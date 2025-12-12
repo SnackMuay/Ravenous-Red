@@ -4629,7 +4629,7 @@ s32 GetBattleMovePriority(u32 battler, enum Ability ability, u32 move)
         gProtectStructs[battler].pranksterElevated = 1;
         priority++;
     }
-    else if (GetMoveEffect(move) == EFFECT_GRASSY_GLIDE && IsBattlerTerrainAffected(battler, ability, GetBattlerHoldEffect(battler), STATUS_FIELD_GRASSY_TERRAIN) && GetActiveGimmick(gBattlerAttacker) != GIMMICK_DYNAMAX && !IsGimmickSelected(battler, GIMMICK_DYNAMAX))
+    else if (GetMoveEffect(move) == EFFECT_GRASSY_GLIDE && IsBattlerTerrainAffected(battler, ability, GetBattlerHoldEffect(battler), B_WEATHER_SUN) && GetActiveGimmick(gBattlerAttacker) != GIMMICK_DYNAMAX && !IsGimmickSelected(battler, GIMMICK_DYNAMAX))
     {
         priority++;
     }

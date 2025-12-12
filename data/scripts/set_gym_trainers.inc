@@ -1,13 +1,13 @@
 EventScript_SetGymTrainers::
 	switch VAR_0x8008
-	case 1, EventScript_SetPewterGymTrainers
+	case 1, EventScript_SetViridianGymTrainers
 	case 2, EventScript_SetCeruleanGymTrainers
-	case 3, EventScript_SetVermilionGymTrainers
-	case 4, EventScript_SetCeladonGymTrainers
-	case 5, EventScript_SetFuchsiaGymTrainers
-	case 6, EventScript_SetSaffronGymTrainers
-	case 7, EventScript_SetCinnabarGymTrainers
-	case 8, EventScript_SetViridianGymTrainers
+	case 3, EventScript_SetPewterGymTrainers
+	case 4, EventScript_SetVermilionGymTrainers
+	case 5, EventScript_SetCeladonGymTrainers
+	case 6, EventScript_SetCinnabarGymTrainers
+	case 7, EventScript_SetFuchsiaGymTrainers
+	case 8, EventScript_SetSaffronGymTrainers
 	end
 
 EventScript_SetPewterGymTrainers::
@@ -65,12 +65,12 @@ EventScript_SetCinnabarGymTrainers::
 	return
 
 EventScript_SetViridianGymTrainers::
-	settrainerflag TRAINER_TAMER_JASON
-	settrainerflag TRAINER_TAMER_COLE
-	settrainerflag TRAINER_BLACK_BELT_ATSUSHI
+	settrainerflag TRAINER_BUG_CATCHER_JASON
+	settrainerflag TRAINER_COOLTRAINER_COLETTE
+	settrainerflag TRAINER_BUG_CATCHER_ATSUSHI
 	settrainerflag TRAINER_BLACK_BELT_KIYO
 	settrainerflag TRAINER_BLACK_BELT_TAKASHI
 	settrainerflag TRAINER_COOLTRAINER_SAMUEL
-	settrainerflag TRAINER_COOLTRAINER_YUJI
+	settrainerflag TRAINER_CAMPER_YUJI
 	settrainerflag TRAINER_COOLTRAINER_WARREN
 	return

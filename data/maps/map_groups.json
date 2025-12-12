@@ -174,7 +174,11 @@
     "SixIsland_DottedHole_B4F",
     "SixIsland_DottedHole_SapphireRoom",
     "SixIsland_PatternBush",
-    "SixIsland_AlteringCave"
+    "SixIsland_AlteringCave",
+    "ViridianForest_Annex",
+    "CliffsideCave_1F",
+    "CliffsideCave_2F",
+    "MtMoon_2F"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",
@@ -424,7 +428,8 @@
     "Route2_ViridianForest_SouthEntrance",
     "Route2_House",
     "Route2_EastBuilding",
-    "Route2_ViridianForest_NorthEntrance"
+    "Route2_ViridianForest_NorthEntrance",
+    "Route2_ViridianForest_MidEntrance"
   ],
   "gMapGroup_IndoorRoute4": [
     "Route4_PokemonCenter_1F",

@@ -2784,7 +2784,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPichuTeachableLearnset,
         .eggMoveLearnset = sPichuEggMoveLearnset,
         .formSpeciesIdTable = sPichuFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PIKACHU, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PIKACHU, CONDITIONS({IF_KNOWS_MOVE, MOVE_QUICK_ATTACK})}),
     },
 
     [SPECIES_PICHU_SPIKY_EARED] =
@@ -4844,7 +4844,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sCleffaLevelUpLearnset,
         .teachableLearnset = sCleffaTeachableLearnset,
         .eggMoveLearnset = sCleffaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CLEFAIRY, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CLEFAIRY, CONDITIONS({IF_KNOWS_MOVE, MOVE_COSMIC_POWER})}),
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -5458,7 +5458,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sIgglybuffLevelUpLearnset,
         .teachableLearnset = sIgglybuffTeachableLearnset,
         .eggMoveLearnset = sIgglybuffEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_JIGGLYPUFF, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_JIGGLYPUFF, CONDITIONS({IF_KNOWS_MOVE, MOVE_SING})}),
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -5820,7 +5820,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sGolbatLevelUpLearnset,
         .teachableLearnset = sGolbatTeachableLearnset,
     #if P_GEN_2_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CROBAT, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CROBAT, CONDITIONS({IF_KNOWS_MOVE, MOVE_ACROBATICS})}),
     #endif
     },
 
@@ -6915,9 +6915,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
+        .abilities = { ABILITY_LIMBER, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
     #else
-        .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_UNNERVE },
+        .abilities = { ABILITY_LIMBER, ABILITY_NONE, ABILITY_UNNERVE },
     #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Meowth"),
@@ -12484,7 +12484,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_INSOMNIA, ABILITY_FOREWARN, ABILITY_INNER_FOCUS },
+        .abilities = { ABILITY_INSOMNIA, ABILITY_INNER_FOCUS, ABILITY_FOREWARN },
     #else
         .abilities = { ABILITY_INSOMNIA, ABILITY_NONE, ABILITY_INNER_FOCUS },
     #endif
@@ -12561,7 +12561,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_INSOMNIA, ABILITY_FOREWARN, ABILITY_INNER_FOCUS },
+        .abilities = { ABILITY_INSOMNIA, ABILITY_INNER_FOCUS, ABILITY_BAD_DREAMS },
     #else
         .abilities = { ABILITY_INSOMNIA, ABILITY_NONE, ABILITY_INNER_FOCUS },
     #endif
@@ -13945,13 +13945,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 77 : 127,
         .evYield_HP = 2,
-        .itemRare = ITEM_LAGGING_TAIL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_OWN_TEMPO, ABILITY_OBLIVIOUS, ABILITY_CLOUD_NINE },
+        .abilities = { ABILITY_OWN_TEMPO, ABILITY_OBLIVIOUS, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Lickitung"),
         .cryId = CRY_LICKITUNG,
@@ -14017,13 +14016,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 30,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 193,
         .evYield_HP = 3,
-        .itemRare = ITEM_LAGGING_TAIL,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
-        .abilities = { ABILITY_OWN_TEMPO, ABILITY_OBLIVIOUS, ABILITY_CLOUD_NINE },
+        .abilities = { ABILITY_OWN_TEMPO, ABILITY_OBLIVIOUS, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Lickilicky"),
         .cryId = CRY_LICKILICKY,
@@ -14326,7 +14324,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_ROCK_HEAD, ABILITY_RECKLESS },
+        .abilities = { ABILITY_RECKLESS, ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Rhyhorn"),
         .cryId = CRY_RHYHORN,
@@ -14410,7 +14408,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_ROCK_HEAD, ABILITY_RECKLESS },
+        .abilities = { ABILITY_RECKLESS, ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Rhydon"),
         .cryId = CRY_RHYDON,
@@ -14500,7 +14498,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_SOLID_ROCK, ABILITY_RECKLESS },
+        .abilities = { ABILITY_RECKLESS, ABILITY_SOLID_ROCK, ABILITY_LIGHTNING_ROD },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Rhyperior"),
         .cryId = CRY_RHYPERIOR,
@@ -14636,8 +14634,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHappinyLevelUpLearnset,
         .teachableLearnset = sHappinyTeachableLearnset,
         .eggMoveLearnset = sHappinyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT},{IF_HOLD_ITEM, ITEM_OVAL_STONE})},
-                                {EVO_ITEM, ITEM_OVAL_STONE, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_HOLD_ITEM, ITEM_OVAL_STONE})},
+                                {EVO_ITEM, ITEM_OVAL_STONE, SPECIES_CHANSEY,}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 
@@ -14709,7 +14707,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sChanseyTeachableLearnset,
         .eggMoveLearnset = sChanseyEggMoveLearnset,
     #if P_GEN_2_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BLISSEY, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BLISSEY, CONDITIONS({IF_KNOWS_MOVE, MOVE_EGG_BOMB})}),
     #endif
     },
 
@@ -15102,7 +15100,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 225,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 83,
         .evYield_SpAttack = 1,
-        .itemRare = ITEM_DRAGON_SCALE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -15179,7 +15176,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 155,
         .evYield_Defense = 1,
         .evYield_SpAttack = 1,
-        .itemRare = ITEM_DRAGON_SCALE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -15266,7 +15262,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
-        .itemRare = ITEM_DRAGON_SCALE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -17912,13 +17907,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 ,{EVO_LEVEL, 0, SPECIES_SYLVEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_KNOWS_MOVE_TYPE, TYPE_FAIRY})}
                             #endif
                             #if P_GEN_2_CROSS_EVOS
-                                ,{EVO_LEVEL, 0, SPECIES_ESPEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_NOT_TIME, TIME_NIGHT})},
-                                {EVO_LEVEL, 0, SPECIES_UMBREON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_TIME, TIME_NIGHT})}
+                                ,{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_UMBREON},
+                                {EVO_ITEM, ITEM_DAWN_STONE, SPECIES_ESPEON}
                             #endif
                             #if P_GEN_4_CROSS_EVOS
-                                ,{EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_VIRIDIAN_FOREST})},
-                                {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SEAFOAM_ISLANDS_B4F})},
+                                ,{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON}
                             #endif
                             ),
@@ -19356,7 +19349,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMunchlaxLevelUpLearnset,
         .teachableLearnset = sMunchlaxTeachableLearnset,
         .eggMoveLearnset = sMunchlaxEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNORLAX, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNORLAX, CONDITIONS({IF_KNOWS_MOVE, MOVE_REST})}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 

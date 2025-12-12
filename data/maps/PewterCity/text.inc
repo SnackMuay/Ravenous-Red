@@ -62,15 +62,6 @@ PewterCity_Text_SprayingRepelToKeepWildMonsOut::
     .string "I'm spraying REPEL to keep wild\n"
     .string "POKéMON out of my garden!$"
 
-PewterCity_Text_BrocksLookingForChallengersFollowMe::
-    .string "You're a TRAINER, right?\p"
-    .string "BROCK's looking for new\n"
-    .string "challengers. Follow me!$"
-
-PewterCity_Text_GoTakeOnBrock::
-    .string "If you have the right stuff,\n"
-    .string "go take on BROCK!$"
-
 PewterCity_Text_TrainerTipsEarningEXP::
     .string "TRAINER TIPS\p"
     .string "All POKéMON that appear in battle,\n"
@@ -89,7 +80,7 @@ PewterCity_Text_MuseumOfScience::
 PewterCity_Text_GymSign::
     .string "PEWTER CITY POKéMON GYM\n"
     .string "LEADER: BROCK\l"
-    .string "The Rock-Solid POKéMON TRAINER!$"
+    .string "The Grounded POKéMON TRAINER!$"
 
 PewterCity_Text_CitySign::
     .string "PEWTER CITY\n"

@@ -654,10 +654,12 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_B_DASH
 	special SetUnlockedPokedexFlags
+	special EnableNationalPokedex
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
-	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
+	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 25
 	msgbox PalletTown_ProfessorOaksLab_Text_OakExplainCatching
 	famechecker FAMECHECKER_OAK, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream
@@ -1070,7 +1072,7 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar PLAYER_STARTER_SPECIES, SPECIES_CHIKORITA
 	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
 	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
@@ -1213,8 +1215,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
-	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar PLAYER_STARTER_SPECIES, SPECIES_PIPLUP
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CHIKORITA
 	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1227,7 +1229,7 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
 	setvar PLAYER_STARTER_SPECIES, SPECIES_CHARMANDER
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_PIPLUP
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice

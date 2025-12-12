@@ -1369,3 +1369,18 @@ Text_TestMsg::
 	.include "data/text/pokedude.inc"
 	.include "data/scripts/follower.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/ViridianForest_Annex/scripts.inc"
+	.include "data/maps/ViridianForest_Annex/text.inc"
+
+	.include "data/maps/Route2_ViridianForest_MidEntrance/scripts.inc"
+	.include "data/maps/Route2_ViridianForest_MidEntrance/text.inc"
+
+	.include "data/maps/CliffsideCave_2F/scripts.inc"
+	.include "data/maps/CliffsideCave_2F/text.inc"
+
+	.include "data/maps/CliffsideCave_1F/scripts.inc"
+	.include "data/maps/CliffsideCave_1F/text.inc"
+
+	.include "data/maps/MtMoon_2F/scripts.inc"
+	.include "data/maps/MtMoon_2F/text.inc"

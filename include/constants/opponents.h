@@ -301,8 +301,8 @@
 #define TRAINER_JUGGLER_NATE                     293
 #define TRAINER_TAMER_PHIL                       294
 #define TRAINER_TAMER_EDGAR                      295
-#define TRAINER_TAMER_JASON                      296
-#define TRAINER_TAMER_COLE                       297
+#define TRAINER_BUG_CATCHER_JASON                296 // Viridian Gym
+#define TRAINER_COOLTRAINER_COLETTE              297 // Viridian Gym
 #define TRAINER_TAMER_VINCENT                    298
 #define TRAINER_TAMER_JOHN                       299
 #define TRAINER_BIRD_KEEPER_SEBASTIAN            300
@@ -327,7 +327,7 @@
 #define TRAINER_BLACK_BELT_HIDEKI                319
 #define TRAINER_BLACK_BELT_AARON                 320
 #define TRAINER_BLACK_BELT_HITOSHI               321
-#define TRAINER_BLACK_BELT_ATSUSHI               322
+#define TRAINER_BUG_CATCHER_ATSUSHI              322 // Viridian Gym
 #define TRAINER_BLACK_BELT_KIYO                  323
 #define TRAINER_BLACK_BELT_TAKASHI               324
 #define TRAINER_BLACK_BELT_DAISUKE               325
@@ -405,7 +405,7 @@
 #define TRAINER_COOLTRAINER_GILBERT              397
 #define TRAINER_COOLTRAINER_OWEN                 398
 #define TRAINER_COOLTRAINER_BERKE                399
-#define TRAINER_COOLTRAINER_YUJI                 400
+#define TRAINER_CAMPER_YUJI                      400 // Viridian Gym
 #define TRAINER_COOLTRAINER_WARREN               401
 #define TRAINER_COOLTRAINER_MARY                 402
 #define TRAINER_COOLTRAINER_CAROLINE             403
@@ -748,12 +748,35 @@
 #define TRAINER_CHAMPION_REMATCH_BULBASAUR       740
 #define TRAINER_CHAMPION_REMATCH_CHARMANDER      741
 #define TRAINER_CUE_BALL_PAXTON                  742
+#define TRAINER_HIKER_CARLOS                     743 // New Trainers Start here
+#define TRAINER_COOLTRAINER_MIRABEL              744
+#define TRAINER_CAMPER_ADRIAN                    745
+#define TRAINER_HIKER_ANTONIO                    746
+#define TRAINER_COOLTRAINER_MARIO                747
+#define TRAINER_PICNICKER_CLAUDIA                748
+#define TRAINER_BUG_CATCHER_MANUEL               749
+#define TRAINER_LASS_EVIE                        750
+#define TRAINER_HIKER_JORGE                      751
+#define TRAINER_CAMPER_PEDRO                     752
+#define TRAINER_RUIN_MANIAC_OMAR                 753
+#define TRAINER_PKMN_RANGER_CARMEN               754
+#define TRAINER_HIKER_FERNANDO                   755
+#define TRAINER_TEAM_ROCKET_GRUNT_52             756
+#define TRAINER_TEAM_ROCKET_GRUNT_53             757
+#define TRAINER_TEAM_ROCKET_GRUNT_54             758
+#define TRAINER_TEAM_ROCKET_GRUNT_55             759
+#define TRAINER_TEAM_ROCKET_ADMIN_SIMONE_1       760
+#define TRAINER_LEADER_BUGSY                     761
+#define TRAINER_TEAM_ROCKET_GRUNT_56             762
+#define TRAINER_TEAM_ROCKET_GRUNT_57             763
+#define TRAINER_TEAM_ROCKET_GRUNT_58             764
+#define TRAINER_TEAM_ROCKET_GRUNTS_1             765
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                           743
+#define TRAINERS_COUNT                           766
 #define MAX_TRAINERS_COUNT                       768
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

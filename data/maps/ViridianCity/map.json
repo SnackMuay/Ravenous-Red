@@ -63,7 +63,7 @@
       "local_id": "LOCALID_VIRIDIAN_OLD_MAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 34,
+      "x": 33,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -79,7 +79,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 21,
-      "y": 6,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 2,
@@ -121,12 +121,12 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 16,
-      "y": 22,
+      "x": 39,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
-      "movement_range_y": 2,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianCity_EventScript_Boy",
@@ -160,6 +160,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianCity_EventScript_ItemPotion",
       "flag": "FLAG_HIDE_VIRIDIAN_CITY_POTION"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_FISHER",
+      "x": 16,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_House2_EventScript_FishingGurusBrother",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -203,7 +217,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 11,
+      "y": 10,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN",
       "var_value": "0",

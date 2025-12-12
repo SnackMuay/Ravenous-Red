@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 3,
-      "y": 8,
+      "x": 4,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -47,7 +47,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
       "x": 7,
-      "y": 12,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -56,26 +56,96 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PewterCity_Gym_EventScript_GymGuy",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 5,
-      "y": 14,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
-      "y": 14,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 7,
-      "y": 14,
+      "y": 18,
       "elevation": 3,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "2"
@@ -86,7 +156,7 @@
     {
       "type": "sign",
       "x": 4,
-      "y": 12,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PewterCity_Gym_EventScript_GymStatue"
@@ -94,7 +164,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 12,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PewterCity_Gym_EventScript_GymStatue"

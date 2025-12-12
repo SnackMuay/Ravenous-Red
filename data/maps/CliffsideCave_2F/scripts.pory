@@ -1,0 +1,99 @@
+mapscripts CliffsideCave_2F_MapScripts {}
+
+script CliffsideCave_EventScript_Carlos{
+
+	trainerbattle_single(TRAINER_HIKER_CARLOS, Carlos_Intro, Carlos_Outro)
+    msgbox(Carlos_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Carlos_Intro{
+    format("It's chilly down here. I hope my POKéMON don't get cold")
+}
+
+text Carlos_Outro{
+    format("I think they were feeling cold after all.")
+}
+
+text Carlos_Postbattle{
+    format("Be careful ahead. Those trainers are excited to battle.")
+}
+
+script CliffsideCave_EventScript_Mirabel{
+
+	trainerbattle_single(TRAINER_COOLTRAINER_MIRABEL, Mirabel_Intro, Mirabel_Outro)
+    msgbox(Mirabel_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Mirabel_Intro{
+    format("Did you bring a pillow?")
+}
+
+text Mirabel_Outro{
+    format("I guess your POKéMON weren't sleepy.")
+}
+
+text Mirabel_Postbattle{
+    format("This cave is spooky. I can't shake the feeling that this whole place isn't supposed to exist.")
+}
+
+script CliffsideCave_EventScript_Adrian{
+
+	trainerbattle_single(TRAINER_CAMPER_ADRIAN, Adrian_Intro, Adrian_Outro)
+    msgbox(Adrian_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Adrian_Intro{
+    format("Say night-night!")
+}
+
+text Adrian_Outro{
+    format("...Not fair.")
+}
+text Adrian_Postbattle{
+    format("I noticed that the wild POKéMON near the entrance of this cave were different from the ones down here.")
+}
+
+script CliffsideCave_EventScript_Antonio{
+
+	trainerbattle_single(TRAINER_HIKER_ANTONIO, Antonio_Intro, Antonio_Outro)
+    msgbox(Antonio_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Antonio_Intro{
+    format("The air is thick with tension!")
+}
+
+text Antonio_Outro{
+    format("Oh well.")
+}
+text Antonio_Postbattle{
+    format("As powerful as you are, I'd be careful entering the Viridian Gym. The trainers there are experts in battle.")
+}
+
+script CliffsideCave_EventScript_Mario{
+
+	trainerbattle_single(TRAINER_COOLTRAINER_MARIO, Mario_Intro, Mario_Outro)
+    msgbox(Mario_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Mario_Intro{
+    format("My rare POKéMON will be your undoing!")
+}
+
+text Mario_Outro{
+    format("Your team was too potent for me.")
+}
+
+text Mario_Postbattle{
+    format("Exotic POKéMON have become far more abundant across Kanto lately. I'm making a point to collect the most powerful species.")
+}

@@ -2539,12 +2539,12 @@ static void BufferEVString(u8 stat)
         ApplyNatureColor(dst, stat);
 }
 
-static const u8 sText_JudgeNoGood[] = _("No good");
-static const u8 sText_JudgeDecent[] = _("Decent");
-static const u8 sText_JudgePrettyGood[] = _("Pretty good");
-static const u8 sText_JudgeVeryGood[] = _("Very good");
-static const u8 sText_JudgeFantastic[] = _("Fantastic");
-static const u8 sText_JudgeBest[] = _("Best");
+static const u8 sText_JudgeNoGood[] = _(" F - - - - -");
+static const u8 sText_JudgeDecent[] = _(" - D - - - -");
+static const u8 sText_JudgePrettyGood[] = _(" - - C - - -");
+static const u8 sText_JudgeVeryGood[] = _(" - - - B - -");
+static const u8 sText_JudgeFantastic[] = _(" - - - - A -");
+static const u8 sText_JudgeBest[] = _(" - - - - - S");
 static const u8 sText_JudgeHyperTrained[] = _("Hyper trained!");
 
 static void BufferIVString(u8 stat)
@@ -2557,13 +2557,13 @@ static void BufferIVString(u8 stat)
         StringCopy(dst, sText_JudgeHyperTrained);
     else if (statValue == 31)
         StringCopy(dst, sText_JudgeBest);
-    else if (statValue == 30)
+    else if (statValue > 24)
         StringCopy(dst, sText_JudgeFantastic);
-    else if (statValue > 25)
+    else if (statValue > 18)
         StringCopy(dst, sText_JudgeVeryGood);
-    else if (statValue > 15)
+    else if (statValue > 12)
         StringCopy(dst, sText_JudgePrettyGood);
-    else if (statValue > 0)
+    else if (statValue > 6)
         StringCopy(dst, sText_JudgeDecent);
     else
         StringCopy(dst, sText_JudgeNoGood);

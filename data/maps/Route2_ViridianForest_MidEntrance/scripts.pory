@@ -1,0 +1,18 @@
+raw `
+Route2_ViridianForest_MidEntrance_MapScripts::
+	.byte 0
+`
+
+script Route2_MidEntrance_EventScript_Nerd{
+    lockall
+    faceplayer
+    msgbox(format("I'm cataloging the many species of POKéMON here in VIRIDIAN FOREST. There are a great variety, perhaps as many as 10 different species!"))
+    releaseall
+}
+
+script Route2_MidEntrance_EventScript_Old_Woman{
+    lockall
+    faceplayer
+    msgbox(format("I'm too old to be catching POKéMON anymore, but I still enjoy watching them in the wild."))
+    releaseall
+}

@@ -1,13 +1,8 @@
 Route22_Text_EarlyRivalIntro::
-	.string "{RIVAL}: Hey! {PLAYER}!\p"
-	.string "You're off to the POKéMON LEAGUE?\n"
-	.string "Forget about it!\p"
-	.string "You probably don't have any\n"
-	.string "BADGES, do you?\p"
-	.string "The guard won't let you through\n"
-	.string "without them.\p"
-	.string "By the way, did your POKéMON get\n"
-	.string "any stronger?$"
+	.string "Check this out! Some old guy gave\n"
+	.string "me one of his leftover POKéMON. I bet\n"
+	.string "you that my POKéMON are already\l"
+	.string "stronger than yours!$"
 
 Route22_Text_EarlyRivalDefeat::
 	.string "Awww!\n"

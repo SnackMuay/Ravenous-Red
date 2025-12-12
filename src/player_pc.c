@@ -95,7 +95,9 @@ static const struct MenuAction sMenuActions_ItemPc[] = {
 };
 
 static const struct ItemSlot gNewGamePCItems[] = {
-    { ITEM_POTION, 1 },
+    { ITEM_EXP_SHARE, 1 },
+    { ITEM_REPEL, 100 },
+    { ITEM_POTION, 100 },
     { ITEM_NONE,   0 }
 };
 

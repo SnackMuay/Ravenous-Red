@@ -6,6 +6,10 @@ Route2_EventScript_ItemParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL
 	end
 
+CliifsideCave_2F_EventScript_ItemHardStone::
+	finditem ITEM_HARD_STONE
+	end
+
 ViridianForest_EventScript_ItemPokeBall::
 	finditem ITEM_POKE_BALL
 	end
@@ -16,6 +20,14 @@ ViridianForest_EventScript_ItemAntidote::
 
 ViridianForest_EventScript_ItemPotion::
 	finditem ITEM_POTION
+	end
+
+ViridianForest_Annex_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
+ViridianForest_Annex_EventScript_ItemMiracleSeed::
+	finditem ITEM_MIRACLE_SEED
 	end
 
 MtMoon_1F_EventScript_ItemParalyzeHeal::

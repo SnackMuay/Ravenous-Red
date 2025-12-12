@@ -27,12 +27,7 @@ ViridianCity_EventScript_SetOldManBlockingRoad::
 	return
 
 ViridianCity_EventScript_TryUnlockGym::
-	goto_if_unset FLAG_BADGE02_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE03_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE04_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE05_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE06_GET, EventScript_Return
-	goto_if_unset FLAG_BADGE07_GET, EventScript_Return
+	goto_if_unset FLAG_GRUNTS_1, EventScript_Return
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 1
 	return
 
@@ -97,7 +92,7 @@ ViridianCity_EventScript_OldManGymLeaderReturned::
 ViridianCity_EventScript_TutorialOldMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE01_GET, ViridianCity_EventScript_AskIfTeachyTVHelpful
+	goto_if_set FLAG_BADGE08_GET, ViridianCity_EventScript_AskIfTeachyTVHelpful
 	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_TutorialCompleted
 	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_TutorialStart
 	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_TutorialNotReady

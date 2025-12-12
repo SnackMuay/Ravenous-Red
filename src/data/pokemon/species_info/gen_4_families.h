@@ -1207,7 +1207,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TECHNICIAN },
+        .abilities = { ABILITY_TECHNICIAN, ABILITY_NONE, ABILITY_SWARM },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Kricketune"),
         .cryId = CRY_KRICKETUNE,
@@ -3331,7 +3331,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = 0,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_KLUTZ, ABILITY_LIMBER },
+        .abilities = { ABILITY_RUN_AWAY, ABILITY_LIMBER, ABILITY_KLUTZ }, 
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Buneary"),
         .cryId = CRY_BUNEARY,
@@ -3379,7 +3379,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sBunearyLevelUpLearnset,
         .teachableLearnset = sBunearyTeachableLearnset,
         .eggMoveLearnset = sBunearyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LOPUNNY, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LOPUNNY, CONDITIONS({IF_KNOWS_MOVE, MOVE_JUMP_KICK})}),
     },
 
     [SPECIES_LOPUNNY] =
@@ -3399,7 +3399,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = 140,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_CUTE_CHARM, ABILITY_KLUTZ, ABILITY_LIMBER },
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_LIMBER, ABILITY_KLUTZ },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Lopunny"),
         .cryId = CRY_LOPUNNY,
@@ -4500,7 +4500,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sRioluLevelUpLearnset,
         .teachableLearnset = sRioluTeachableLearnset,
         .eggMoveLearnset = sRioluEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LUCARIO, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD},{IF_NOT_TIME, TIME_NIGHT})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LUCARIO, CONDITIONS({IF_KNOWS_MOVE, MOVE_METAL_SOUND})}),
     },
 
     [SPECIES_LUCARIO] =

@@ -1,0 +1,200 @@
+mapscripts ViridianForest_Annex_MapScripts {}
+
+
+
+script ViridianForest_Annex_EventScript_Manuel{
+	trainerbattle_single(TRAINER_BUG_CATCHER_MANUEL, Manuel_Intro, Manuel_Outro)
+    msgbox(Manuel_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Manuel_Intro{
+    format("Bugs! Together! Strong!")
+}
+
+text Manuel_Outro{
+    format("My POKéMON didn't work together how I expected them to.")
+}
+
+text Manuel_Postbattle{
+    format("I hope to one day be a skillful POKéMON trainer like Bugsy. That's why I'm training here in Viridian Forest.")
+}
+
+script ViridianForest_Annex_EventScript_Claudia{
+	trainerbattle_single(TRAINER_PICNICKER_CLAUDIA, Claudia_Intro, Claudia_Outro)
+    msgbox(Claudia_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Claudia_Intro{
+    format("En garde!")
+}
+
+text Claudia_Outro{
+    format("Touche.")
+}
+
+text Claudia_Postbattle{
+    format("Here, deep in forest, I can best harness the awesome power of nature and her POKéMON.")
+}
+
+script ViridianForest_Annex_EventScript_Evie{
+	trainerbattle_single(TRAINER_LASS_EVIE, Evie_Intro, Evie_Outro)
+    msgbox(Evie_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Evie_Intro{
+    format("Let's go!")
+}
+
+text Evie_Outro{
+    format("...My POKéMON were still cuter than yours.")
+}
+text Evie_Postbattle{
+    format("Even if they aren't the most powerful POKéMON, I love my precious EEVEE and PIKACHU.")
+}
+
+script ViridianForest_Annex_EventScript_Grunt_52{
+	trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_52, Grunt_52_Intro, Grunt_52_Outro)
+    msgbox(Grunt_52_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Grunt_52_Intro{
+    format("Go be a pest somewhere else!")
+}
+
+text Grunt_52_Outro{
+    format("I... lost? I lost to a kid?")
+}
+text Grunt_52_Postbattle{
+    format("You'll get out of here if you know what's good for ya.")
+}
+
+script ViridianForest_Annex_EventScript_Grunt_53{
+	trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_53, Grunt_53_Intro, Grunt_53_Outro)
+    msgbox(Grunt_53_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Grunt_53_Intro{
+    format("Buzz off, kid!")
+}
+
+text Grunt_53_Outro{
+    format("Damn.")
+}
+
+text Grunt_53_Postbattle{
+    format("Keep sticking your nose in other people's business. See what happens.")
+}
+
+script ViridianForest_Annex_EventScript_Grunt_54{
+	trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro)
+    msgbox(Grunt_54_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script ViridianForest_Annex_EventScript_Grunt_55{
+	trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro)
+    msgbox(Grunt_55_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script ViridianForest_Annex_EventScript_Simone_1{
+	trainerbattle_single(TRAINER_TEAM_ROCKET_ADMIN_SIMONE_1, Simone_1_Intro, Simone_1_Outro, Simone_1_Defeated,)
+    lockall
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    msgbox(Simone_1_Postbattle)
+    waitmessage
+    releaseall
+}
+
+text Simone_1_Intro{
+    format("I'll teach you not to mess with Team Rocket.")
+}
+
+text Simone_1_Outro{
+    format("That's it, we're leaving. GIOVANNI won't be happy about this.")
+}
+text Simone_1_Postbattle{
+    format("...")
+}
+
+script Simone_1_Defeated{
+    msgbox(format("..."))
+    waitmessage
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    removeobject(LOCALID_GRUNT_52)
+	removeobject(LOCALID_GRUNT_53)
+    removeobject(LOCALID_GRUNT_54)
+    removeobject(LOCALID_GRUNT_55)
+    removeobject(LOCALID_VIRIDIAN_SIMONE)
+    setflag(FLAG_SIMONE_1)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}
+
+script ViridianForest_Annex_Eventscript_Scientist{
+    lockall
+    msgbox(format("Thank you for saving me! You got here just in time for me to prevent my fossils from being stolen by those goons. They said something about heading to Pewter City. I wouldn't be shocked if they intend to terrorize the scientists there too!"))
+    releaseall
+}
+
+script Viridian_Forest_Grunts_Trigger{
+    lockall
+    applymovement(LOCALID_GRUNT_54, GruntMovement)
+    waitmovement(0)
+    trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont)
+    releaseall
+}
+
+script Viridian_Forest_Grunts_Trigger_cont{
+    applymovement(LOCALID_GRUNT_55, GruntMovement)
+    waitmovement(0)
+    trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated)
+    releaseall
+}
+
+script Viridian_Forest_Grunts_Defeated{
+    setvar(VAR_SIMONE_1_ANNEX, 1)
+    releaseall
+}
+
+movement GruntMovement{
+    walk_left
+    faceplayer
+}
+
+text Grunt_54_Intro{
+    format("That's it. Your fun little adventure ends here.")
+}
+
+text Grunt_54_Outro{
+    format("Must be your lucky day.")
+}
+
+text Grunt_54_Postbattle{
+    format("Don't be stupid. You're no match for SIMONE.")
+}
+
+text Grunt_55_Intro{
+    format("I'll handle this.")
+}
+
+text Grunt_55_Outro{
+    format("Fine. SIMONE will straighten you out.")
+}
+
+text Grunt_55_Postbattle{
+    format("I dare you to continue this meddling. Our boss won't be so patient with you.")
+}

@@ -1,0 +1,240 @@
+{
+  "id": "MAP_VIRIDIAN_FOREST_ANNEX",
+  "name": "ViridianForest_Annex",
+  "layout": "LAYOUT_VIRIDIAN_FOREST_ANNEX",
+  "music": "MUS_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_VIRIDIAN_SIMONE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
+      "x": 27,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_EventScript_Simone_1",
+      "flag": "FLAG_SIMONE_1"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
+      "x": 29,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_Eventscript_Scientist",
+      "flag": "FLAG_GRUNTS_1"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 7,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_EventScript_ItemSuperPotion",
+      "flag": "FLAG_VIRIDIAN_SUPER_POTION"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 0,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ViridianForest_Annex_EventScript_Manuel",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 26,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "ViridianForest_Annex_EventScript_Claudia",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ViridianForest_Annex_EventScript_Evie",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 29,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_EventScript_ItemMiracleSeed",
+      "flag": "FLAG_VIRIDIAN_MIRACLE_SEED"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_52",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ViridianForest_Annex_EventScript_Grunt_52",
+      "flag": "FLAG_SIMONE_1"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_53",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 23,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ViridianForest_Annex_EventScript_Grunt_53",
+      "flag": "FLAG_SIMONE_1"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_54",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 26,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_EventScript_Grunt_54",
+      "flag": "FLAG_SIMONE_1"
+    },
+    {
+      "local_id": "LOCALID_GRUNT_55",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 26,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_Annex_EventScript_Grunt_55",
+      "flag": "FLAG_SIMONE_1"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_MID_ENTRANCE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 10,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_MID_ENTRANCE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_MID_ENTRANCE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_SIMONE_1_ANNEX",
+      "var_value": "0",
+      "script": "Viridian_Forest_Grunts_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SIMONE_1_ANNEX",
+      "var_value": "0",
+      "script": "Viridian_Forest_Grunts_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SIMONE_1_ANNEX",
+      "var_value": "0",
+      "script": "Viridian_Forest_Grunts_Trigger"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
+  ]
+}

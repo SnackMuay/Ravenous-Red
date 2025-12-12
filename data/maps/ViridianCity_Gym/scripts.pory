@@ -1,0 +1,149 @@
+mapscripts ViridianCity_Gym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: OnTransition
+}
+
+script OnTransition{
+    if(flag(FLAG_BADGE08_GET)){
+        settrainerflag(TRAINER_COOLTRAINER_COLETTE)
+	    settrainerflag(TRAINER_BUG_CATCHER_ATSUSHI)
+	    settrainerflag(TRAINER_BLACK_BELT_KIYO)
+	    settrainerflag(TRAINER_BLACK_BELT_TAKASHI)
+	    settrainerflag(TRAINER_COOLTRAINER_SAMUEL)
+	    settrainerflag(TRAINER_CAMPER_YUJI)
+	    settrainerflag(TRAINER_COOLTRAINER_WARREN)
+        settrainerflag(TRAINER_BUG_CATCHER_JASON)
+    }
+    else{
+        cleartrainerflag(TRAINER_COOLTRAINER_COLETTE)
+	    cleartrainerflag(TRAINER_BUG_CATCHER_ATSUSHI)
+	    cleartrainerflag(TRAINER_BLACK_BELT_KIYO)
+	    cleartrainerflag(TRAINER_BLACK_BELT_TAKASHI)
+	    cleartrainerflag(TRAINER_COOLTRAINER_SAMUEL)
+	    cleartrainerflag(TRAINER_CAMPER_YUJI)
+	    cleartrainerflag(TRAINER_COOLTRAINER_WARREN)
+        cleartrainerflag(TRAINER_BUG_CATCHER_JASON)
+    }
+	special(HealPlayerParty)
+}
+
+text ViridianCity_Gym_Text_GymGuyAdvice{
+    format("Here in Kanto, you must defeat all the trainers on your path to the LEADER before exiting the GYM. If you leave this building before taking down BUGSY, you'll have to start again from the beginning.")
+}
+
+text ViridianCity_Gym_Text_BugsyPostBattle{
+	format("I'm eager to track your progress as you journey through Kanto. You showed me that I still have so much to learn about the world of POKéMON.")
+    }
+
+text ViridianCity_Gym_Text_BugsyIntro{
+    format("Welcome to VIRIDIAN GYM. I strive to exhibit the beauty and strength of BUG POKéMON when I battle. It's an admirable feat to even stand before me now. So don't take it too hard if you can't win this fight.${PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}") 
+}
+
+raw `
+
+ViridianCity_Gym_EventScript_Bugsy::
+	trainerbattle_single TRAINER_LEADER_BUGSY, ViridianCity_Gym_Text_BugsyIntro, ViridianCity_Gym_Text_BugsyDefeat, ViridianCity_Gym_EventScript_DefeatedBugsy, NO_MUSIC
+	goto_if_unset FLAG_GOT_TM26_FROM_BUGSY, ViridianCity_Gym_EventScript_GiveTM26
+	msgbox ViridianCity_Gym_Text_BugsyPostBattle
+	closemessage
+	release
+	end
+
+ViridianCity_Gym_EventScript_DefeatedBugsy::
+	setflag FLAG_DEFEATED_LEADER_BUGSY
+	setflag FLAG_BADGE08_GET
+	setvar VAR_MAP_SCENE_PEWTER_CITY, 2
+	set_gym_trainers 1
+	goto ViridianCity_Gym_EventScript_GiveTM26
+	end
+
+ViridianCity_Gym_EventScript_GiveTM26::
+	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
+	checkitemspace ITEM_TM26
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_Gym_EventScript_NoRoomForTM26
+	giveitem_msg ViridianCity_Gym_Text_ReceivedTM26FromBugsy, ITEM_TM26
+	setflag FLAG_GOT_TM26_FROM_BUGSY
+	msgbox ViridianCity_Gym_Text_ExplainTM26
+	release
+	end
+
+ViridianCity_Gym_EventScript_NoRoomForTM26::
+	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
+	release
+	end
+
+ViridianCity_Gym_EventScript_Jason::
+	trainerbattle_single TRAINER_BUG_CATCHER_JASON, ViridianCity_Gym_Text_JasonIntro, ViridianCity_Gym_Text_JasonDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_JasonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Colette::
+	trainerbattle_single TRAINER_COOLTRAINER_COLETTE, ViridianCity_Gym_Text_ColetteIntro, ViridianCity_Gym_Text_ColetteDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_ColettePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Atsushi::
+	trainerbattle_single TRAINER_BUG_CATCHER_ATSUSHI, ViridianCity_Gym_Text_AtsushiIntro, ViridianCity_Gym_Text_AtsushiDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_AtsushiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Kiyo::
+	trainerbattle_single TRAINER_BLACK_BELT_KIYO, ViridianCity_Gym_Text_KiyoIntro, ViridianCity_Gym_Text_KiyoDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_KiyoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Takashi::
+	trainerbattle_single TRAINER_BLACK_BELT_TAKASHI, ViridianCity_Gym_Text_TakashiIntro, ViridianCity_Gym_Text_TakashiDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_TakashiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Samuel::
+	trainerbattle_single TRAINER_COOLTRAINER_SAMUEL, ViridianCity_Gym_Text_SamuelIntro, ViridianCity_Gym_Text_SamuelDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_SamuelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Yuji::
+	trainerbattle_single TRAINER_CAMPER_YUJI, ViridianCity_Gym_Text_YujiIntro, ViridianCity_Gym_Text_YujiDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_YujiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_Warren::
+	trainerbattle_single TRAINER_COOLTRAINER_WARREN, ViridianCity_Gym_Text_WarrenIntro, ViridianCity_Gym_Text_WarrenDefeat
+	special HealPlayerParty
+	msgbox ViridianCity_Gym_Text_WarrenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianCity_Gym_EventScript_GymGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LEADER_BUGSY, ViridianCity_Gym_EventScript_GymGuyPostVictory
+	msgbox ViridianCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+ViridianCity_Gym_EventScript_GymGuyPostVictory::
+	famechecker FAMECHECKER_GIOVANNI, 4
+	msgbox ViridianCity_Gym_Text_GymGuyPostVictory
+	release
+	end
+
+ViridianCity_Gym_EventScript_GymStatue::
+	lockall
+	goto_if_set FLAG_BADGE08_GET, ViridianCity_Gym_EventScript_GymStatuePostVictory
+	msgbox ViridianCity_Gym_Text_GymStatue
+	releaseall
+	end
+
+ViridianCity_Gym_EventScript_GymStatuePostVictory::
+	msgbox ViridianCity_Gym_Text_GymStatuePlayerWon
+	releaseall
+	end
+
+`
+

@@ -27,7 +27,7 @@
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
     F(THUNDER) \
-    F(EARTHQUAKE) \
+    F(BUG_BITE) \
     F(RETURN) \
     F(DIG) \
     F(PSYCHIC) \

@@ -22,7 +22,7 @@ Route22_EventScript_EarlyRivalTriggerBottom::
 	end
 
 Route22_EventScript_EarlyRival::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_FEMALE
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	addobject LOCALID_ROUTE22_RIVAL
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_EarlyRivalApproach
@@ -58,15 +58,15 @@ Route22_EventScript_EarlyRivalApproachBottom::
 	return
 
 Route22_EventScript_EarlyRivalSquirtle::
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
 	return
 
 Route22_EventScript_EarlyRivalBulbasaur::
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
 	return
 
 Route22_EventScript_EarlyRivalCharmander::
-	trainerbattle_earlyrival TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER, 0, Route22_Text_EarlyRivalDefeat, Text_RivalVictory
 	return
 
 Route22_EventScript_EarlyRivalExit::
@@ -173,7 +173,7 @@ Route22_EventScript_LateRivalTriggerBottom::
 	end
 
 Route22_EventScript_LateRival::
-	textcolor NPC_TEXT_COLOR_MALE
+	textcolor NPC_TEXT_COLOR_FEMALE
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	addobject LOCALID_ROUTE22_RIVAL
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_LateRivalApproach

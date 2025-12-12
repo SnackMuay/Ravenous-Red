@@ -9756,10 +9756,9 @@ static const struct LevelUpMove sLopunnyLevelUpLearnset[] = {
 
 #if P_FAMILY_GLAMEOW
 static const struct LevelUpMove sGlameowLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_FAKE_OUT),
-    LEVEL_UP_MOVE( 5, MOVE_SCRATCH),
-    LEVEL_UP_MOVE( 8, MOVE_GROWL),
-    LEVEL_UP_MOVE(13, MOVE_HYPNOSIS),
+    LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
+    LEVEL_UP_MOVE( 4, MOVE_GROWL),
+    LEVEL_UP_MOVE(10, MOVE_HYPNOSIS),
     LEVEL_UP_MOVE(17, MOVE_FEINT_ATTACK),
     LEVEL_UP_MOVE(20, MOVE_FURY_SWIPES),
     LEVEL_UP_MOVE(25, MOVE_CHARM),

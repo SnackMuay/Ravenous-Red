@@ -190,11 +190,11 @@
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
 // Unused?
-#define FLAG_0x0AF               0x0AF
-#define FLAG_0x0B0               0x0B0
-#define FLAG_0x0B1               0x0B1
-#define FLAG_0x0B2               0x0B2
-#define FLAG_0x0B3               0x0B3
+#define FLAG_SIMONE_1                0x0AF // Unlocks Pewter City
+#define FLAG_CLIFFSIDE_HARD_STONE    0x0B0
+#define FLAG_VIRIDIAN_MIRACLE_SEED   0x0B1
+#define FLAG_VIRIDIAN_SUPER_POTION   0x0B2
+#define FLAG_GRUNTS_1                0x0B3 // Unlocks Viridian Gym
 #define FLAG_0x0B4               0x0B4
 #define FLAG_0x0B5               0x0B5
 #define FLAG_0x0B6               0x0B6
@@ -686,7 +686,7 @@
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL                  0x295
 #define FLAG_GOT_TM16_FROM_THIRSTY_GIRL                  0x296
 #define FLAG_GOT_TM03_FROM_MISTY                         0x297
-#define FLAG_GOT_TM26_FROM_GIOVANNI                      0x298
+#define FLAG_GOT_TM26_FROM_BUGSY                         0x298
 #define FLAG_0x299                                       0x299
 #define FLAG_GOT_TM04_FROM_SABRINA                       0x29A
 #define FLAG_GOT_FAME_CHECKER                            0x29B
@@ -1246,7 +1246,7 @@
 #define FLAG_DEFEATED_KOGA            0x4B4
 #define FLAG_DEFEATED_SABRINA         0x4B5
 #define FLAG_DEFEATED_BLAINE          0x4B6
-#define FLAG_DEFEATED_LEADER_GIOVANNI 0x4B7
+#define FLAG_DEFEATED_LEADER_BUGSY    0x4B7
 #define FLAG_DEFEATED_LORELEI         0x4B8
 #define FLAG_DEFEATED_BRUNO           0x4B9
 #define FLAG_DEFEATED_AGATHA          0x4BA

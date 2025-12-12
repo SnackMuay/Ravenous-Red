@@ -1719,7 +1719,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sTogepiLevelUpLearnset,
         .teachableLearnset = sTogepiTeachableLearnset,
         .eggMoveLearnset = sTogepiEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_TOGETIC, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_TOGETIC, CONDITIONS({IF_KNOWS_MOVE, MOVE_WISH})}),
     },
 
     [SPECIES_TOGETIC] =
@@ -2403,7 +2403,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sAzurillLevelUpLearnset,
         .teachableLearnset = sAzurillTeachableLearnset,
         .eggMoveLearnset = sAzurillEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MARILL, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MARILL, CONDITIONS({IF_KNOWS_MOVE, MOVE_WATER_GUN})}),
     },
 #endif //P_GEN_3_CROSS_EVOS
 
@@ -7594,7 +7594,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_OBLIVIOUS, ABILITY_EARLY_BIRD, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Phanpy"),
         .cryId = CRY_PHANPY,
@@ -7668,7 +7668,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_STURDY, ABILITY_BATTLE_ARMOR, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Donphan"),
         .cryId = CRY_DONPHAN,
