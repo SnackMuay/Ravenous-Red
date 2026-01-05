@@ -1,0 +1,96 @@
+mapscripts Route4_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route4_OnTransition
+}
+
+script Route4_OnTransition{
+    setflag(FLAG_HIDE_MAY_ROUTE_4)
+}
+
+raw `
+Route4_EventScript_Unused::
+	end
+
+Route4_EventScript_Woman::
+	msgbox Route4_Text_TrippedOverGeodude, MSGBOX_NPC
+	end
+
+Route4_EventScript_MtMoonSign::
+	msgbox Route4_Text_MtMoonEntrance, MSGBOX_SIGN
+	end
+
+Route4_EventScript_RouteSign::
+	msgbox Route4_Text_RouteSign, MSGBOX_SIGN
+	end
+
+`
+script Route4_Trigger_May{
+    lockall
+    opendoor(12, 5)
+	waitdooranim
+    addobject(LOCALID_MAY_2)
+    clearflag(FLAG_HIDE_MAY_ROUTE_4)
+    applymovement(LOCALID_MAY_2, May_ExitPC)
+    waitmovement(0)
+    closedoor(12, 5)
+	waitdooranim
+    applymovement(LOCALID_MAY_2, May_Approach)
+    waitmovement(0)
+    call_if_eq(VAR_STARTER_MON, 2, Route4_EventScript_May_Charmander)
+    call_if_eq(VAR_STARTER_MON, 1, Route4_EventScript_May_Piplup)
+    call_if_eq(VAR_STARTER_MON, 0, Route4_EventScript_May_Chikorita)
+    releaseall    
+}
+
+script Route4_EventScript_May_Chikorita{
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    trainerbattle_single(TRAINER_ROUTE_4_MAY_CHIKORITA, May_2_Intro, May_2_Outro, May_2_Defeat)
+    releaseall
+}
+
+script Route4_EventScript_May_Piplup{
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    trainerbattle_single(TRAINER_ROUTE_4_MAY_PIPLUP, May_2_Intro, May_2_Outro, May_2_Defeat)
+    releaseall
+}
+
+script Route4_EventScript_May_Charmander{
+    textcolor(NPC_TEXT_COLOR_FEMALE)
+    trainerbattle_single(TRAINER_ROUTE_4_MAY_CHARMANDER, May_2_Intro, May_2_Outro, May_2_Defeat) 
+    releaseall
+}
+
+script May_2_Defeat{
+    lockall
+    applymovement(LOCALID_MAY_2, May_Depart)
+    waitmovement(0)
+    removeobject(LOCALID_MAY_2)
+    setvar(VAR_ROUTE_4_MAY, 1)
+    setflag(FLAG_MAY_DEFEATED_ROUTE_4)
+    setflag(FLAG_HIDE_MAY_ROUTE_4)
+    releaseall
+}
+
+text May_2_Intro{
+    format("You're here too? That's impressive for someone like you. Let's see if you've improved at all.")
+}
+
+text May_2_Outro{
+    format("Still as lucky as ever.")
+}
+
+movement May_Appear{
+    walk_down * 7
+}
+
+movement May_ExitPC{
+    walk_down
+}
+
+movement May_Approach{
+    walk_right * 6
+}
+
+movement May_Depart{
+    walk_left * 5
+    walk_down * 7
+}

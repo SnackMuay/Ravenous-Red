@@ -190,25 +190,25 @@
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
 // Unused?
-#define FLAG_SIMONE_1                0x0AF // Unlocks Pewter City
-#define FLAG_CLIFFSIDE_HARD_STONE    0x0B0
-#define FLAG_VIRIDIAN_MIRACLE_SEED   0x0B1
-#define FLAG_VIRIDIAN_SUPER_POTION   0x0B2
-#define FLAG_GRUNTS_1                0x0B3 // Unlocks Viridian Gym
-#define FLAG_0x0B4               0x0B4
-#define FLAG_0x0B5               0x0B5
-#define FLAG_0x0B6               0x0B6
-#define FLAG_0x0B7               0x0B7
-#define FLAG_0x0B8               0x0B8
-#define FLAG_0x0B9               0x0B9
-#define FLAG_0x0BA               0x0BA
-#define FLAG_0x0BB               0x0BB
-#define FLAG_0x0BC               0x0BC
-#define FLAG_0x0BD               0x0BD
-#define FLAG_0x0BE               0x0BE
-#define FLAG_0x0BF               0x0BF
-#define FLAG_0x0C0               0x0C0
-#define FLAG_0x0C1               0x0C1
+#define FLAG_SIMONE_1                                      0x0AF // Unlocks Pewter City
+#define FLAG_CLIFFSIDE_HARD_STONE                          0x0B0
+#define FLAG_VIRIDIAN_MIRACLE_SEED                         0x0B1
+#define FLAG_VIRIDIAN_SUPER_POTION                         0x0B2
+#define FLAG_GRUNTS_1                                      0x0B3 // Unlocks Viridian Gym
+#define FLAG_RIVAL_DEFEATED_CERULEAN                       0x0B4 
+#define FLAG_MAY_DEFEATED_ROUTE_4                          0x0B5
+#define FLAG_HIDE_MAY_ROUTE_4                              0x0B6
+#define FLAG_VIRIDIAN_RARE_CANDY                           0x0B7
+#define FLAG_ROUTE3_HEART_SCALE                            0x0B8
+#define FLAG_CERULEAN_RARE_CANDY                           0x0B9
+#define FLAG_PEWTER_HEART_SCALE                            0x0BA
+#define FLAG_RECEIVED_TM17                                 0x0BB // Rock Throw. Cliffside Cave
+#define FLAG_RECEIVED_LUCKY_EGG                            0x0BC
+#define FLAG_RECEIVED_MAGNET_FROM_NERD                     0x0BD
+#define FLAG_ROUTE2_GRASS_GEM                              0x0BE
+#define FLAG_ROUTE25_LEAF_STONE                            0x0BF
+#define FLAG_SPOKEN_WITH_SCIENTIST                         0x0C0
+#define FLAG_RECEIVED_HEAVY_DUTY_BOOTS                     0x0C1
 #define FLAG_0x0C2               0x0C2
 #define FLAG_0x0C3               0x0C3
 #define FLAG_0x0C4               0x0C4

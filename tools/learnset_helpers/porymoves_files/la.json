@@ -5760,7 +5760,6 @@
     "EggMoves": [],
     "TutorMoves": [
       "MOVE_CALM_MIND",
-      "MOVE_CHARGE_BEAM",
       "MOVE_DAZZLING_GLEAM",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_BEAM",
@@ -5808,7 +5807,6 @@
     "EggMoves": [],
     "TutorMoves": [
       "MOVE_CALM_MIND",
-      "MOVE_CHARGE_BEAM",
       "MOVE_DAZZLING_GLEAM",
       "MOVE_FIRE_PUNCH",
       "MOVE_ICE_BEAM",
@@ -5872,7 +5870,6 @@
     "EggMoves": [],
     "TutorMoves": [
       "MOVE_CALM_MIND",
-      "MOVE_CHARGE_BEAM",
       "MOVE_DAZZLING_GLEAM",
       "MOVE_ENERGY_BALL",
       "MOVE_FIRE_PUNCH",
@@ -11752,7 +11749,6 @@
       "MOVE_BULK_UP",
       "MOVE_BULLDOZE",
       "MOVE_CALM_MIND",
-      "MOVE_CHARGE_BEAM",
       "MOVE_DAZZLING_GLEAM",
       "MOVE_DRAIN_PUNCH",
       "MOVE_ENERGY_BALL",

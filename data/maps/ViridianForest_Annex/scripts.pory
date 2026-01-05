@@ -146,7 +146,9 @@ script Simone_1_Defeated{
 
 script ViridianForest_Annex_Eventscript_Scientist{
     lockall
+    faceplayer
     msgbox(format("Thank you for saving me! You got here just in time for me to prevent my fossils from being stolen by those goons. They said something about heading to Pewter City. I wouldn't be shocked if they intend to terrorize the scientists there too!"))
+    waitmessage
     releaseall
 }
 

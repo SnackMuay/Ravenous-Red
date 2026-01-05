@@ -137,7 +137,7 @@
       "id": "LAYOUT_CERULEAN_CITY_GYM",
       "name": "CeruleanCity_Gym_Layout",
       "width": 19,
-      "height": 26,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -904,7 +904,7 @@
     {
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
-      "width": 48,
+      "width": 52,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
@@ -916,7 +916,7 @@
     {
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
-      "width": 24,
+      "width": 42,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
@@ -964,7 +964,7 @@
     {
       "id": "LAYOUT_ROUTE10",
       "name": "Route10_Layout",
-      "width": 24,
+      "width": 42,
       "height": 80,
       "border_width": 2,
       "border_height": 2,
@@ -1133,7 +1133,7 @@
       "id": "LAYOUT_ROUTE24",
       "name": "Route24_Layout",
       "width": 24,
-      "height": 40,
+      "height": 46,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -1948,7 +1948,7 @@
     {
       "id": "LAYOUT_PEWTER_CITY_MUSEUM_2F",
       "name": "PewterCity_Museum_2F_Layout",
-      "width": 19,
+      "width": 22,
       "height": 10,
       "border_width": 2,
       "border_height": 2,
@@ -4440,6 +4440,102 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MtMoon_2F/border.bin",
       "blockdata_filepath": "data/layouts/MtMoon_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDSWEPT_CAVERN_1F",
+      "name": "SandsweptCavern_1F_Layout",
+      "width": 30,
+      "height": 42,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SandsweptCavern_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SandsweptCavern_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDSWEPT_CAVERN_WEST",
+      "name": "SandsweptCavern_West_Layout",
+      "width": 30,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SandsweptCavern_West/border.bin",
+      "blockdata_filepath": "data/layouts/SandsweptCavern_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDSWEPT_CAVERN_EAST",
+      "name": "SandsweptCavern_East_Layout",
+      "width": 32,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SandsweptCavern_East/border.bin",
+      "blockdata_filepath": "data/layouts/SandsweptCavern_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDSWEPT_CAVERN_NORTH",
+      "name": "SandsweptCavern_North_Layout",
+      "width": 50,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SandsweptCavern_North/border.bin",
+      "blockdata_filepath": "data/layouts/SandsweptCavern_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDSWEPT_CAVERN_2F",
+      "name": "SandsweptCavern_2F_Layout",
+      "width": 40,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SandsweptCavern_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SandsweptCavern_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAND_SWEPT_CAVE_2F",
+      "name": "SandSweptCave_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralAutumn",
+      "secondary_tileset": "gTileset_FuchsiaCityAutumn",
+      "border_filepath": "data/layouts/SandSweptCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SandSweptCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CLOUDED_WOOD_1",
+      "name": "CloudedWood_1_Layout",
+      "width": 66,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralAutumn",
+      "secondary_tileset": "gTileset_FuchsiaCityAutumn",
+      "border_filepath": "data/layouts/CloudedWood_1/border.bin",
+      "blockdata_filepath": "data/layouts/CloudedWood_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CLOUDED_WOOD_2",
+      "name": "CloudedWood_2_Layout",
+      "width": 36,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralAutumn",
+      "secondary_tileset": "gTileset_FuchsiaCityAutumn",
+      "border_filepath": "data/layouts/CloudedWood_2/border.bin",
+      "blockdata_filepath": "data/layouts/CloudedWood_2/map.bin"
     }
   ]
 }

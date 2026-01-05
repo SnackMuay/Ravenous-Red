@@ -1,0 +1,204 @@
+mapscripts CeruleanCity_Gym_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: CeruleanCity_Gym_OnTransition
+}
+
+script CeruleanCity_Gym_OnTransition{
+    if(flag(FLAG_BADGE02_GET)){
+        settrainerflag(TRAINER_SWIMMER_FEMALE_DIANA)
+	    settrainerflag(TRAINER_SWIMMER_MALE_LUIS)
+	    settrainerflag(TRAINER_SAILOR_GRAYSON)
+	    settrainerflag(TRAINER_SAILOR_DEEJAY)
+        settrainerflag(TRAINER_SWIMMER_FEMALE_ARIEL)
+        settrainerflag(TRAINER_SWIMMER_FEMALE_HARPER)
+        settrainerflag(TRAINER_SWIMMER_MALE_CHANCE)
+    }
+    else{
+        cleartrainerflag(TRAINER_SWIMMER_FEMALE_DIANA)
+	    cleartrainerflag(TRAINER_SWIMMER_MALE_LUIS)
+	    cleartrainerflag(TRAINER_SAILOR_GRAYSON)
+	    cleartrainerflag(TRAINER_SAILOR_DEEJAY)
+        cleartrainerflag(TRAINER_SWIMMER_FEMALE_ARIEL)
+        cleartrainerflag(TRAINER_SWIMMER_FEMALE_HARPER)
+        cleartrainerflag(TRAINER_SWIMMER_MALE_CHANCE)
+    }
+	special(HealPlayerParty)
+}
+
+raw `
+
+CeruleanCity_Gym_EventScript_Misty::
+	famechecker FAMECHECKER_MISTY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	trainerbattle_single TRAINER_LEADER_MISTY, CeruleanCity_Gym_Text_MistyIntro, CeruleanCity_Gym_Text_MistyDefeat, CeruleanCity_Gym_EventScript_MistyDefeated, NO_MUSIC
+	goto_if_unset FLAG_GOT_TM03_FROM_MISTY, CeruleanCity_Gym_EventScript_GiveTM03
+	msgbox CeruleanCity_Gym_Text_ExplainTM03
+	release
+	end
+
+CeruleanCity_Gym_EventScript_MistyDefeated::
+	famechecker FAMECHECKER_MISTY, 1
+	setflag FLAG_DEFEATED_MISTY
+	setflag FLAG_BADGE02_GET
+	setrespawn HEAL_LOCATION_CERULEAN_CITY
+	set_gym_trainers 2
+	goto CeruleanCity_Gym_EventScript_GiveTM03
+	end
+
+CeruleanCity_Gym_EventScript_GiveTM03::
+	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
+	checkitemspace ITEM_TM03
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_Gym_EventScript_NoRoomForTM03
+	giveitem_msg CeruleanCity_Gym_Text_ReceivedTM03FromMisty, ITEM_TM03
+	setflag FLAG_GOT_TM03_FROM_MISTY
+	msgbox CeruleanCity_Gym_Text_ExplainTM03
+	release
+	end
+
+CeruleanCity_Gym_EventScript_NoRoomForTM03::
+	msgbox CeruleanCity_Gym_Text_BetterMakeRoomForThis
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MISTY, CeruleanCity_Gym_EventScript_GymGuyPostVictory
+	msgbox CeruleanCity_Gym_Text_GymGuyAdvice
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymGuyPostVictory::
+	msgbox CeruleanCity_Gym_Text_WeMakePrettyGoodTeam
+	release
+	end
+
+CeruleanCity_Gym_EventScript_GymStatue::
+	lockall
+	goto_if_set FLAG_BADGE02_GET, CeruleanCity_Gym_EventScript_GymStatuePostVictory
+	msgbox CeruleanCity_Gym_Text_GymStatue
+	releaseall
+	end
+
+CeruleanCity_Gym_EventScript_GymStatuePostVictory::
+	msgbox CeruleanCity_Gym_Text_GymStatuePlayerWon
+	releaseall
+	end
+
+
+`
+
+script CeruleanCity_Gym_EventScript_Diana{
+	trainerbattle_single(TRAINER_SWIMMER_FEMALE_DIANA, CeruleanCity_Gym_Text_DianaIntro, CeruleanCity_Gym_Text_DianaDefeat)
+    special(HealPlayerParty)
+	msgbox(CeruleanCity_Gym_Text_DianaPostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+script CeruleanCity_Gym_EventScript_Luis{
+	trainerbattle_single(TRAINER_SWIMMER_MALE_LUIS, CeruleanCity_Gym_Text_LuisIntro, CeruleanCity_Gym_Text_LuisDefeat)
+	famechecker(FAMECHECKER_MISTY, 2)
+    special(HealPlayerParty)
+	msgbox(CeruleanCity_Gym_Text_LuisPostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+script CeruleanCity_Gym_EventScript_Grayson{
+	trainerbattle_single(TRAINER_SAILOR_GRAYSON, Grayson_Intro, Grayson_Outro)
+    special(HealPlayerParty)
+	msgbox(Grayson_PostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+text Grayson_Intro{
+    format("Prepare for a splash!")
+}
+
+text Grayson_Outro{
+    format("Well done.")
+}
+
+text Grayson_PostBattle{
+    format("Don't get cocky. MISTY has mastered WATER POKéMON to a greater extent than anyone in this GYM.")
+}
+
+script CeruleanCity_Gym_EventScript_Deejay{
+	trainerbattle_single(TRAINER_SAILOR_DEEJAY, Deejay_Intro, Deejay_Outro)
+    special(HealPlayerParty)
+	msgbox(Deejay_PostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+text Deejay_Intro{
+    format("We'll drag you into deep waters!")
+}
+
+text Deejay_Outro{
+    format("We've been sunk.")
+}
+
+text Deejay_PostBattle{
+    format("Choose your path wisely. Each trainer en route to MISTY presents a unique challenge.")
+}
+
+script CeruleanCity_Gym_EventScript_Ariel{
+	trainerbattle_single(TRAINER_SWIMMER_FEMALE_ARIEL, Ariel_Intro, Ariel_Outro)
+    special(HealPlayerParty)
+	msgbox(Ariel_PostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+text Ariel_Intro{
+    format("Finally! It's time to battle!")
+}
+
+text Ariel_Outro{
+    format("Even a loss provides such a rush of excitement.")
+}
+
+text Ariel_PostBattle{
+    format("Your POKéMON were splendid! I can't wait to see them battle against the team MISTY has assembled.")
+}
+
+script CeruleanCity_Gym_EventScript_Harper{
+	trainerbattle_single(TRAINER_SWIMMER_FEMALE_HARPER, Harper_Intro, Harper_Outro)
+    special(HealPlayerParty)
+	msgbox(Harper_PostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+text Harper_Intro{
+    format("You think I'll be easy to defeat, huh?")
+}
+
+text Harper_Outro{
+    format("Your assessment of me was... correct.")
+}
+
+text Harper_PostBattle{
+    format("I've let MISTY down, but she doesn't need my help anyway.")
+}
+
+script CeruleanCity_Gym_EventScript_Chance{
+	trainerbattle_single(TRAINER_SWIMMER_MALE_CHANCE, Chance_Intro, Chance_Outro)
+    special(HealPlayerParty)
+	msgbox(Chance_PostBattle, MSGBOX_AUTOCLOSE)
+	releaseall
+}
+
+text Chance_Intro{
+    format("Here goes!")
+}
+
+text Chance_Outro{
+    format("I can't be upset having lost to a TRAINER of your caliber.")
+}
+
+text Chance_PostBattle{
+    format("That was my best effort. You've proven that you're worthy to challenge this GYM's LEADER.")
+}
+
+script CeruleanCity_Gym_EventScript_BodyGuard{
+    lockall
+    faceplayer
+    msgbox(format("MISTY doesn't need our protection. She's the most formidable TRAINER I've ever met."))
+    releaseall
+}

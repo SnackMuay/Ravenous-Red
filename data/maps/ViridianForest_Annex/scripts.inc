@@ -120,51 +120,55 @@ ViridianForest_Annex_Eventscript_Scientist::
 # 148 "data/maps/ViridianForest_Annex/scripts.pory"
 	lockall
 # 149 "data/maps/ViridianForest_Annex/scripts.pory"
-	msgbox ViridianForest_Annex_Eventscript_Scientist_Text_0
+	faceplayer
 # 150 "data/maps/ViridianForest_Annex/scripts.pory"
+	msgbox ViridianForest_Annex_Eventscript_Scientist_Text_0
+# 151 "data/maps/ViridianForest_Annex/scripts.pory"
+	waitmessage
+# 152 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
 Viridian_Forest_Grunts_Trigger::
-# 154 "data/maps/ViridianForest_Annex/scripts.pory"
-	lockall
-# 155 "data/maps/ViridianForest_Annex/scripts.pory"
-	applymovement LOCALID_GRUNT_54, GruntMovement
 # 156 "data/maps/ViridianForest_Annex/scripts.pory"
-	waitmovement 0
+	lockall
 # 157 "data/maps/ViridianForest_Annex/scripts.pory"
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont
+	applymovement LOCALID_GRUNT_54, GruntMovement
 # 158 "data/maps/ViridianForest_Annex/scripts.pory"
+	waitmovement 0
+# 159 "data/maps/ViridianForest_Annex/scripts.pory"
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont
+# 160 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
 Viridian_Forest_Grunts_Trigger_cont::
-# 162 "data/maps/ViridianForest_Annex/scripts.pory"
-	applymovement LOCALID_GRUNT_55, GruntMovement
-# 163 "data/maps/ViridianForest_Annex/scripts.pory"
-	waitmovement 0
 # 164 "data/maps/ViridianForest_Annex/scripts.pory"
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated
+	applymovement LOCALID_GRUNT_55, GruntMovement
 # 165 "data/maps/ViridianForest_Annex/scripts.pory"
+	waitmovement 0
+# 166 "data/maps/ViridianForest_Annex/scripts.pory"
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated
+# 167 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
 Viridian_Forest_Grunts_Defeated::
-# 169 "data/maps/ViridianForest_Annex/scripts.pory"
+# 171 "data/maps/ViridianForest_Annex/scripts.pory"
 	setvar VAR_SIMONE_1_ANNEX, 1
-# 170 "data/maps/ViridianForest_Annex/scripts.pory"
+# 172 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
-# 173 "data/maps/ViridianForest_Annex/scripts.pory"
-GruntMovement:
-# 174 "data/maps/ViridianForest_Annex/scripts.pory"
-	walk_left
 # 175 "data/maps/ViridianForest_Annex/scripts.pory"
+GruntMovement:
+# 176 "data/maps/ViridianForest_Annex/scripts.pory"
+	walk_left
+# 177 "data/maps/ViridianForest_Annex/scripts.pory"
 	faceplayer
 	step_end
 
@@ -173,7 +177,7 @@ Simone_1_Defeated_Text_0:
 	.string "...$"
 
 ViridianForest_Annex_Eventscript_Scientist_Text_0:
-# 149 "data/maps/ViridianForest_Annex/scripts.pory"
+# 150 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Thank you for saving me! You got here\n"
 	.string "just in time for me to prevent my\l"
 	.string "fossils from being stolen by those\l"
@@ -267,28 +271,28 @@ Simone_1_Postbattle::
 	.string "...$"
 
 Grunt_54_Intro::
-# 178 "data/maps/ViridianForest_Annex/scripts.pory"
+# 180 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "That's it. Your fun little adventure\n"
 	.string "ends here.$"
 
 Grunt_54_Outro::
-# 182 "data/maps/ViridianForest_Annex/scripts.pory"
+# 184 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Must be your lucky day.$"
 
 Grunt_54_Postbattle::
-# 186 "data/maps/ViridianForest_Annex/scripts.pory"
+# 188 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Don't be stupid. You're no match for\n"
 	.string "SIMONE.$"
 
 Grunt_55_Intro::
-# 190 "data/maps/ViridianForest_Annex/scripts.pory"
+# 192 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "I'll handle this.$"
 
 Grunt_55_Outro::
-# 194 "data/maps/ViridianForest_Annex/scripts.pory"
+# 196 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Fine. SIMONE will straighten you out.$"
 
 Grunt_55_Postbattle::
-# 198 "data/maps/ViridianForest_Annex/scripts.pory"
+# 200 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "I dare you to continue this meddling.\n"
 	.string "Our boss won't be so patient with you.$"

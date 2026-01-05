@@ -1,0 +1,57 @@
+mapscripts PewterCity_Museum_2F_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: PewterCity_Museum_2F_OnTransition
+}
+
+script PewterCity_Museum_2F_OnTransition{
+    call_if_unset(FLAG_SPOKEN_WITH_SCIENTIST, PewterCity_Museum_HideScientist)
+    end
+}
+
+script PewterCity_Museum_HideScientist{
+    removeobject(LOCALID_MUSEUM_SCIENTIST_2F)
+}
+
+raw `
+
+PewterCity_Museum_2F_EventScript_Man::
+	msgbox PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone, MSGBOX_NPC
+	end
+
+PewterCity_Museum_2F_EventScript_OldMan::
+	msgbox PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding, MSGBOX_NPC
+	end
+
+PewterCity_Museum_2F_EventScript_LittleGirl::
+	msgbox PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu, MSGBOX_NPC
+	end
+
+PewterCity_Museum_2F_EventScript_BaldingMan::
+	msgbox PewterCity_Museum_1F_Text_PikachuSoonIPromise, MSGBOX_NPC
+	end
+
+PewterCity_Museum_2F_EventScript_SpaceShuttle::
+	msgbox PewterCity_Museum_1F_Text_SpaceShuttle, MSGBOX_SIGN
+	end
+
+PewterCity_Museum_2F_EventScript_MoonStone::
+	msgbox PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon, MSGBOX_SIGN
+	end
+
+`
+
+script PewterCity_Museum_2F_EventScript_Scientist{
+    lockall
+    faceplayer
+    goto_if_unset(FLAG_RECEIVED_HEAVY_DUTY_BOOTS, PewterMuseum_GiveBoots)
+    msgbox(format("Those boots protect a POKéMON from hazards on the field when the holder enters a battle."))
+    releaseall
+}
+
+script PewterMuseum_GiveBoots{
+    msgbox(format("Here's something I've been developing for a POKéMON to hold during battle. 
+        A skilled TRAINER like yourself can surely make better use of it than I could."))
+    giveitem(ITEM_HEAVY_DUTY_BOOTS, amount=1)
+    setflag(FLAG_RECEIVED_HEAVY_DUTY_BOOTS)
+    msgbox(format("Those boots protect a POKéMON from hazards on the field when the holder enters a battle."))
+    releaseall
+}

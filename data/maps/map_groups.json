@@ -240,7 +240,15 @@
     "BirthIsland_Exterior",
     "OneIsland_KindleRoad_EmberSpa",
     "BirthIsland_Harbor",
-    "NavelRock_Harbor"
+    "NavelRock_Harbor",
+    "SandsweptCavern_1F",
+    "SandsweptCavern_West",
+    "SandsweptCavern_East",
+    "SandsweptCavern_North",
+    "SandsweptCavern_2F",
+    "SandSweptCave_2F",
+    "CloudedWood_1",
+    "CloudedWood_2"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

@@ -34,9 +34,9 @@
 #define TRAINER_LEADER_ROXANNE                    27
 #define TRAINER_LEADER_BRAWLY                     28
 #define TRAINER_LEADER_TATE_LIZA                  29
-#define TRAINER_SCHOOL_KID_M                      30
-#define TRAINER_SCHOOL_KID_F                      31
-#define TRAINER_SR_AND_JR                         32
+#define TRAINER_ROUTE_4_MAY_CHIKORITA             30 // Route 4 May Rival (May has Piplup)
+#define TRAINER_ROUTE_4_MAY_PIPLUP                31 // Route 4 May Rival (May has Charmander)
+#define TRAINER_ROUTE_4_MAY_CHARMANDER            32 // Route 4 May Rival (May has Chikorita)
 #define TRAINER_POKEFAN_M                         33
 #define TRAINER_POKEFAN_F                         34
 #define TRAINER_EXPERT_M                          35
@@ -97,7 +97,7 @@
 #define TRAINER_YOUNGSTER_BEN                     89
 #define TRAINER_YOUNGSTER_CALVIN                  90
 #define TRAINER_YOUNGSTER_JOSH                    91
-#define TRAINER_YOUNGSTER_TIMMY                   92
+#define TRAINER_PSYCHIC_LEXI                      92 // Nugget Bridge
 #define TRAINER_YOUNGSTER_JOEY                    93
 #define TRAINER_YOUNGSTER_DAN                     94
 #define TRAINER_YOUNGSTER_CHAD                    95
@@ -111,11 +111,11 @@
 #define TRAINER_BUG_CATCHER_DOUG                 103
 #define TRAINER_BUG_CATCHER_SAMMY                104
 #define TRAINER_BUG_CATCHER_COLTON               105
-#define TRAINER_BUG_CATCHER_GREG                 106
+#define TRAINER_CRUSH_GIRL_ISOLDE                106 // Route 3
 #define TRAINER_BUG_CATCHER_JAMES                107
 #define TRAINER_BUG_CATCHER_KENT                 108
-#define TRAINER_BUG_CATCHER_ROBBY                109
-#define TRAINER_BUG_CATCHER_CALE                 110
+#define TRAINER_HIKER_ROBBY                      109 // Mt. Moon
+#define TRAINER_PKMN_RANGER_CALE                 110 // Nugget Bridge
 #define TRAINER_BUG_CATCHER_KEIGO                111
 #define TRAINER_BUG_CATCHER_ELIJAH               112
 #define TRAINER_BUG_CATCHER_2                    113
@@ -127,8 +127,8 @@
 #define TRAINER_LASS_CRISSY                      119
 #define TRAINER_LASS_MIRIAM                      120
 #define TRAINER_LASS_IRIS                        121
-#define TRAINER_LASS_RELI                        122
-#define TRAINER_LASS_ALI                         123
+#define TRAINER_COOLTRAINER_RELI                 122 // Nugget Bridge
+#define TRAINER_PKMN_RANGER_ALI                  123 // Nugget Bridge
 #define TRAINER_LASS_2                           124
 #define TRAINER_LASS_HALEY                       125
 #define TRAINER_LASS_ANN                         126
@@ -148,14 +148,14 @@
 #define TRAINER_SAILOR_PHILLIP                   140
 #define TRAINER_SAILOR_DWAYNE                    141
 #define TRAINER_CAMPER_LIAM                      142
-#define TRAINER_CAMPER_SHANE                     143
-#define TRAINER_CAMPER_ETHAN                     144
+#define TRAINER_PSYCHIC_SHANE                    143 // Nugget Bridge
+#define TRAINER_COOLTRAINER_ETHAN                144 // Nugget Bridge
 #define TRAINER_CAMPER_RICKY                     145
 #define TRAINER_CAMPER_JEFF                      146
 #define TRAINER_CAMPER_2                         147
 #define TRAINER_CAMPER_CHRIS                     148
 #define TRAINER_CAMPER_DREW                      149
-#define TRAINER_PICNICKER_DIANA                  150
+#define TRAINER_SWIMMER_FEMALE_DIANA             150 // Cerulean Gym
 #define TRAINER_PICNICKER_NANCY                  151
 #define TRAINER_PICNICKER_ISABELLE               152
 #define TRAINER_PICNICKER_KELSEY                 153
@@ -174,7 +174,7 @@
 #define TRAINER_POKEMANIAC_WINSTON               166
 #define TRAINER_POKEMANIAC_DAWSON                167
 #define TRAINER_POKEMANIAC_ASHTON                168
-#define TRAINER_SUPER_NERD_JOVAN                 169
+#define TRAINER_SUPER_NERD_JOVAN                 169 // Replace?
 #define TRAINER_SUPER_NERD_MIGUEL                170
 #define TRAINER_SUPER_NERD_AIDAN                 171
 #define TRAINER_SUPER_NERD_GLENN                 172
@@ -215,7 +215,7 @@
 #define TRAINER_BIKER_LUKAS                      207
 #define TRAINER_BIKER_ISAAC                      208
 #define TRAINER_BIKER_GERALD                     209
-#define TRAINER_BURGLAR_1                        210
+#define TRAINER_SUPER_NERD_JOSEPH                210 // Replaces Jovan Mt. Moon
 #define TRAINER_BURGLAR_2                        211
 #define TRAINER_BURGLAR_3                        212
 #define TRAINER_BURGLAR_QUINN                    213
@@ -224,7 +224,7 @@
 #define TRAINER_BURGLAR_ARNIE                    216
 #define TRAINER_BURGLAR_4                        217
 #define TRAINER_BURGLAR_SIMON                    218
-#define TRAINER_BURGLAR_LEWIS                    219
+#define TRAINER_BURGLAR_LEWIS                    219 //
 #define TRAINER_ENGINEER_BAILY                   220
 #define TRAINER_ENGINEER_BRAXTON                 221
 #define TRAINER_ENGINEER_BERNIE                  222
@@ -239,7 +239,7 @@
 #define TRAINER_FISHERMAN_WADE                   231
 #define TRAINER_FISHERMAN_NOLAN                  232
 #define TRAINER_FISHERMAN_ANDREW                 233
-#define TRAINER_SWIMMER_MALE_LUIS                234
+#define TRAINER_SWIMMER_MALE_LUIS                234 // Cerulean Gym
 #define TRAINER_SWIMMER_MALE_RICHARD             235
 #define TRAINER_SWIMMER_MALE_REECE               236
 #define TRAINER_SWIMMER_MALE_MATTHEW             237
@@ -356,7 +356,7 @@
 #define TRAINER_BOSS_GIOVANNI                    348
 #define TRAINER_BOSS_GIOVANNI_2                  349
 #define TRAINER_LEADER_GIOVANNI                  350
-#define TRAINER_TEAM_ROCKET_GRUNT                351
+#define TRAINER_TEAM_ROCKET_GRUNT_1              351
 #define TRAINER_TEAM_ROCKET_GRUNT_2              352
 #define TRAINER_TEAM_ROCKET_GRUNT_3              353
 #define TRAINER_TEAM_ROCKET_GRUNT_4              354
@@ -512,8 +512,8 @@
 #define TRAINER_YOUNGSTER_TIMMY_3                504
 #define TRAINER_YOUNGSTER_TIMMY_4                505
 #define TRAINER_YOUNGSTER_CHAD_3                 506
-#define TRAINER_LASS_JANICE_2                    507
-#define TRAINER_LASS_JANICE_3                    508
+#define TRAINER_PICNICKER_XIOMARA                507 // Route 2 Optional
+#define TRAINER_YOUNGSTER_HUDSON                 508 // Blocks Pewter Gym
 #define TRAINER_YOUNGSTER_CHAD_4                 509
 #define TRAINER_HIKER_FRANKLIN_2                 510
 #define TRAINER_PKMN_PROF_PROF_OAK               511
@@ -735,11 +735,11 @@
 #define TRAINER_COOLTRAINER_MICHELLE_2           727
 #define TRAINER_COOL_COUPLE_LEX_NYA_2            728
 #define TRAINER_BUG_CATCHER_COLTON_2             729
-#define TRAINER_BUG_CATCHER_COLTON_3             730
-#define TRAINER_BUG_CATCHER_COLTON_4             731
-#define TRAINER_SWIMMER_MALE_MATTHEW_2           732
-#define TRAINER_SWIMMER_MALE_TONY_2              733
-#define TRAINER_SWIMMER_FEMALE_MELISSA_2         734
+#define TRAINER_SWIMMER_FEMALE_ARIEL             730 // Cerulean Gym
+#define TRAINER_SWIMMER_FEMALE_HARPER            731 // Cerulean Gym
+#define TRAINER_SWIMMER_MALE_CHANCE              732 // Cerulean Gym
+#define TRAINER_SAILOR_GRAYSON                   733 // Cerulean Gym Double
+#define TRAINER_SAILOR_DEEJAY                    734 // Cerulean Gym Double
 #define TRAINER_ELITE_FOUR_LORELEI_2             735
 #define TRAINER_ELITE_FOUR_BRUNO_2               736
 #define TRAINER_ELITE_FOUR_AGATHA_2              737

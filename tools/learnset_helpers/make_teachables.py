@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 
 
 """
 Usage: python3 make_teachable.py SOURCE_LEARNSETS_JSON

@@ -1,0 +1,11 @@
+raw ` 
+MtMoon_2F_MapScripts::
+	.byte 0
+`
+script MtMoon_2F_EventScript_Hiker{
+    lockall
+    msgbox(format("This part of MT. MOON is the best place to search for ancient POKéMON."))
+    waitmessage
+    closemessage
+    releaseall
+}

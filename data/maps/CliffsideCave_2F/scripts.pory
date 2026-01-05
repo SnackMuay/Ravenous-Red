@@ -97,3 +97,18 @@ text Mario_Outro{
 text Mario_Postbattle{
     format("Exotic POKéMON have become far more abundant across Kanto lately. I'm making a point to collect the most powerful species.")
 }
+
+script CliffsideCave_EventScript_BlackBelt{
+    lockall
+    faceplayer
+    goto_if_unset(FLAG_RECEIVED_TM17, CliffsideCave_GiveTM17)
+    msgbox(format("I've been nursing a shoulder injury, so I won't be able to use this. You can have it."))
+    releaseall
+}
+
+script CliffsideCave_GiveTM17{
+    msgbox(format("I've been nursing a shoulder injury, so I won't be able to use this. You can have it."))
+    giveitem(ITEM_TM17, amount=1)
+    setflag(FLAG_RECEIVED_TM17)
+    releaseall
+}

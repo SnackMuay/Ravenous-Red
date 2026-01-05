@@ -1,0 +1,15 @@
+raw `
+Route21_North_MapScripts::
+	.byte 0
+
+`
+
+script Route21_EventScript_Fisherman{
+    lockall
+    faceplayer
+    msgbox(format("Shhh! you'll scare away the POKéMON."))
+    closemessage
+    delay(10)
+    face_left
+    releaseall
+}

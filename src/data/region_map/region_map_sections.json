@@ -197,7 +197,8 @@
       "id": "MAPSEC_METEOR_FALLS2"
     },
     {
-      "id": "MAPSEC_MT_PYRE"
+      "id": "MAPSEC_MT_PYRE",
+      "name": "CLOUDED WOOD"
     },
     {
       "id": "MAPSEC_AQUA_HIDEOUT_OLD"
@@ -248,7 +249,8 @@
       "id": "MAPSEC_ISLAND_CAVE"
     },
     {
-      "id": "MAPSEC_DESERT_RUINS"
+      "id": "MAPSEC_DESERT_RUINS",
+      "name": "SANDSWEPT CAVERN"
     },
     {
       "id": "MAPSEC_ANCIENT_TOMB"
@@ -1136,6 +1138,22 @@
       "y": 0,
       "width": 0,
       "height": 0
+    },
+    {
+      "id": "MAPSEC_CLIFFSIDE_CAVE",
+      "name": "CLIFFSIDE CAVE",
+      "x": 18,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SANDSWEPT_CAVERN",
+      "name": "SANDSWEPT CAVERN",
+      "x": 18,
+      "y": 5,
+      "width": 1,
+      "height": 1
     }
   ]
 }

@@ -1384,3 +1384,27 @@ Text_TestMsg::
 
 	.include "data/maps/MtMoon_2F/scripts.inc"
 	.include "data/maps/MtMoon_2F/text.inc"
+
+	.include "data/maps/SandsweptCavern_1F/scripts.inc"
+	.include "data/maps/SandsweptCavern_1F/text.inc"
+
+	.include "data/maps/SandsweptCavern_West/scripts.inc"
+	.include "data/maps/SandsweptCavern_West/text.inc"
+
+	.include "data/maps/SandsweptCavern_East/scripts.inc"
+	.include "data/maps/SandsweptCavern_East/text.inc"
+
+	.include "data/maps/SandsweptCavern_2F/scripts.inc"
+	.include "data/maps/SandsweptCavern_2F/text.inc"
+
+	.include "data/maps/SandsweptCavern_North/scripts.inc"
+	.include "data/maps/SandsweptCavern_North/text.inc"
+
+	.include "data/maps/SandSweptCave_2F/scripts.inc"
+	.include "data/maps/SandSweptCave_2F/text.inc"
+
+	.include "data/maps/CloudedWood_1/scripts.inc"
+	.include "data/maps/CloudedWood_1/text.inc"
+
+	.include "data/maps/CloudedWood_2/scripts.inc"
+	.include "data/maps/CloudedWood_2/text.inc"

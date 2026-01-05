@@ -35,14 +35,14 @@ Route3_EventScript_ColtonRematch::
 	end
 
 Route3_EventScript_Greg::
-	trainerbattle_single TRAINER_BUG_CATCHER_GREG, Route3_Text_GregIntro, Route3_Text_GregDefeat
+	trainerbattle_single TRAINER_CRUSH_GIRL_ISOLDE, Route3_Text_GregIntro, Route3_Text_GregDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_GregRematch
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route3_EventScript_GregRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_GREG, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
+	trainerbattle_rematch TRAINER_CRUSH_GIRL_ISOLDE, Route3_Text_GregRematchIntro, Route3_Text_GregDefeat
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -107,74 +107,74 @@ Route4_EventScript_CrissyRematch::
 	end
 
 Route24_EventScript_Timmy::
-	trainerbattle_single TRAINER_YOUNGSTER_TIMMY, Route24_Text_TimmyIntro, Route24_Text_TimmyDefeat
+	trainerbattle_single TRAINER_PSYCHIC_LEXI, Route24_Text_TimmyIntro, Route24_Text_TimmyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_TimmyRematch
 	msgbox Route24_Text_TimmyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_TimmyRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_TIMMY, Route24_Text_TimmyRematchIntro, Route24_Text_TimmyDefeat
+	trainerbattle_rematch TRAINER_PSYCHIC_LEXI, Route24_Text_TimmyRematchIntro, Route24_Text_TimmyDefeat
 	msgbox Route24_Text_TimmyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_Cale::
-	trainerbattle_single TRAINER_BUG_CATCHER_CALE, Route24_Text_CaleIntro, Route24_Text_CaleDefeat
+	trainerbattle_single TRAINER_PKMN_RANGER_CALE, Route24_Text_CaleIntro, Route24_Text_CaleDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_CaleRematch
 	msgbox Route24_Text_CalePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_CaleRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_CALE, Route24_Text_CaleRematchIntro, Route24_Text_CaleDefeat
+	trainerbattle_rematch TRAINER_PKMN_RANGER_CALE, Route24_Text_CaleRematchIntro, Route24_Text_CaleDefeat
 	msgbox Route24_Text_CalePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_Reli::
-	trainerbattle_single TRAINER_LASS_RELI, Route24_Text_ReliIntro, Route24_Text_ReliDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_RELI, Route24_Text_ReliIntro, Route24_Text_ReliDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_ReliRematch
 	msgbox Route24_Text_ReliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_ReliRematch::
-	trainerbattle_rematch TRAINER_LASS_RELI, Route24_Text_ReliRematchIntro, Route24_Text_ReliDefeat
+	trainerbattle_rematch TRAINER_COOLTRAINER_RELI, Route24_Text_ReliRematchIntro, Route24_Text_ReliDefeat
 	msgbox Route24_Text_ReliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_Ali::
-	trainerbattle_single TRAINER_LASS_ALI, Route24_Text_AliIntro, Route24_Text_AliDefeat
+	trainerbattle_single TRAINER_PKMN_RANGER_ALI, Route24_Text_AliIntro, Route24_Text_AliDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_AliRematch
 	msgbox Route24_Text_AliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_AliRematch::
-	trainerbattle_rematch TRAINER_LASS_ALI, Route24_Text_AliRematchIntro, Route24_Text_AliDefeat
+	trainerbattle_rematch TRAINER_PKMN_RANGER_ALI, Route24_Text_AliRematchIntro, Route24_Text_AliDefeat
 	msgbox Route24_Text_AliPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_Shane::
-	trainerbattle_single TRAINER_CAMPER_SHANE, Route24_Text_ShaneIntro, Route24_Text_ShaneDefeat
+	trainerbattle_single TRAINER_PSYCHIC_SHANE, Route24_Text_ShaneIntro, Route24_Text_ShaneDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_ShaneRematch
 	msgbox Route24_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_ShaneRematch::
-	trainerbattle_rematch TRAINER_CAMPER_SHANE, Route24_Text_ShaneRematchIntro, Route24_Text_ShaneDefeat
+	trainerbattle_rematch TRAINER_PSYCHIC_SHANE, Route24_Text_ShaneRematchIntro, Route24_Text_ShaneDefeat
 	msgbox Route24_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_Ethan::
-	trainerbattle_single TRAINER_CAMPER_ETHAN, Route24_Text_EthanIntro, Route24_Text_EthanDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_ETHAN, Route24_Text_EthanIntro, Route24_Text_EthanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route24_EventScript_EthanRematch
 	msgbox Route24_Text_EthanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route24_EventScript_EthanRematch::
-	trainerbattle_rematch TRAINER_CAMPER_ETHAN, Route24_Text_EthanRematchIntro, Route24_Text_EthanDefeat
+	trainerbattle_rematch TRAINER_COOLTRAINER_ETHAN, Route24_Text_EthanRematchIntro, Route24_Text_EthanDefeat
 	msgbox Route24_Text_EthanPostBattle, MSGBOX_AUTOCLOSE
 	end
 

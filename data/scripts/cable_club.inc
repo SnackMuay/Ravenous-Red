@@ -68,17 +68,6 @@ EventScript_OnLoadFromGameCorner::
 	call CableClub_EventScript_OpenGameCornerBarrier
 	end
 
-CableClub_OnFrame::
-	map_script_2 VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1, CableClub_EventScript_Tutorial
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, CableClub_EventScript_ExitLinkRoom
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, CableClub_EventScript_ExitLinkRoom
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, CableClub_EventScript_ExitLinkRoom
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, CableClub_EventScript_ExitTradeCenter
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, CableClub_EventScript_ExitUnionRoom
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, CableClub_EventScript_ExitLinkRoom
-	map_script_2 VAR_CABLE_CLUB_STATE, USING_MINIGAME, CableClub_EventScript_ExitMinigameRoom
-	.2byte 0
-
 CableClub_EventScript_ExitLinkRoom::
 	lockall
 	call CableClub_EventScript_CloseLinkAndExitLinkRoom
@@ -180,16 +169,9 @@ CableClub_EventScript_PlayerExitLinkRoom::
 
 CableClub_EventScript_Tutorial::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
+	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox CableClub_Text_FirstTimeRightThisWay
 	closemessage
-	applymovement LOCALID_PLAYER, Movement_PlayerApproachCounter
-	waitmovement 0
-	delay 30
-	msgbox CableClub_Text_ExplainWirelessClubFirstTime
-	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 2
 	releaseall
 	end
 
@@ -1681,15 +1663,14 @@ CableClub_Text_EnjoyUnionRoom::
 	.string "the UNION ROOM.$"
 
 CableClub_Text_FirstTimeRightThisWay::
-	.string "Hello!\n"
-	.string "My name is TEALA.\p"
+	.string "Hello!\p"
 	.string "This must be your first time\n"
 	.string "up here.\p"
-	.string "I'll show you how the Wireless\n"
-	.string "Communication System works.\p"
-	.string "First, I need to show you this\n"
-	.string "floor of our POKéMON CENTER.\p"
-	.string "Right this way, please.$"
+	.string "You can change the nickname\n"
+	.string "of your POKéMON by talking.\p"
+	.string "to the man on the left.\p"
+	.string "The woman behind the counter.\n"
+	.string "sells useful services.$"
 
 CableClub_Text_ExplainWirelessClubFirstTime::
 	.string "On the top floor, there are two\n"

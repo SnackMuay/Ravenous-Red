@@ -820,14 +820,53 @@ text PewterCity_Text_GoTakeOnBrock{
 script PewterCity_EventScript_Youngster{
     lock
 	faceplayer
+	textcolor(NPC_TEXT_COLOR_MALE)
     msgbox(format("I'm waiting for BROCK to return so that I can challenge the GYM. One of the early GYM TRAINERS defeated me on my last attempt, so I've added a WATER type to my team."))
-    releaseall
+    waitmessage
+	msgbox(format("Wanna battle me while we wait for BROCK to return?"), MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PewterCity_EventScript_Hudson)
+	goto_if_eq(VAR_RESULT, NO, PewterCity_EventScript_DeclineToBattle)
+	closemessage
+	face_up
+	releaseall
+}
+
+script PewterCity_EventScript_Hudson{
+	cleartrainerflag(TRAINER_YOUNGSTER_HUDSON)
+	trainerbattle_single(TRAINER_YOUNGSTER_HUDSON, Hudson_Intro, Hudson_Outro)
+	msgbox(Hudson_Postbattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+script PewterCity_EventScript_DeclineToBattle{
+	lockall
+	msgbox(format("Fine then. You're probably not even good practice."))
+	waitmessage
+	closemessage
+	face_up
+	releaseall
+}
+
+text Hudson_Intro{
+	format("Let's go! My new team composition is sure to win!")
+}
+
+text Hudson_Outro{
+	format("How could I lose?")
+}
+
+text Hudson_Postbattle{
+	format("You might be even stronger than BROCK. There's no way that my POKéMON are still too weak to defeat a GYM.")
 }
 
 script PewterCity_EventScript_Museum_Grunt{
     lock
 	faceplayer
     msgbox(format("No one's allowed in here. Boss's orders."))
+	waitmessage
+	closemessage
+	face_down
     releaseall
 }
 
@@ -889,7 +928,7 @@ text Grunt_58_Postbattle{
 }
 
 script PewterCity_EventScript_Grunts_1{
-	trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle)
+	trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated)
     lockall
     msgbox(Grunts_1_Postbattle)
     waitmessage
@@ -897,6 +936,25 @@ script PewterCity_EventScript_Grunts_1{
     setvar(VAR_PEWTER_GRUNTS, 1)
     setflag(FLAG_GRUNTS_1)
     setflag(FLAG_HIDE_PEWTER_CITY_GYM_GUIDE)
+    releaseall
+}
+
+script Grunts_1_Defeated{
+	lockall
+    msgbox(Grunts_1_Postbattle)
+    waitmessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    removeobject(LOCALID_GRUNT_F)
+    removeobject(LOCALID_GRUNT_M)
+    removeobject(LOCALID_GRUNT_58)
+    removeobject(LOCALID_GRUNT_57)
+    removeobject(LOCALID_GRUNT_56)
+    setvar(VAR_MAP_SCENE_PEWTER_CITY, 1)
+    setvar(VAR_PEWTER_GRUNTS, 1)
+    setflag(FLAG_GRUNTS_1)
+    setflag(FLAG_HIDE_PEWTER_CITY_GYM_GUIDE)
+	callnative(UpdateFollowingPokemon)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
     releaseall
 }
 
@@ -930,30 +988,20 @@ movement StopPlayer{
 
 script PewterCity_Trigger_Grunts_West{
     lockall
-    applymovement(LOCALID_GRUNT_F, FaceThePlayer)
+    applymovement(LOCALID_GRUNT_F, FaceLeft)
     waitmovement(0)
     applymovement(LOCALID_GRUNT_M, WestTrigger)
     waitmovement(4)
-    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle)
-    lockall
-    msgbox(Grunts_1_Postbattle)
-    waitmessage
-    fadescreen(FADE_TO_BLACK)
-    removeobject(LOCALID_GRUNT_F)
-    removeobject(LOCALID_GRUNT_M)
-    removeobject(LOCALID_GRUNT_58)
-    removeobject(LOCALID_GRUNT_57)
-    removeobject(LOCALID_GRUNT_56)
-    setvar(VAR_MAP_SCENE_PEWTER_CITY, 1)
-    setvar(VAR_PEWTER_GRUNTS, 1)
-    setflag(FLAG_GRUNTS_1)
-    setflag(FLAG_HIDE_PEWTER_CITY_GYM_GUIDE)
-    fadescreen(FADE_FROM_BLACK)
+    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated)
     releaseall
 }
 
-movement FaceThePlayer{
-    faceplayer
+movement FaceLeft{
+    face_left
+}
+
+movement FaceDown{
+    face_down
 }
 
 movement WestTrigger{
@@ -965,23 +1013,9 @@ script PewterCity_Trigger_Grunts_East{
     lockall
     applymovement(LOCALID_GRUNT_F, EastTrigger)
     waitmovement(4)
-    applymovement(LOCALID_GRUNT_M, FaceThePlayer)
+    applymovement(LOCALID_GRUNT_M, FaceDown)
     waitmovement(0)
-    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle)
-    lockall
-    msgbox(Grunts_1_Postbattle)
-    waitmessage
-    fadescreen(FADE_TO_BLACK)
-    removeobject(LOCALID_GRUNT_F)
-    removeobject(LOCALID_GRUNT_M)
-    removeobject(LOCALID_GRUNT_58)
-    removeobject(LOCALID_GRUNT_57)
-    removeobject(LOCALID_GRUNT_56)
-    setvar(VAR_MAP_SCENE_PEWTER_CITY, 1)
-    setvar(VAR_PEWTER_GRUNTS, 1)
-    setflag(FLAG_GRUNTS_1)
-    setflag(FLAG_HIDE_PEWTER_CITY_GYM_GUIDE)
-    fadescreen(FADE_FROM_BLACK)
+    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated)
     releaseall
 }
 
@@ -992,24 +1026,24 @@ movement EastTrigger{
 
 script PewterCity_Trigger_Grunts_Middle{
     lockall
-    applymovement(LOCALID_GRUNT_F, FaceThePlayer)
+    applymovement(LOCALID_GRUNT_F, FaceDown)
     waitmovement(0)
-    applymovement(LOCALID_GRUNT_M, FaceThePlayer)
+    applymovement(LOCALID_GRUNT_M, FaceLeft)
     waitmovement(0)
-    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle)
-    lockall
-    msgbox(Grunts_1_Postbattle)
-    waitmessage
-    fadescreen(FADE_TO_BLACK)
-    removeobject(LOCALID_GRUNT_F)
-    removeobject(LOCALID_GRUNT_M)
-    removeobject(LOCALID_GRUNT_58)
-    removeobject(LOCALID_GRUNT_57)
-    removeobject(LOCALID_GRUNT_56)
-    setvar(VAR_MAP_SCENE_PEWTER_CITY, 1)
-    setvar(VAR_PEWTER_GRUNTS, 1)
-    setflag(FLAG_GRUNTS_1)
-    setflag(FLAG_HIDE_PEWTER_CITY_GYM_GUIDE)
-    fadescreen(FADE_FROM_BLACK)
+    trainerbattle_double(TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated)
     releaseall
 }
+
+script PewterCity_EventScript_Scientist{
+	lockall
+	faceplayer
+	msgbox(format("Thank you so much! I was just seconds away from being overwhelmed. It hurts to imagine people out there using their POKéMON to harm others. 
+		Come visit me on the second floor of PEWTER MUSEUM. I'd like to give you a token of my gratitude."))
+	fadescreenswapbuffers(FADE_TO_BLACK)
+	removeobject(LOCALID_PEWTER_SCIENTIST)
+	setflag(FLAG_SPOKEN_WITH_SCIENTIST)
+	callnative(UpdateFollowingPokemon)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	releaseall
+}
+

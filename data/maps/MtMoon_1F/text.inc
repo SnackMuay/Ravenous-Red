@@ -35,17 +35,6 @@ MtMoon_1F_Text_MiriamPostBattle::
     .string "How do you get out of here?\n"
     .string "It's so big, I may get lost.$"
 
-MtMoon_1F_Text_JovanIntro::
-    .string "What!\n"
-    .string "Don't sneak up on me!$"
-
-MtMoon_1F_Text_JovanDefeat::
-    .string "My POKéMON won't do!$"
-
-MtMoon_1F_Text_JovanPostBattle::
-    .string "I have to find stronger POKéMON.\n"
-    .string "Where might they be?$"
-
 MtMoon_1F_Text_IrisIntro::
     .string "What?\n"
     .string "I'm waiting for my friends to find\l"

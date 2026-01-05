@@ -15,8 +15,13 @@ EventScript_SetPewterGymTrainers::
 	return
 
 EventScript_SetCeruleanGymTrainers::
-	settrainerflag TRAINER_PICNICKER_DIANA
+	settrainerflag TRAINER_SWIMMER_FEMALE_DIANA
 	settrainerflag TRAINER_SWIMMER_MALE_LUIS
+	settrainerflag TRAINER_SAILOR_DEEJAY
+	settrainerflag TRAINER_SAILOR_GRAYSON
+	settrainerflag TRAINER_SWIMMER_FEMALE_ARIEL
+	settrainerflag TRAINER_SWIMMER_FEMALE_HARPER
+	settrainerflag TRAINER_SWIMMER_MALE_CHANCE
 	return
 
 EventScript_SetVermilionGymTrainers::

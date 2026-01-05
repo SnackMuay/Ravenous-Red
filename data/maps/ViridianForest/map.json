@@ -318,17 +318,17 @@
       "x": 3,
       "y": 49,
       "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
+      "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION",
       "quantity": 1,
       "underfoot": false
     },
     {
       "type": "hidden_item",
-      "x": 28,
-      "y": 63,
+      "x": 49,
+      "y": 49,
       "elevation": 0,
-      "item": "ITEM_HEART_SCALE",
+      "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE",
       "quantity": 1,
       "underfoot": false

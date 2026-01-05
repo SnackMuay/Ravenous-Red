@@ -1,0 +1,107 @@
+{
+  "id": "MAP_SANDSWEPT_CAVERN_2F",
+  "name": "SandsweptCavern_2F",
+  "layout": "LAYOUT_SANDSWEPT_CAVERN_2F",
+  "music": "MUS_SEVII_CAVE",
+  "region_map_section": "MAPSEC_SANDSWEPT_CAVERN",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 9,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 34,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 27,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_1F",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 5,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_WEST",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 30,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_EAST",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_SANDSWEPT_CAVERN_NORTH",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

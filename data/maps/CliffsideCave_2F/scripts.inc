@@ -52,14 +52,47 @@ CliffsideCave_EventScript_Mario::
 	end
 
 
+CliffsideCave_EventScript_BlackBelt::
+# 102 "data/maps/CliffsideCave_2F/scripts.pory"
+	lockall
+# 103 "data/maps/CliffsideCave_2F/scripts.pory"
+	faceplayer
+# 104 "data/maps/CliffsideCave_2F/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_TM17, CliffsideCave_GiveTM17
+# 105 "data/maps/CliffsideCave_2F/scripts.pory"
+	msgbox CliffsideCave_EventScript_BlackBelt_Text_0
+# 106 "data/maps/CliffsideCave_2F/scripts.pory"
+	releaseall
+	return
+
+
+CliffsideCave_GiveTM17::
+# 110 "data/maps/CliffsideCave_2F/scripts.pory"
+	msgbox CliffsideCave_EventScript_BlackBelt_Text_0
+# 111 "data/maps/CliffsideCave_2F/scripts.pory"
+	giveitem ITEM_TM17, amount = 1
+# 112 "data/maps/CliffsideCave_2F/scripts.pory"
+	setflag FLAG_RECEIVED_TM17
+# 113 "data/maps/CliffsideCave_2F/scripts.pory"
+	releaseall
+	return
+
+
+CliffsideCave_EventScript_BlackBelt_Text_0:
+# 105 "data/maps/CliffsideCave_2F/scripts.pory"
+	.string "I've been nursing a shoulder injury, so\n"
+	.string "I won't be able to use this. You can\l"
+	.string "have it.$"
+
 Carlos_Intro::
 # 11 "data/maps/CliffsideCave_2F/scripts.pory"
-	.string "It's chilly down here. I hope my POKéMON\n"
-	.string "don't get cold$"
+	.string "It's chilly down here. I hope my\n"
+	.string "POKéMON don't get cold$"
 
 Carlos_Outro::
 # 15 "data/maps/CliffsideCave_2F/scripts.pory"
-	.string "I think they were feeling cold after all.$"
+	.string "I think they were feeling cold after\n"
+	.string "all.$"
 
 Carlos_Postbattle::
 # 19 "data/maps/CliffsideCave_2F/scripts.pory"
@@ -105,8 +138,8 @@ Antonio_Outro::
 Antonio_Postbattle::
 # 77 "data/maps/CliffsideCave_2F/scripts.pory"
 	.string "As powerful as you are, I'd be careful\n"
-	.string "entering the Viridian Gym. The trainers\l"
-	.string "there are experts in battle.$"
+	.string "entering the Viridian Gym. The\l"
+	.string "trainers there are experts in battle.$"
 
 Mario_Intro::
 # 89 "data/maps/CliffsideCave_2F/scripts.pory"

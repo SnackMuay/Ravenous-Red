@@ -1867,6 +1867,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             else if (PartnerMoveIsSameNoTarget(BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)
               && gSideTimers[GetBattlerSide(battlerDef)].spikesAmount == 2)
                 ADJUST_SCORE(-10); // only one mon needs to set up the last layer of Spikes
+            else if (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount == 2)
+                ADJUST_SCORE(-5);
+            else if (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount == 1)
+                ADJUST_SCORE(-5);
             break;
         case EFFECT_STEALTH_ROCK:
             if (IsHazardOnSide(GetBattlerSide(battlerDef), HAZARDS_STEALTH_ROCK)
@@ -3495,6 +3499,7 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 break;
             case ABILITY_FLASH_FIRE:
             case ABILITY_WELL_BAKED_BODY:
+            case ABILITY_MAGMA_ARMOR:
                 if (moveType == TYPE_FIRE)
                 {
                     if (moveTarget == MOVE_TARGET_FOES_AND_ALLY)

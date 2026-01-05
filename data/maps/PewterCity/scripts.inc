@@ -1625,346 +1625,414 @@ PewterCity_EventScript_Youngster::
 # 822 "data/maps/PewterCity/scripts.pory"
 	faceplayer
 # 823 "data/maps/PewterCity/scripts.pory"
-	msgbox PewterCity_EventScript_Youngster_Text_0
+	textcolor NPC_TEXT_COLOR_MALE
 # 824 "data/maps/PewterCity/scripts.pory"
-	releaseall
-	return
-
-
-PewterCity_EventScript_Museum_Grunt::
+	msgbox PewterCity_EventScript_Youngster_Text_0
+# 825 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 826 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Youngster_Text_1, MSGBOX_YESNO
+# 827 "data/maps/PewterCity/scripts.pory"
+	goto_if_eq VAR_RESULT, YES, PewterCity_EventScript_Hudson
 # 828 "data/maps/PewterCity/scripts.pory"
-	lock
+	goto_if_eq VAR_RESULT, NO, PewterCity_EventScript_DeclineToBattle
 # 829 "data/maps/PewterCity/scripts.pory"
-	faceplayer
+	closemessage
 # 830 "data/maps/PewterCity/scripts.pory"
-	msgbox PewterCity_EventScript_Museum_Grunt_Text_0
+	face_up
 # 831 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
-PewterCity_EventScript_Grunt_56::
+PewterCity_EventScript_Hudson::
 # 835 "data/maps/PewterCity/scripts.pory"
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_56, Grunt_56_Intro, Grunt_56_Outro
+	cleartrainerflag TRAINER_YOUNGSTER_HUDSON
 # 836 "data/maps/PewterCity/scripts.pory"
-	msgbox Grunt_56_Postbattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_YOUNGSTER_HUDSON, Hudson_Intro, Hudson_Outro
 # 837 "data/maps/PewterCity/scripts.pory"
+	msgbox Hudson_Postbattle, MSGBOX_AUTOCLOSE
+# 838 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+	end
+
+
+PewterCity_EventScript_DeclineToBattle::
+# 843 "data/maps/PewterCity/scripts.pory"
+	lockall
+# 844 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_DeclineToBattle_Text_0
+# 845 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 846 "data/maps/PewterCity/scripts.pory"
+	closemessage
+# 847 "data/maps/PewterCity/scripts.pory"
+	face_up
+# 848 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+PewterCity_EventScript_Museum_Grunt::
+# 864 "data/maps/PewterCity/scripts.pory"
+	lock
+# 865 "data/maps/PewterCity/scripts.pory"
+	faceplayer
+# 866 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Museum_Grunt_Text_0
+# 867 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 868 "data/maps/PewterCity/scripts.pory"
+	closemessage
+# 869 "data/maps/PewterCity/scripts.pory"
+	face_down
+# 870 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+PewterCity_EventScript_Grunt_56::
+# 874 "data/maps/PewterCity/scripts.pory"
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_56, Grunt_56_Intro, Grunt_56_Outro
+# 875 "data/maps/PewterCity/scripts.pory"
+	msgbox Grunt_56_Postbattle, MSGBOX_AUTOCLOSE
+# 876 "data/maps/PewterCity/scripts.pory"
 	waitmessage
 	end
 
 
 PewterCity_EventScript_Grunt_57::
-# 854 "data/maps/PewterCity/scripts.pory"
+# 893 "data/maps/PewterCity/scripts.pory"
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_57, Grunt_57_Intro, Grunt_57_Outro
-# 855 "data/maps/PewterCity/scripts.pory"
+# 894 "data/maps/PewterCity/scripts.pory"
 	msgbox Grunt_57_Postbattle, MSGBOX_AUTOCLOSE
-# 856 "data/maps/PewterCity/scripts.pory"
+# 895 "data/maps/PewterCity/scripts.pory"
 	waitmessage
 	end
 
 
 PewterCity_EventScript_Grunt_58::
-# 873 "data/maps/PewterCity/scripts.pory"
+# 912 "data/maps/PewterCity/scripts.pory"
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_58, Grunt_58_Intro, Grunt_58_Outro
-# 874 "data/maps/PewterCity/scripts.pory"
+# 913 "data/maps/PewterCity/scripts.pory"
 	msgbox Grunt_58_Postbattle, MSGBOX_AUTOCLOSE
-# 875 "data/maps/PewterCity/scripts.pory"
+# 914 "data/maps/PewterCity/scripts.pory"
 	waitmessage
 	end
 
 
 PewterCity_EventScript_Grunts_1::
-# 892 "data/maps/PewterCity/scripts.pory"
-	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle
-# 893 "data/maps/PewterCity/scripts.pory"
+# 931 "data/maps/PewterCity/scripts.pory"
+	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated
+# 932 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 894 "data/maps/PewterCity/scripts.pory"
+# 933 "data/maps/PewterCity/scripts.pory"
 	msgbox Grunts_1_Postbattle
-# 895 "data/maps/PewterCity/scripts.pory"
+# 934 "data/maps/PewterCity/scripts.pory"
 	waitmessage
-# 896 "data/maps/PewterCity/scripts.pory"
+# 935 "data/maps/PewterCity/scripts.pory"
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
-# 897 "data/maps/PewterCity/scripts.pory"
+# 936 "data/maps/PewterCity/scripts.pory"
 	setvar VAR_PEWTER_GRUNTS, 1
-# 898 "data/maps/PewterCity/scripts.pory"
+# 937 "data/maps/PewterCity/scripts.pory"
 	setflag FLAG_GRUNTS_1
-# 899 "data/maps/PewterCity/scripts.pory"
+# 938 "data/maps/PewterCity/scripts.pory"
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-# 900 "data/maps/PewterCity/scripts.pory"
+# 939 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+Grunts_1_Defeated::
+# 943 "data/maps/PewterCity/scripts.pory"
+	lockall
+# 944 "data/maps/PewterCity/scripts.pory"
+	msgbox Grunts_1_Postbattle
+# 945 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 946 "data/maps/PewterCity/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 947 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_GRUNT_F
+# 948 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_GRUNT_M
+# 949 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_GRUNT_58
+# 950 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_GRUNT_57
+# 951 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_GRUNT_56
+# 952 "data/maps/PewterCity/scripts.pory"
+	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
+# 953 "data/maps/PewterCity/scripts.pory"
+	setvar VAR_PEWTER_GRUNTS, 1
+# 954 "data/maps/PewterCity/scripts.pory"
+	setflag FLAG_GRUNTS_1
+# 955 "data/maps/PewterCity/scripts.pory"
+	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+# 956 "data/maps/PewterCity/scripts.pory"
+	callnative UpdateFollowingPokemon
+# 957 "data/maps/PewterCity/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 958 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
 PewterCity_Trigger_BlockPath::
-# 920 "data/maps/PewterCity/scripts.pory"
+# 978 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 921 "data/maps/PewterCity/scripts.pory"
+# 979 "data/maps/PewterCity/scripts.pory"
 	msgbox PewterCity_Trigger_BlockPath_Text_0
-# 922 "data/maps/PewterCity/scripts.pory"
+# 980 "data/maps/PewterCity/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
-# 923 "data/maps/PewterCity/scripts.pory"
+# 981 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
-# 924 "data/maps/PewterCity/scripts.pory"
+# 982 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
-# 927 "data/maps/PewterCity/scripts.pory"
+# 985 "data/maps/PewterCity/scripts.pory"
 StopPlayer:
-# 928 "data/maps/PewterCity/scripts.pory"
+# 986 "data/maps/PewterCity/scripts.pory"
 	walk_left
 	step_end
 
 PewterCity_Trigger_Grunts_West::
-# 932 "data/maps/PewterCity/scripts.pory"
+# 990 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 933 "data/maps/PewterCity/scripts.pory"
-	applymovement LOCALID_GRUNT_F, FaceThePlayer
-# 934 "data/maps/PewterCity/scripts.pory"
+# 991 "data/maps/PewterCity/scripts.pory"
+	applymovement LOCALID_GRUNT_F, FaceLeft
+# 992 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
-# 935 "data/maps/PewterCity/scripts.pory"
+# 993 "data/maps/PewterCity/scripts.pory"
 	applymovement LOCALID_GRUNT_M, WestTrigger
-# 936 "data/maps/PewterCity/scripts.pory"
+# 994 "data/maps/PewterCity/scripts.pory"
 	waitmovement 4
-# 937 "data/maps/PewterCity/scripts.pory"
-	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle
-# 938 "data/maps/PewterCity/scripts.pory"
-	lockall
-# 939 "data/maps/PewterCity/scripts.pory"
-	msgbox Grunts_1_Postbattle
-# 940 "data/maps/PewterCity/scripts.pory"
-	waitmessage
-# 941 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 942 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_F
-# 943 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_M
-# 944 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_58
-# 945 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_57
-# 946 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_56
-# 947 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
-# 948 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_PEWTER_GRUNTS, 1
-# 949 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_GRUNTS_1
-# 950 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-# 951 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 952 "data/maps/PewterCity/scripts.pory"
+# 995 "data/maps/PewterCity/scripts.pory"
+	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated
+# 996 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
-# 955 "data/maps/PewterCity/scripts.pory"
-FaceThePlayer:
-# 956 "data/maps/PewterCity/scripts.pory"
-	faceplayer
+# 999 "data/maps/PewterCity/scripts.pory"
+FaceLeft:
+# 1000 "data/maps/PewterCity/scripts.pory"
+	face_left
 	step_end
 
-# 959 "data/maps/PewterCity/scripts.pory"
+# 1003 "data/maps/PewterCity/scripts.pory"
+FaceDown:
+# 1004 "data/maps/PewterCity/scripts.pory"
+	face_down
+	step_end
+
+# 1007 "data/maps/PewterCity/scripts.pory"
 WestTrigger:
-# 960 "data/maps/PewterCity/scripts.pory"
+# 1008 "data/maps/PewterCity/scripts.pory"
 	faceplayer
-# 961 "data/maps/PewterCity/scripts.pory"
+# 1009 "data/maps/PewterCity/scripts.pory"
 	walk_left
 	step_end
 
 PewterCity_Trigger_Grunts_East::
-# 965 "data/maps/PewterCity/scripts.pory"
+# 1013 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 966 "data/maps/PewterCity/scripts.pory"
+# 1014 "data/maps/PewterCity/scripts.pory"
 	applymovement LOCALID_GRUNT_F, EastTrigger
-# 967 "data/maps/PewterCity/scripts.pory"
+# 1015 "data/maps/PewterCity/scripts.pory"
 	waitmovement 4
-# 968 "data/maps/PewterCity/scripts.pory"
-	applymovement LOCALID_GRUNT_M, FaceThePlayer
-# 969 "data/maps/PewterCity/scripts.pory"
+# 1016 "data/maps/PewterCity/scripts.pory"
+	applymovement LOCALID_GRUNT_M, FaceDown
+# 1017 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
-# 970 "data/maps/PewterCity/scripts.pory"
-	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle
-# 971 "data/maps/PewterCity/scripts.pory"
-	lockall
-# 972 "data/maps/PewterCity/scripts.pory"
-	msgbox Grunts_1_Postbattle
-# 973 "data/maps/PewterCity/scripts.pory"
-	waitmessage
-# 974 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 975 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_F
-# 976 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_M
-# 977 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_58
-# 978 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_57
-# 979 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_56
-# 980 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
-# 981 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_PEWTER_GRUNTS, 1
-# 982 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_GRUNTS_1
-# 983 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-# 984 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 985 "data/maps/PewterCity/scripts.pory"
+# 1018 "data/maps/PewterCity/scripts.pory"
+	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated
+# 1019 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
-# 988 "data/maps/PewterCity/scripts.pory"
+# 1022 "data/maps/PewterCity/scripts.pory"
 EastTrigger:
-# 989 "data/maps/PewterCity/scripts.pory"
+# 1023 "data/maps/PewterCity/scripts.pory"
 	faceplayer
-# 990 "data/maps/PewterCity/scripts.pory"
+# 1024 "data/maps/PewterCity/scripts.pory"
 	walk_down
 	step_end
 
 PewterCity_Trigger_Grunts_Middle::
-# 994 "data/maps/PewterCity/scripts.pory"
+# 1028 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 995 "data/maps/PewterCity/scripts.pory"
-	applymovement LOCALID_GRUNT_F, FaceThePlayer
-# 996 "data/maps/PewterCity/scripts.pory"
+# 1029 "data/maps/PewterCity/scripts.pory"
+	applymovement LOCALID_GRUNT_F, FaceDown
+# 1030 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
-# 997 "data/maps/PewterCity/scripts.pory"
-	applymovement LOCALID_GRUNT_M, FaceThePlayer
-# 998 "data/maps/PewterCity/scripts.pory"
+# 1031 "data/maps/PewterCity/scripts.pory"
+	applymovement LOCALID_GRUNT_M, FaceLeft
+# 1032 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
-# 999 "data/maps/PewterCity/scripts.pory"
-	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle
-# 1000 "data/maps/PewterCity/scripts.pory"
+# 1033 "data/maps/PewterCity/scripts.pory"
+	trainerbattle_double TRAINER_TEAM_ROCKET_GRUNTS_1, Grunts_1_Intro, Grunts_1_Outro, Grunts_1_CantBattle, Grunts_1_Defeated
+# 1034 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+PewterCity_EventScript_Scientist::
+# 1038 "data/maps/PewterCity/scripts.pory"
 	lockall
-# 1001 "data/maps/PewterCity/scripts.pory"
-	msgbox Grunts_1_Postbattle
-# 1002 "data/maps/PewterCity/scripts.pory"
-	waitmessage
-# 1003 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 1004 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_F
-# 1005 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_M
-# 1006 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_58
-# 1007 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_57
-# 1008 "data/maps/PewterCity/scripts.pory"
-	removeobject LOCALID_GRUNT_56
-# 1009 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
-# 1010 "data/maps/PewterCity/scripts.pory"
-	setvar VAR_PEWTER_GRUNTS, 1
-# 1011 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_GRUNTS_1
-# 1012 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-# 1013 "data/maps/PewterCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 1014 "data/maps/PewterCity/scripts.pory"
+# 1039 "data/maps/PewterCity/scripts.pory"
+	faceplayer
+# 1040 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Scientist_Text_0
+# 1042 "data/maps/PewterCity/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 1043 "data/maps/PewterCity/scripts.pory"
+	removeobject LOCALID_PEWTER_SCIENTIST
+# 1044 "data/maps/PewterCity/scripts.pory"
+	setflag FLAG_SPOKEN_WITH_SCIENTIST
+# 1045 "data/maps/PewterCity/scripts.pory"
+	callnative UpdateFollowingPokemon
+# 1046 "data/maps/PewterCity/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 1047 "data/maps/PewterCity/scripts.pory"
 	releaseall
 	return
 
 
 PewterCity_EventScript_Youngster_Text_0:
-# 823 "data/maps/PewterCity/scripts.pory"
+# 824 "data/maps/PewterCity/scripts.pory"
 	.string "I'm waiting for BROCK to return so\n"
-	.string "that I can challenge the GYM. One of\l"
-	.string "the early GYM TRAINERS defeated me\l"
-	.string "on my last attempt, so I've added a\l"
-	.string "WATER type to my team.$"
+	.string "that I can challenge the GYM. One\l"
+	.string "of the early GYM TRAINERS\l"
+	.string "defeated me on my last attempt,\l"
+	.string "so I've added a WATER type to my\l"
+	.string "team.$"
+
+PewterCity_EventScript_Youngster_Text_1:
+# 826 "data/maps/PewterCity/scripts.pory"
+	.string "Wanna battle me while we wait for\n"
+	.string "BROCK to return?$"
+
+PewterCity_EventScript_DeclineToBattle_Text_0:
+# 844 "data/maps/PewterCity/scripts.pory"
+	.string "Fine then. You're probably not\n"
+	.string "even good practice.$"
 
 PewterCity_EventScript_Museum_Grunt_Text_0:
-# 830 "data/maps/PewterCity/scripts.pory"
+# 866 "data/maps/PewterCity/scripts.pory"
 	.string "No one's allowed in here. Boss's\n"
 	.string "orders.$"
 
 PewterCity_Trigger_BlockPath_Text_0:
-# 921 "data/maps/PewterCity/scripts.pory"
+# 979 "data/maps/PewterCity/scripts.pory"
 	.string "{PLAYER} thought to themself: I\n"
 	.string "should see if VIRIDIAN GYM is\l"
 	.string "unlocked.$"
 
+PewterCity_EventScript_Scientist_Text_0:
+# 1040 "data/maps/PewterCity/scripts.pory"
+	.string "Thank you so much! I was just\n"
+	.string "seconds away from being\l"
+	.string "overwhelmed. It hurts to imagine\l"
+	.string "people out there using their\l"
+	.string "POKéMON to harm others. Come visit\l"
+	.string "me on the second floor of PEWTER\l"
+	.string "MUSEUM. I'd like to give you a\l"
+	.string "token of my gratitude.$"
+
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
 # 812 "data/maps/PewterCity/scripts.pory"
-	.string "You're a Trainer, right? Our town is\n"
-	.string "being terrorized by some\l"
+	.string "You're a Trainer, right? Our town\n"
+	.string "is being terrorized by some\l"
 	.string "nefarious-looking folks. I hate to\l"
-	.string "ask this, but I don't think we have any\l"
-	.string "other choice. Follow me, I'll show you\l"
-	.string "the people I'm talking about.$"
+	.string "ask this, but I don't think we have\l"
+	.string "any other choice. Follow me, I'll\l"
+	.string "show you the people I'm talking\l"
+	.string "about.$"
 
 PewterCity_Text_GoTakeOnBrock::
 # 816 "data/maps/PewterCity/scripts.pory"
-	.string "Our town would be indebted to you if\n"
-	.string "you could save our citizens from\l"
-	.string "these goons.$"
+	.string "Our town would be indebted to you\n"
+	.string "if you could save our citizens\l"
+	.string "from these goons.$"
+
+Hudson_Intro::
+# 851 "data/maps/PewterCity/scripts.pory"
+	.string "Let's go! My new team composition\n"
+	.string "is sure to win!$"
+
+Hudson_Outro::
+# 855 "data/maps/PewterCity/scripts.pory"
+	.string "How could I lose?$"
+
+Hudson_Postbattle::
+# 859 "data/maps/PewterCity/scripts.pory"
+	.string "You might be even stronger than\n"
+	.string "BROCK. There's no way that my\l"
+	.string "POKéMON are still too weak to\l"
+	.string "defeat a GYM.$"
 
 Grunt_56_Intro::
-# 841 "data/maps/PewterCity/scripts.pory"
+# 880 "data/maps/PewterCity/scripts.pory"
 	.string "You must be that kid I heard about\n"
 	.string "from Viridian forest.$"
 
 Grunt_56_Outro::
-# 845 "data/maps/PewterCity/scripts.pory"
+# 884 "data/maps/PewterCity/scripts.pory"
 	.string "Unbelievable.$"
 
 Grunt_56_Postbattle::
-# 849 "data/maps/PewterCity/scripts.pory"
-	.string "TEAM ROCKET won't be stopped by the\n"
-	.string "likes of you.$"
+# 888 "data/maps/PewterCity/scripts.pory"
+	.string "TEAM ROCKET won't be stopped by\n"
+	.string "the likes of you.$"
 
 Grunt_57_Intro::
-# 860 "data/maps/PewterCity/scripts.pory"
+# 899 "data/maps/PewterCity/scripts.pory"
 	.string "You've just made a big mistake.$"
 
 Grunt_57_Outro::
-# 864 "data/maps/PewterCity/scripts.pory"
+# 903 "data/maps/PewterCity/scripts.pory"
 	.string "...What just happened?$"
 
 Grunt_57_Postbattle::
-# 868 "data/maps/PewterCity/scripts.pory"
+# 907 "data/maps/PewterCity/scripts.pory"
 	.string "It's foolish to try and intervene\n"
 	.string "here.$"
 
 Grunt_58_Intro::
-# 879 "data/maps/PewterCity/scripts.pory"
+# 918 "data/maps/PewterCity/scripts.pory"
 	.string "My lucky day!$"
 
 Grunt_58_Outro::
-# 883 "data/maps/PewterCity/scripts.pory"
+# 922 "data/maps/PewterCity/scripts.pory"
 	.string "How lame.$"
 
 Grunt_58_Postbattle::
-# 887 "data/maps/PewterCity/scripts.pory"
-	.string "I don't understand. SIMONE said that\n"
-	.string "she defeated you with ease...$"
+# 926 "data/maps/PewterCity/scripts.pory"
+	.string "I don't understand. SIMONE said\n"
+	.string "that she defeated you with ease...$"
 
 Grunts_1_Intro::
-# 903 "data/maps/PewterCity/scripts.pory"
-	.string "You've crossed us for the last time!$"
+# 961 "data/maps/PewterCity/scripts.pory"
+	.string "You've crossed us for the last\n"
+	.string "time!$"
 
 Grunts_1_Outro::
-# 907 "data/maps/PewterCity/scripts.pory"
+# 965 "data/maps/PewterCity/scripts.pory"
 	.string "This is unacceptable.$"
 
 Grunts_1_CantBattle::
-# 911 "data/maps/PewterCity/scripts.pory"
-	.string "You're too short-handed to take us\n"
-	.string "on, kid.$"
+# 969 "data/maps/PewterCity/scripts.pory"
+	.string "You're too short-handed to take\n"
+	.string "us on, kid.$"
 
 Grunts_1_Postbattle::
-# 915 "data/maps/PewterCity/scripts.pory"
+# 973 "data/maps/PewterCity/scripts.pory"
 	.string "Maybe there won't be any meddling\n"
-	.string "children in MT. MOON where the fossils\l"
-	.string "are sourced. We ought to try that\l"
-	.string "approach.$"
+	.string "children in MT. MOON where the\l"
+	.string "fossils are sourced. We ought to\l"
+	.string "try that approach.$"

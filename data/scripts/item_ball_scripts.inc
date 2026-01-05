@@ -11,27 +11,39 @@ CliifsideCave_2F_EventScript_ItemHardStone::
 	end
 
 ViridianForest_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+	finditem ITEM_GREAT_BALL
 	end
 
 ViridianForest_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+	finditem ITEM_FULL_HEAL
 	end
 
 ViridianForest_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_HEART_SCALE
 	end
 
 ViridianForest_Annex_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+	finditem ITEM_GREAT_BALL
 	end
 
 ViridianForest_Annex_EventScript_ItemMiracleSeed::
 	finditem ITEM_MIRACLE_SEED
 	end
 
+PewterCity_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
+Route2_EventScript_ItemGrassGem::
+	finditem ITEM_GRASS_GEM
+	end
+
+Route3_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
 MtMoon_1F_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+	finditem ITEM_EVERSTONE
 	end
 
 MtMoon_1F_EventScript_ItemTM09::
@@ -39,11 +51,11 @@ MtMoon_1F_EventScript_ItemTM09::
 	end
 
 MtMoon_1F_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_HEART_SCALE
 	end
 
 MtMoon_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+	finditem ITEM_HEART_SCALE
 	end
 
 MtMoon_1F_EventScript_ItemEscapeRope::
@@ -51,23 +63,31 @@ MtMoon_1F_EventScript_ItemEscapeRope::
 	end
 
 MtMoon_1F_EventScript_ItemMoonStone::
-	finditem ITEM_MOON_STONE
+	finditem ITEM_REVIVE
 	end
 
 MtMoon_B2F_EventScript_ItemStarPiece::
-	finditem ITEM_STAR_PIECE
+	finditem ITEM_GHOST_GEM
 	end
 
 MtMoon_B2F_EventScript_ItemTM46::
-	finditem ITEM_TM46
+	finditem ITEM_MOON_STONE
 	end
 
 Route4_EventScript_ItemTM05::
 	finditem ITEM_TM05
 	end
 
+CeruleanCity_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end
+
 Route24_EventScript_ItemTM45::
-	finditem ITEM_TM45
+	finditem ITEM_FIRE_STONE
+	end
+
+Route25_EventScript_ItemLeafStone::
+	finditem ITEM_LEAF_STONE
 	end
 
 Route25_EventScript_ItemTM43::
@@ -423,15 +443,15 @@ ThreeIsland_EventScript_ItemZinc::
 	end
 
 ViridianForest_EventScript_ItemPotion2::
-	finditem ITEM_POTION
+	finditem ITEM_SUN_STONE
 	end
 
 MtMoon_B2F_EventScript_ItemRevive::
-	finditem ITEM_REVIVE
+	finditem ITEM_FLOAT_STONE
 	end
 
 MtMoon_B2F_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+	finditem ITEM_DUSK_BALL
 	end
 
 Route11_EventScript_ItemXDefend::
@@ -482,8 +502,12 @@ PokemonMansion_2F_EventScript_ItemHPUp::
 	finditem ITEM_HP_UP
 	end
 
+ViridianCity_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end
+
 ViridianCity_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_FULL_HEAL
 	end
 
 Route11_EventScript_ItemGreatBall::

@@ -1,19 +1,15 @@
 LavenderTown_House2_Text_WantMeToRateNicknames::
-    .string "Hello, hello!\n"
-    .string "I am the official NAME RATER!\p"
     .string "Want me to rate the nicknames of\n"
     .string "your POKéMON?$"
 
 LavenderTown_House2_Text_CritiqueWhichMonsNickname::
     .string "Which POKéMON's nickname should\n"
-    .string "I critique?$"
+    .string "I revise?$"
 
 LavenderTown_House2_Text_GiveItANicerName::
-    .string "{STR_VAR_1}, is it?\n"
-    .string "That is a decent nickname!\p"
-    .string "But, would you like me to give it\n"
-    .string "a nicer name?\p"
-    .string "How about it?$"
+    .string "{STR_VAR_1}, is it?\p"
+    .string "Would you like me to give it\n"
+    .string "a new nickname?$"
 
 LavenderTown_House2_Text_WhatShallNewNicknameBe::
     .string "Ah, good. Then, what shall the new\n"

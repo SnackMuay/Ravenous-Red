@@ -2798,11 +2798,9 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Stardust"),
         .pluralName = ITEM_PLURAL_NAME("Stardust"),
-        .price = (I_PRICE >= GEN_7) ? 3000 * TREASURE_FACTOR: 2000,
+        .price = (I_PRICE >= GEN_7) ? 0 * TREASURE_FACTOR: 0,
         .description = COMPOUND_STRING(
-            "Beautiful red sand. "
-            "Can be sold\nat a "
-            "high price."),
+            "Beautiful red sand. "),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
@@ -11458,14 +11456,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = NULL,
     },
 
-    [ITEM_TM_ROAR] =
+    [ITEM_TM_CHARGE_BEAM] =
     {
         .name = ITEM_NAME("TM05"),
         .price = 1000,
         .description = COMPOUND_STRING(
-            "A savage roar that "
-            "\nmakes the foe flee  "
-            "to\nend the battle."),
+            "An electrical attack "
+            "\nthat may raise the "
+            "\nuser's Sp. Atk "),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11521,14 +11519,15 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = NULL,
     },
 
-    [ITEM_TM_BULLET_SEED] =
+    [ITEM_TM_FALSE_SWIPE] =
     {
         .name = ITEM_NAME("TM09"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Shoots 2 to 5 seeds "
-            "in\na row to strike "
-            "the\nfoe."),
+            "A restrained "
+            "attack that\nalways "
+            "leaves the foe\nwith "
+            "at least 1 HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11643,14 +11642,13 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = NULL,
     },
 
-    [ITEM_TM_PROTECT] =
+    [ITEM_TM_ROCK_THROW] =
     {
         .name = ITEM_NAME("TM17"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Negates all damage, "
-            "but\nmay fail if used "
-            "in\nsuccession."),
+            "Throws small rocks "
+            "to \nstrike the foe. "),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11774,9 +11772,9 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("TM26"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user bites the " 
-            "target.\nAnd eats "
-            "their\nBerry."),
+            "The user bites the\n" 
+            "target and eats "
+            "their \nberry. "),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

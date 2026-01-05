@@ -1,5 +1,9 @@
+.equ CHECKED_CURRENCY,  FLAG_TEMP_1
+.equ HAS_HEART_SCALE,   FLAG_TEMP_2
+.equ HAS_STARDUST,      FLAG_TEMP_3
+.equ HAS_BOTH_ITEMS,    FLAG_TEMP_4
+
 PewterCity_PokemonCenter_2F_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CableClub_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, CableClub_OnWarp
 	map_script MAP_SCRIPT_ON_LOAD, CableClub_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, CableClub_OnTransition

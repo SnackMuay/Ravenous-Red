@@ -84,7 +84,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 47,
       "y": 3,
       "elevation": 3,
@@ -93,12 +93,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route4_EventScript_MegaPunchTutor",
+      "script": "Universal_EventScript_NurseChansey",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 50,
       "y": 3,
       "elevation": 3,
@@ -107,7 +107,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route4_EventScript_MegaKickTutor",
+      "script": "Universal_EventScript_NurseChansey",
       "flag": "0"
     },
     {
@@ -117,6 +117,49 @@
       "y": 3,
       "target_local_id": "LOCALID_CERULEAN_CAVE_GUARD",
       "target_map": "MAP_CERULEAN_CITY"
+    },
+    {
+      "local_id": "LOCALID_MAY_2",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_RS_MAY",
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MAY_ROUTE_4"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
+      "x": 49,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_FAST_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Universal_EventScript_NurseChansey",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CUBONE",
+      "x": 48,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_FAST_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Universal_EventScript_NurseChansey",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -142,11 +185,21 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ROUTE_4_MAY",
+      "var_value": "0",
+      "script": "Route4_Trigger_May"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 18,
+      "x": 17,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -162,30 +215,30 @@
     },
     {
       "type": "hidden_item",
-      "x": 42,
-      "y": 5,
+      "x": 33,
+      "y": 11,
       "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
+      "item": "ITEM_LUM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL",
       "quantity": 1,
       "underfoot": false
     },
     {
       "type": "hidden_item",
-      "x": 5,
+      "x": 7,
       "y": 4,
       "elevation": 3,
-      "item": "ITEM_PERSIM_BERRY",
+      "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY",
       "quantity": 1,
       "underfoot": false
     },
     {
       "type": "hidden_item",
-      "x": 50,
-      "y": 17,
+      "x": 56,
+      "y": 18,
       "elevation": 3,
-      "item": "ITEM_RAZZ_BERRY",
+      "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY",
       "quantity": 1,
       "underfoot": false

@@ -8,7 +8,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     #if B_NATURE_POWER_MOVES >= GEN_6
         .naturePower = MOVE_ENERGY_BALL,
     #elif B_NATURE_POWER_MOVES >= GEN_4
-        .naturePower = MOVE_SEED_BOMB,
+        .naturePower = MOVE_RAZOR_LEAF,
     #else
         .naturePower = MOVE_STUN_SPORE,
     #endif
@@ -47,7 +47,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_SAND] =
     {
         .name = _("NORMAL - SAND            "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_6 ? MOVE_EARTH_POWER : MOVE_EARTHQUAKE,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_6 ? MOVE_EARTH_POWER : MOVE_SAND_TOMB,
         .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
         .camouflageType = TYPE_GROUND,
         .background =
@@ -62,8 +62,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_UNDERWATER] =
     {
         .name = _("NORMAL - UNDERWATER      "),
-        .naturePower = MOVE_HYDRO_PUMP,
-        .secretPowerEffect = B_SECRET_POWER_EFFECT >= GEN_6 ? MOVE_EFFECT_ATK_MINUS_1 : MOVE_EFFECT_DEF_MINUS_1,
+        .naturePower = MOVE_WATER_PULSE,
+        .secretPowerEffect = B_SECRET_POWER_EFFECT >= GEN_6 ? MOVE_EFFECT_ATK_MINUS_1 : MOVE_EFFECT_SPD_MINUS_1,
         .camouflageType = TYPE_WATER,
         .background =
         {
@@ -77,8 +77,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_WATER] =
     {
         .name = _("NORMAL - WATER           "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_HYDRO_PUMP : MOVE_SURF,
-        .secretPowerEffect = MOVE_EFFECT_ATK_MINUS_1,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_BUBBLE_BEAM : MOVE_BUBBLE_BEAM,
+        .secretPowerEffect = MOVE_EFFECT_SPD_MINUS_1,
         .camouflageType = TYPE_WATER,
         .background =
         {
@@ -92,7 +92,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_POND] =
     {
         .name = _("NORMAL - POND            "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_HYDRO_PUMP : MOVE_BUBBLE_BEAM,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_BUBBLE_BEAM : MOVE_BUBBLE_BEAM,
         .secretPowerEffect = B_SECRET_POWER_EFFECT >= GEN_4 ? MOVE_EFFECT_ATK_MINUS_1 : MOVE_EFFECT_SPD_MINUS_1,
         .camouflageType = TYPE_WATER,
         .background =
@@ -110,12 +110,12 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     #if B_NATURE_POWER_MOVES >= GEN_6
         .naturePower = MOVE_EARTH_POWER,
     #elif B_NATURE_POWER_MOVES >= GEN_5
-        .naturePower = MOVE_EARTHQUAKE,
+        .naturePower = MOVE_ROCK_TOMB,
     #else
         .naturePower = MOVE_ROCK_SLIDE,
     #endif
     #if B_SECRET_POWER_EFFECT >= GEN_5
-        .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
+        .secretPowerEffect = MOVE_EFFECT_FLINCH,
     #elif B_SECRET_POWER_EFFECT >= GEN_4
         .secretPowerEffect = MOVE_EFFECT_FLINCH,
     #else
@@ -137,7 +137,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     #if B_NATURE_POWER_MOVES >= GEN_6
         .naturePower = MOVE_EARTH_POWER,
     #elif B_NATURE_POWER_MOVES >= GEN_5
-        .naturePower = MOVE_EARTHQUAKE,
+        .naturePower = MOVE_FEINT_ATTACK,
     #elif B_NATURE_POWER_MOVES >= GEN_4
         .naturePower = MOVE_ROCK_SLIDE,
     #else
@@ -157,7 +157,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_BUILDING] =
     {
         .name = _("NORMAL - BUILDING        "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background =
@@ -175,7 +175,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     #if B_NATURE_POWER_MOVES >= GEN_6
         .naturePower = MOVE_TRI_ATTACK,
     #elif B_NATURE_POWER_MOVES >= GEN_4
-        .naturePower = MOVE_EARTHQUAKE,
+        .naturePower = MOVE_ROUND,
     #else
         .naturePower = MOVE_SWIFT,
     #endif
@@ -221,14 +221,14 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_MARSH] =
     {
         .name = _("NORMAL - MARSH           "),
-        .naturePower = MOVE_MUD_BOMB,
+        .naturePower = MOVE_MUD_SHOT,
         .secretPowerEffect = MOVE_EFFECT_SPD_MINUS_1,
         .camouflageType = TYPE_GROUND,
     },
     [BATTLE_ENVIRONMENT_SWAMP] =
     {
         .name = _("NORMAL - SWAMP           "),
-        .naturePower = MOVE_MUD_BOMB,
+        .naturePower = MOVE_MUD_SHOT,
         .secretPowerEffect = MOVE_EFFECT_SPD_MINUS_1,
         .camouflageType = TYPE_GROUND,
     },
@@ -240,7 +240,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     #elif B_NATURE_POWER_MOVES >= GEN_6
         .naturePower = MOVE_FROST_BREATH,
     #else
-        .naturePower = MOVE_BLIZZARD,
+        .naturePower = MOVE_ICY_WIND,
     #endif
         .secretPowerEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
         .camouflageType = TYPE_ICE,
@@ -248,30 +248,30 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_ICE] =
     {
         .name = _("NORMAL - ICE             "),
-        .naturePower = MOVE_ICE_BEAM,
+        .naturePower = MOVE_ICY_WIND,
         .secretPowerEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
         .camouflageType = TYPE_ICE,
     },
     [BATTLE_ENVIRONMENT_VOLCANO] =
     {
         .name = _("NORMAL - VOLCANO         "),
-        .naturePower = MOVE_LAVA_PLUME,
+        .naturePower = MOVE_FLAME_WHEEL,
         .secretPowerEffect = MOVE_EFFECT_BURN,
         .camouflageType = TYPE_FIRE,
     },
     [BATTLE_ENVIRONMENT_DISTORTION_WORLD] =
     {
         .name = _("NORMAL - DISTORTION WORLD"),
-        .naturePower = MOVE_TRI_ATTACK,
-        .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
-        .camouflageType = TYPE_NORMAL,
+        .naturePower = MOVE_HEX,
+        .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
+        .camouflageType = TYPE_DARK,
     },
     [BATTLE_ENVIRONMENT_SPACE] =
     {
         .name = _("NORMAL - SPACE           "),
-        .naturePower = MOVE_DRACO_METEOR,
-        .secretPowerEffect = MOVE_EFFECT_FLINCH,
-        .camouflageType = TYPE_DRAGON,
+        .naturePower = MOVE_MOONLIGHT,
+        .secretPowerEffect = MOVE_EFFECT_ALL_STATS_UP,
+        .camouflageType = TYPE_NORMAL,
     },
     [BATTLE_ENVIRONMENT_ULTRA_SPACE] =
     {
@@ -297,7 +297,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_GYM] =
     {
         .name = _("NORMAL - GYM             "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background = {
@@ -311,7 +311,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_LEADER] =
     {
         .name = _("NORMAL - LEADER          "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background = {
@@ -325,7 +325,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_INDOOR_2] =
     {
         .name = _("NORMAL - INDOOR_2        "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background = {
@@ -339,7 +339,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_INDOOR_1] =
     {
         .name = _("NORMAL - INDOOR_1        "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background = {
@@ -353,8 +353,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_LORELEI] =
     {
         .name = _("NORMAL - LORELEI         "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
-        .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ICY_WIND : MOVE_SWIFT,
+        .secretPowerEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
         .camouflageType = TYPE_NORMAL,
         .background = {
             .tileset = gBattleEnvironmentTiles_Indoor,
@@ -367,8 +367,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_BRUNO] =
     {
         .name = _("NORMAL - BRUNO           "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
-        .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROCK_TOMB : MOVE_SWIFT,
+        .secretPowerEffect = MOVE_EFFECT_FLINCH,
         .camouflageType = TYPE_NORMAL,
         .background = {
             .tileset = gBattleEnvironmentTiles_Indoor,
@@ -381,8 +381,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_AGATHA] =
     {
         .name = _("NORMAL - AGATHA          "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
-        .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_HEX : MOVE_SWIFT,
+        .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
         .camouflageType = TYPE_NORMAL,
         .background = {
             .tileset = gBattleEnvironmentTiles_Indoor,
@@ -395,8 +395,8 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_LANCE] =
     {
         .name = _("NORMAL - LANCE           "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
-        .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_DRAGON_BREATH : MOVE_SWIFT,
+        .secretPowerEffect = MOVE_EFFECT_BURN,
         .camouflageType = TYPE_NORMAL,
         .background = {
             .tileset = gBattleEnvironmentTiles_Indoor,
@@ -409,7 +409,7 @@ const struct BattleEnvironmentInfo gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COU
     [BATTLE_ENVIRONMENT_CHAMPION] =
     {
         .name = _("NORMAL - CHAMPION        "),
-        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT,
+        .naturePower = B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_ROUND : MOVE_SWIFT,
         .secretPowerEffect = MOVE_EFFECT_PARALYSIS,
         .camouflageType = TYPE_NORMAL,
         .background = {

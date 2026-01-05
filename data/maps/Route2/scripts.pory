@@ -1,0 +1,35 @@
+raw `
+
+Route2_MapScripts::
+	.byte 0
+
+Route2_EventScript_RouteSign::
+	msgbox Route2_Text_RouteSign, MSGBOX_SIGN
+	end
+
+Route2_EventScript_DiglettsCaveSign::
+	msgbox Route2_Text_DiglettsCave, MSGBOX_SIGN
+	end
+
+
+`
+
+script Route2_EventScript_Xiomara{
+    trainerbattle_single(TRAINER_PICNICKER_XIOMARA, Xiomara_Intro, Xiomara_Outro)
+    msgbox(Xiomara_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Xiomara_Intro{
+    format("My POKéMON and I battle with the power of nature! Think you can take us on?")
+}
+
+text Xiomara_Outro{
+    format("Stunning.")
+}
+
+text Xiomara_Postbattle{
+    format("POKéMON love to be outdoors!")
+}
+

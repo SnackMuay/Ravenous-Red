@@ -1,7 +1,7 @@
-.equ CHECKED_MUSHROOMS,  FLAG_TEMP_1
-.equ HAS_BIG_MUSHROOM,   FLAG_TEMP_2
-.equ HAS_TINY_MUSHROOMS, FLAG_TEMP_3
-.equ HAS_BOTH_MUSHROOMS, FLAG_TEMP_4
+.equ CHECKED_CURRENCY,  FLAG_TEMP_1
+.equ HAS_HEART_SCALE,   FLAG_TEMP_2
+.equ HAS_STARDUST,      FLAG_TEMP_3
+.equ HAS_BOTH_ITEMS,    FLAG_TEMP_4
 
 TwoIsland_House_MapScripts::
 	.byte 0
@@ -11,32 +11,32 @@ TwoIsland_House_EventScript_MoveManiac::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	clearflag HAS_BIG_MUSHROOM
-	clearflag HAS_TINY_MUSHROOMS
-	clearflag HAS_BOTH_MUSHROOMS
-	goto_if_set CHECKED_MUSHROOMS, TwoIsland_House_EventScript_CheckPlayerHasMushrooms
+	clearflag HAS_HEART_SCALE
+	clearflag HAS_STARDUST
+	clearflag HAS_BOTH_ITEMS
+	goto_if_set CHECKED_CURRENCY, TwoIsland_House_EventScript_CheckPlayerHasMushrooms
 	msgbox TwoIsland_House_Text_TeachMonMoveForMushroom
-	setflag CHECKED_MUSHROOMS
+	setflag CHECKED_CURRENCY
 	goto TwoIsland_House_EventScript_CheckPlayerHasMushrooms
 	end
 
 TwoIsland_House_EventScript_CheckPlayerHasMushrooms::
-	checkitem ITEM_BIG_MUSHROOM
+	checkitem ITEM_HEART_SCALE, 3
 	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasBigMushroom
-	checkitem ITEM_TINY_MUSHROOM, 2
+	checkitem ITEM_STARDUST, 30
 	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasTinyMushrooms
-	goto_if_set HAS_BIG_MUSHROOM, TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms
-	goto_if_set HAS_TINY_MUSHROOMS, TwoIsland_House_EventScript_CheckAlsoHasBigMushroom
+	goto_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms
+	goto_if_set HAS_STARDUST, TwoIsland_House_EventScript_CheckAlsoHasBigMushroom
 	goto TwoIsland_House_EventScript_EndTutorMove
 	end
 
 TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms::
-	call_if_set HAS_TINY_MUSHROOMS, TwoIsland_House_EventScript_SetHasBothMushrooms
+	call_if_set HAS_STARDUST, TwoIsland_House_EventScript_SetHasBothMushrooms
 	goto TwoIsland_House_EventScript_AskTutorMon
 	end
 
 TwoIsland_House_EventScript_CheckAlsoHasBigMushroom::
-	call_if_set HAS_BIG_MUSHROOM, TwoIsland_House_EventScript_SetHasBothMushrooms
+	call_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_SetHasBothMushrooms
 	goto TwoIsland_House_EventScript_AskTutorMon
 	end
 
@@ -62,13 +62,13 @@ TwoIsland_House_EventScript_ChooseMoveToTeach::
 	special TeachMoveRelearnerMove
 	waitstate
 	goto_if_eq VAR_0x8004, 0, TwoIsland_House_EventScript_ChooseMonToTutor
-	goto_if_set HAS_BOTH_MUSHROOMS, TwoIsland_House_EventScript_ChooseMushroom
-	goto_if_set HAS_BIG_MUSHROOM, TwoIsland_House_EventScript_GiveBigMushroom
-	goto_if_set HAS_TINY_MUSHROOMS, TwoIsland_House_EventScript_GiveTinyMushrooms
+	goto_if_set HAS_BOTH_ITEMS, TwoIsland_House_EventScript_ChooseMushroom
+	goto_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_GiveBigMushroom
+	goto_if_set HAS_STARDUST, TwoIsland_House_EventScript_GiveTinyMushrooms
 	end
 
 TwoIsland_House_EventScript_GiveBigMushroom::
-	removeitem ITEM_BIG_MUSHROOM
+	removeitem ITEM_HEART_SCALE, 3
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TwoIsland_House_Text_HandedOverOneBigMushroom
 	call EventScript_RestorePrevTextColor
@@ -76,7 +76,7 @@ TwoIsland_House_EventScript_GiveBigMushroom::
 	end
 
 TwoIsland_House_EventScript_GiveTinyMushrooms::
-	removeitem ITEM_TINY_MUSHROOM, 2
+	removeitem ITEM_STARDUST, 30
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox TwoIsland_House_Text_HandedOverTwoTinyMushrooms
 	call EventScript_RestorePrevTextColor
@@ -108,13 +108,13 @@ TwoIsland_House_EventScript_EndTutorMove::
 	end
 
 TwoIsland_House_EventScript_SetHasBigMushroom::
-	setflag HAS_BIG_MUSHROOM
+	setflag HAS_HEART_SCALE
 	return
 
 TwoIsland_House_EventScript_SetHasTinyMushrooms::
-	setflag HAS_TINY_MUSHROOMS
+	setflag HAS_STARDUST
 	return
 
 TwoIsland_House_EventScript_SetHasBothMushrooms::
-	setflag HAS_BOTH_MUSHROOMS
+	setflag HAS_BOTH_ITEMS
 	return
