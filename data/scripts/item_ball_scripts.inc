@@ -94,6 +94,22 @@ Route25_EventScript_ItemTM43::
 	finditem ITEM_TM43
 	end
 
+CloudedWood_EventScript_ItemCharcoal::
+	finditem ITEM_CHARCOAL
+	end
+
+CloudedWood_EventScript_ItemFlameOrb::
+	finditem ITEM_FLAME_ORB
+	end
+
+CloudedWood_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
+CloudedWood_EventScript_ItemBugGem::
+	finditem ITEM_BUG_GEM
+	end
+
 SSAnne_1F_Room2_EventScript_ItemTM31::
 	finditem ITEM_TM31
 	end

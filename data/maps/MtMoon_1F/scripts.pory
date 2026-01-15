@@ -85,6 +85,7 @@ script Universal_EventScript_NurseChansey{
 	faceplayer
 	message("Chaans!")
 	waitmessage
+	delay(12)
 	goto_if_unset(FLAG_RECEIVED_LUCKY_EGG, Universal_EventScript_GiveLuckyEgg)
 	goto_if_set(FLAG_RECEIVED_LUCKY_EGG, Universal_EventScript_NurseChanseyGreeting)
 	releaseall
@@ -100,6 +101,8 @@ script Universal_EventScript_NurseChanseyGreeting{
 	lockall
 	message("Chaans!")
 	waitmessage
+	delay(10)
+	closemessage
 	releaseall
 }
 

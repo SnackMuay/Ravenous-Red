@@ -445,7 +445,8 @@
   ],
   "gMapGroup_IndoorRoute5": [
     "Route5_PokemonDayCare",
-    "Route5_SouthEntrance"
+    "Route5_SouthEntrance",
+    "CloudedWood_House"
   ],
   "gMapGroup_IndoorRoute6": [
     "Route6_NorthEntrance",

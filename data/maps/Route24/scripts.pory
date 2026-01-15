@@ -101,7 +101,9 @@ Route24_Movement_WalkDown::
 
 script Route24_EventScript_BlackBelt{
     lockall
-    msgbox(format("Just one BADGE? Sorry, kid. SANDSWEPT CAVERN is too dangerous for beginners like you."))
+    msgbox(format("It's not a good idea to enter this cave system without eye protection. 
+		The magnetic field in SANDSWEPT CAVERN whips up all the metallic dust into a 
+		SANDSTORM."))
     waitmessage
     closemessage
     face_down

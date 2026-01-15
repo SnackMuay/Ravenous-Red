@@ -195,7 +195,7 @@
 #define VAR_PEWTER_GRUNTS          0x408D
 #define VAR_ROUTE_4_MAY            0x408E
 #define VAR_UNLOCK_CERULEAN_GYM    0x408F
-#define VAR_0x4090                 0x4090
+#define VAR_UNLOCK_UNDERGROUND     0x4090
 #define VAR_0x4091                 0x4091
 #define VAR_0x4092                 0x4092
 #define VAR_0x4093                 0x4093

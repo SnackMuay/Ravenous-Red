@@ -1,0 +1,46 @@
+{
+  "id": "MAP_CLOUDED_WOOD_HOUSE",
+  "name": "CloudedWood_House",
+  "layout": "LAYOUT_CLOUDED_WOOD_HOUSE",
+  "music": "MUS_POKE_TOWER",
+  "region_map_section": "MAPSEC_CLOUDED_WOOD",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CLOUDED_WOOD_2",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Universal_EventScript_Bed"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Universal_EventScript_Bed"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ script CeruleanCity_House1_EventScript_BadgeGuy{
     lockall
     faceplayer
     goto_if_unset(FLAG_RECEIVED_MAGNET_FROM_NERD, CeruleanCity_House1_EventScript_NerdMagnet)
-    msgbox(format("I've been nursing a shoulder injury, so I won't be able to use this. You can have it."))
+    msgbox(format("I expected my STEEL POKéMON to be powered up by this, but I haven't noticed a difference. It must be defective. Maybe you'll find a use for it."))
     releaseall
 }
 

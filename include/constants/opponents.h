@@ -106,7 +106,7 @@
 #define TRAINER_YOUNGSTER_DILLON                  98
 #define TRAINER_YOUNGSTER_YASU                    99
 #define TRAINER_YOUNGSTER_DAVE                   100
-#define TRAINER_YOUNGSTER_BEN_2                  101
+#define TRAINER_BUG_CATCHER_SONNY                101 // Route 2
 #define TRAINER_BUG_CATCHER_RICK                 102
 #define TRAINER_BUG_CATCHER_DOUG                 103
 #define TRAINER_BUG_CATCHER_SAMMY                104
@@ -224,7 +224,7 @@
 #define TRAINER_BURGLAR_ARNIE                    216
 #define TRAINER_BURGLAR_4                        217
 #define TRAINER_BURGLAR_SIMON                    218
-#define TRAINER_BURGLAR_LEWIS                    219 //
+#define TRAINER_BURGLAR_LEWIS                    219 
 #define TRAINER_ENGINEER_BAILY                   220
 #define TRAINER_ENGINEER_BRAXTON                 221
 #define TRAINER_ENGINEER_BERNIE                  222
@@ -459,10 +459,10 @@
 #define TRAINER_CHANNELER_ANGELICA               451
 #define TRAINER_CHANNELER_EMILIA                 452
 #define TRAINER_CHANNELER_JENNIFER               453
-#define TRAINER_CHANNELER_1                      454
-#define TRAINER_CHANNELER_2                      455
-#define TRAINER_CHANNELER_3                      456
-#define TRAINER_CHANNELER_4                      457
+#define TRAINER_CHANNELER_ASPEN                  454 // Clouded Wood
+#define TRAINER_CHANNELER_VANESSA                455 // Clouded Wood
+#define TRAINER_CHANNELER_BRISTOL                456 // Clouded Wood 2
+#define TRAINER_CLOUDED_WOOD_AGATHA              457 // Clouded Wood 2
 #define TRAINER_CHANNELER_5                      458
 #define TRAINER_CHANNELER_6                      459
 #define TRAINER_CHANNELER_7                      460
@@ -497,21 +497,21 @@
 #define TRAINER_YOUNG_COUPLE_LEA_JED             489
 #define TRAINER_SIS_AND_BRO_LIA_LUC              490
 #define TRAINER_SIS_AND_BRO_LIL_IAN              491
-#define TRAINER_BUG_CATCHER_3                    492
-#define TRAINER_BUG_CATCHER_4                    493
-#define TRAINER_BUG_CATCHER_5                    494
-#define TRAINER_BUG_CATCHER_6                    495
-#define TRAINER_BUG_CATCHER_7                    496
-#define TRAINER_BUG_CATCHER_8                    497
+#define TRAINER_RUIN_MANIAC_HEATH                492 // Sandswept Cavern
+#define TRAINER_CRUSH_GIRL_MILEY                 493 // Sandswept Cavern
+#define TRAINER_SUPER_NERD_LAYNE                 494 // Sandswept Cavern
+#define TRAINER_RUIN_MANIAC_SULLIVAN             495 // Sandswept Cavern
+#define TRAINER_COOLTRAINER_HADLEY               496 // Sandswept Cavern
+#define TRAINER_COOLTRAINER_LINCOLN              497 // Sandswept Cavern
 #define TRAINER_YOUNGSTER_BEN_3                  498
 #define TRAINER_YOUNGSTER_BEN_4                  499
 #define TRAINER_YOUNGSTER_CHAD_2                 500
 #define TRAINER_LASS_RELI_2                      501
 #define TRAINER_LASS_RELI_3                      502
-#define TRAINER_YOUNGSTER_TIMMY_2                503
-#define TRAINER_YOUNGSTER_TIMMY_3                504
-#define TRAINER_YOUNGSTER_TIMMY_4                505
-#define TRAINER_YOUNGSTER_CHAD_3                 506
+#define TRAINER_PKMN_RANGER_DENZEL               503 // Clouded Wood 2
+#define TRAINER_PKMN_RANGER_CODY                 504 // Clouded Wood 2
+#define TRAINER_BIRD_KEEPER_WESTON               505 // Route 5
+#define TRAINER_AROMA_LADY_AUBREY                506 // Route 5
 #define TRAINER_PICNICKER_XIOMARA                507 // Route 2 Optional
 #define TRAINER_YOUNGSTER_HUDSON                 508 // Blocks Pewter Gym
 #define TRAINER_YOUNGSTER_CHAD_4                 509
@@ -626,15 +626,15 @@
 #define TRAINER_CAMPER_RILEY                     618
 #define TRAINER_PICNICKER_MARCY                  619
 #define TRAINER_RUIN_MANIAC_LAYTON               620
-#define TRAINER_PICNICKER_KELSEY_2               621
-#define TRAINER_PICNICKER_KELSEY_3               622
-#define TRAINER_PICNICKER_KELSEY_4               623
-#define TRAINER_CAMPER_RICKY_2                   624
-#define TRAINER_CAMPER_RICKY_3                   625
-#define TRAINER_CAMPER_RICKY_4                   626
-#define TRAINER_CAMPER_JEFF_2                    627
-#define TRAINER_CAMPER_JEFF_3                    628
-#define TRAINER_CAMPER_JEFF_4                    629
+#define TRAINER_HIKER_RAMSEY                     621 // SandSwept Cavern 
+#define TRAINER_COOLTRAINER_MELODY               622 // SandSwept Cavern 
+#define TRAINER_SUPER_NERD_BENJI                 623 // SandSwept Cavern 
+#define TRAINER_RUIN_MANIAC_CEDRIC               624 // SandSwept Cavern 
+#define TRAINER_CRUSH_GIRL_SELENA                625 // SandSwept Cavern 
+#define TRAINER_PICNICKER_WREN                   626 // SandSwept Cavern 
+#define TRAINER_COOLTRAINER_ZANE                 627 // SandSwept Cavern 
+#define TRAINER_BLACK_BELT_ILIA                  628 // SandSwept Cavern 
+#define TRAINER_CAMPER_JEFF_4                    629 
 #define TRAINER_PICNICKER_ISABELLE_2             630
 #define TRAINER_PICNICKER_ISABELLE_3             631
 #define TRAINER_PICNICKER_ISABELLE_4             632

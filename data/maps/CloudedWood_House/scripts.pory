@@ -1,0 +1,21 @@
+raw `
+
+CloudedWood_House_MapScripts::
+	.byte 0
+
+`
+
+script Universal_EventScript_Bed{
+    lockall
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(format("Take a nap?"), MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Universal_EventScript_TakeANap)
+    releaseall
+}
+
+script Universal_EventScript_TakeANap{
+    lockall
+    call(EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Your POKéMON are feeling refreshed."))
+    releaseall
+}

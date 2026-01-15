@@ -1,0 +1,202 @@
+raw `
+
+CloudedWood_1_MapScripts::
+	.byte 0
+
+
+`
+
+script CloudedWood_EventScript_Aspen{
+    trainerbattle_single(TRAINER_CHANNELER_ASPEN, Aspen_Intro, Aspen_Outro)
+    msgbox(Aspen_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Aspen_Intro{
+    format("Boo!")
+}
+
+text Aspen_Outro{
+    format("You're scary.")
+}
+
+text Aspen_Postbattle{
+    format("Do you feel that? This forest is connected to the other side.")
+}
+
+script CloudedWood_EventScript_Vanessa{
+    trainerbattle_single(TRAINER_CHANNELER_VANESSA, Vanessa_Intro, Vanessa_Outro)
+    msgbox(Vanessa_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Vanessa_Intro{
+    format("The time has come.")
+}
+
+text Vanessa_Outro{
+    format("You're even more talented than I foresaw.")
+}
+
+text Vanessa_Postbattle{
+    format("There is still more to our world that has yet to be explained. Even beyond the world of POKéMON.")
+}
+
+script CloudedWood_EventScript_Cody{
+    trainerbattle_single(TRAINER_PKMN_RANGER_CODY, Cody_Intro, Cody_Outro)
+    msgbox(Cody_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Cody_Intro{
+    format("Can you pass this test?")
+}
+
+text Cody_Outro{
+    format("You met the moment.")
+}
+
+text Cody_Postbattle{
+    format("Even places like this deserve preservation efforts..")
+}
+
+script CloudedWood_EventScript_Bristol{
+    trainerbattle_single(TRAINER_CHANNELER_BRISTOL, Bristol_Intro, Bristol_Outro)
+    msgbox(Bristol_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Bristol_Intro{
+    format("You look like you've seen a GHOST-type.")
+}
+
+text Bristol_Outro{
+    format("Your spirit was truly unshakable.")
+}
+
+text Bristol_Postbattle{
+    format("GHOST-type POKéMON needn't be concerned with NORMAL and FIGHTING-type attacks.")
+}
+
+script CloudedWood_EventScript_Denzel{
+    trainerbattle_single(TRAINER_PKMN_RANGER_DENZEL, Denzel_Intro, Denzel_Outro)
+    msgbox(Denzel_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Denzel_Intro{
+    format("My POKéMON have a burning passion for BATTLE!")
+}
+
+text Denzel_Outro{
+    format("Extinguished...")
+}
+
+text Denzel_Postbattle{
+    format("Something about these red and orange leaves makes me feel right at home.")
+}
+
+script CloudedWood_EventScript_Agatha{
+    lockall
+    faceplayer
+	textcolor(NPC_TEXT_COLOR_FEMALE)
+    goto_if_unset(FLAG_GO_GOGGLES, CloudedWood_EventScript_Agatha_PreBattle)
+    msgbox(format("GHOST-type POKéMON are my specialty, but like all members of the ELITE FOUR, 
+        I am flexible enough to appreciate other POKéMON as well."))
+    closemessage
+    releaseall
+}
+
+script CloudedWood_EventScript_Agatha_PreBattle{
+    faceplayer
+    msgbox(format("You're {PLAYER}, aren't you? I hear OAK's taken a lot of interest in you, child.  
+        Like me, his best days are behind him. But you might be surprised at how even this old bag can keep up 
+        with you young ones. I've even developed an affinity for DOUBLE BATTLES."))
+    waitmessage
+	msgbox(format("What do you say, would you like to see if you've got what it takes to 
+        defeat me?"), MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, CloudedWood_EventScript_AgathaDouble)
+	goto_if_eq(VAR_RESULT, NO, CloudedWood_EventScript_DeclineToBattle)
+	closemessage
+	face_down
+	releaseall
+}
+
+script CloudedWood_EventScript_AgathaDouble{
+	trainerbattle_double(TRAINER_CLOUDED_WOOD_AGATHA, Agatha_Intro, Agatha_Outro, Agatha_CantBattle, CloudedWood_Agatha_Defeated)
+	msgbox(Agatha_Postbattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+script CloudedWood_EventScript_DeclineToBattle{
+	lockall
+	msgbox(format("No worries, dear. A former ELITE FOUR is a challenge that most TRAINERS shy away from."))
+	waitmessage
+	closemessage
+	face_down
+	releaseall
+}
+
+script CloudedWood_Agatha_Defeated{
+	lockall
+    msgbox(Agatha_Postbattle)
+    waitmessage
+    giveitem(ITEM_GO_GOGGLES, amount=1)
+    setflag(FLAG_GO_GOGGLES)
+    msgbox(format("Those ought to help you traverse the parts of KANTO with harsh weather."))
+    releaseall
+}
+
+text Agatha_CantBattle{
+    format("You don't have enough POKéMON with you to engage me in a DOUBLE BATTLE.")
+}
+
+text Agatha_Intro{
+	format("Try to keep your bearings!")
+}
+
+text Agatha_Outro{
+	format("OAK was right. You're quite the young TRAINER.")
+}
+
+text Agatha_Postbattle{
+	format("I haven't encountered a TRAINER as promising as yourself in quite some time. I'd love to help your journey along.")
+}
+
+script CloudedWood_EventScript_Sign1{
+    lockall
+    msgbox(format("CLOUDED WOOD."), MSGBOX_SIGN)
+    releaseall
+}
+
+script CloudedWood_EventScript_Sign2{
+    lockall
+    msgbox(format("AGATHA'S house."), MSGBOX_SIGN)
+    releaseall
+}
+
+script CloudedWood_EventScript_Sign3{
+    lockall
+    msgbox(format("CLOUDED WOOD experiences Autumn year-round"), MSGBOX_SIGN)
+    releaseall
+}
+
+script CloudedWood_EventScript_Woman1{
+    lockall
+    faceplayer
+    msgbox(format("My girlfriend thinks I'm weird for this, but there's something about this place that calls to me."))
+    releaseall
+}
+
+script CloudedWood_EventScript_Fisherman{
+    lockall
+    faceplayer
+    msgbox(format("The stillness here in CLOUDED WOOD makes it a perfect spot for fishing."))
+    releaseall
+}

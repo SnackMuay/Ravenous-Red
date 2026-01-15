@@ -3,7 +3,7 @@
   "name": "CloudedWood_2",
   "layout": "LAYOUT_CLOUDED_WOOD_2",
   "music": "MUS_POKE_TOWER",
-  "region_map_section": "MAPSEC_MT_PYRE",
+  "region_map_section": "MAPSEC_CLOUDED_WOOD",
   "requires_flash": false,
   "weather": "WEATHER_FOG",
   "map_type": "MAP_TYPE_ROUTE",
@@ -24,9 +24,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "NULL",
+      "script": "CloudedWood_EventScript_Cody",
       "flag": "0"
     },
     {
@@ -38,23 +38,23 @@
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "CloudedWood_EventScript_Bristol",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 29,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "CloudedWood_EventScript_Denzel",
       "flag": "0"
     },
     {
@@ -68,21 +68,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "CloudedWood_EventScript_Fisherman",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_CW_AGATHA",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_AGATHA",
       "x": 20,
       "y": 11,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "CloudedWood_EventScript_Agatha",
       "flag": "0"
     },
     {
@@ -96,8 +97,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "CloudedWood_EventScript_ItemCharcoal",
+      "flag": "FLAG_CLOUDED_WOOD_CHARCOAL"
     },
     {
       "type": "object",
@@ -110,8 +111,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "CloudedWood_EventScript_ItemFlameOrb",
+      "flag": "FLAG_CLOUDED_WOOD_FLAME_ORB"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CloudedWood_EventScript_ItemBugGem",
+      "flag": "FLAG_CLOUDED_WOOD_BUG_GEM"
     }
   ],
   "warp_events": [
@@ -133,10 +148,37 @@
       "x": 23,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_CLOUDED_WOOD_2",
+      "dest_map": "MAP_CLOUDED_WOOD_HOUSE",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 3,
+      "y": 3,
+      "elevation": 0,
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_CLOUDED_WOOD_SITRUS",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CloudedWood_EventScript_Sign2"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CloudedWood_EventScript_Sign3"
+    }
+  ]
 }

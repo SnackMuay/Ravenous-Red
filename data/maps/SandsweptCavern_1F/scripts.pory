@@ -1,0 +1,162 @@
+raw `
+
+SandsweptCavern_1F_MapScripts::
+	.byte 0
+
+`
+
+script SandsweptCavern_EventScript_Heath{
+    trainerbattle_single(TRAINER_RUIN_MANIAC_HEATH, Heath_Intro, Heath_Outro)
+    msgbox(Heath_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Heath_Intro{
+    format("Wait just moment, there.")
+}
+
+text Heath_Outro{
+    format("We've been swept away.")
+}
+
+text Heath_Postbattle{
+    format("There are so many fascinating GROUND and ROCK-type POKéMON here in SANDSWEPT CAVERN.")
+}
+
+script SandsweptCavern_EventScript_Miley{
+    trainerbattle_single(TRAINER_CRUSH_GIRL_MILEY, Miley_Intro, Miley_Outro)
+    msgbox(Miley_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Miley_Intro{
+    format("Square up!")
+}
+
+text Miley_Outro{
+    format("That was quite a bout.")
+}
+
+text Miley_Postbattle{
+    format("The violent sands in this cave system are perfect for training my POKéMON to have a thicker skin. They will be prepared for anything after I'm done.")
+}
+
+script SandsweptCavern_EventScript_Layne{
+    trainerbattle_single(TRAINER_SUPER_NERD_LAYNE, Layne_Intro, Layne_Outro)
+    msgbox(Layne_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Layne_Intro{
+    format("Excuse me...")
+}
+
+text Layne_Outro{
+    format("My apologies. I wasn't much of a challenge for you.")
+}
+
+text Layne_Postbattle{
+    format("I'd like to learn more about the mysterious POKéMON that appear here, but traveling deeper into SANDSWEPT CAVERN is daunting.")
+}
+
+script SandsweptCavern_EventScript_Lincoln{
+    trainerbattle_single(TRAINER_COOLTRAINER_LINCOLN, Lincoln_Intro, Lincoln_Outro)
+    msgbox(Lincoln_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Lincoln_Intro{
+    format("Yo!")
+}
+
+text Lincoln_Outro{
+    format("Ho Boy! What a battle!")
+}
+
+text Lincoln_Postbattle{
+    format("You're pretty cool, yourself.")
+}
+
+script SandsweptCavern_EventScript_Sullivan{
+    trainerbattle_single(TRAINER_RUIN_MANIAC_SULLIVAN, Sullivan_Intro, Sullivan_Outro)
+    msgbox(Sullivan_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Sullivan_Intro{
+    format("I'm hunting for signs of ancient civilization. But a POKéMON BATTLE makes for a perfect respite.")
+}
+
+text Sullivan_Outro{
+    format("Back to work for me.")
+}
+
+text Sullivan_Postbattle{
+    format("From what we know, ancient peoples had POKéMON by their side as well. Perhaps even more intertwined with their lives than ours are today.")
+}
+
+script SandsweptCavern_EventScript_Hadley{
+    trainerbattle_single(TRAINER_COOLTRAINER_HADLEY, Hadley_Intro, Hadley_Outro)
+    msgbox(Hadley_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Hadley_Intro{
+    format("You think you've got the skills to defeat me?")
+}
+
+text Hadley_Outro{
+    format("Your POKéMON were unfazed.")
+}
+
+text Hadley_Postbattle{
+    format("Some POKéMON shine more than others in these WEATHER conditions.")
+}
+
+script SandsweptCavern_EventScript_Ramsey{
+    trainerbattle_single(TRAINER_HIKER_RAMSEY, Ramsey_Intro, Ramsey_Outro)
+    msgbox(Ramsey_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Ramsey_Intro{
+    format("I'm ashamed to say I've misplaced my MAP. In the meantime, care to engage in a POKéMON BATTLE?")
+}
+
+text Ramsey_Outro{
+    format("What fun!")
+}
+
+text Ramsey_Postbattle{
+    format("I've reached what appears to be a dead end on my trek. There's nothing here except an ominous hole in the ground.")
+}
+
+script SandsweptCavern_EventScript_Scientist{
+    lockall
+    faceplayer
+    msgbox(format("The fluctuating magnetic field here in SANDSWEPT CAVERN agitates the ferromagnetic minerals in the sand. 
+        It's a bizarre thing to experience, but he result is a SANDSTORM without any wind."))
+    releaseall
+}
+
+script SandsweptCavern_EventScript_Camper{
+    lockall
+    faceplayer
+    msgbox(format("This remote area has far less sand. It's a reprieve from the constant barrage out there."))
+    releaseall
+}
+
+script SandsweptCavern_EventScript_Black_Belt{
+    lockall
+    faceplayer
+    msgbox(format("SNACK gives the player FOCUS BAND."))
+    releaseall
+}
+

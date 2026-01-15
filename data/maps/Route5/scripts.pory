@@ -1,0 +1,75 @@
+raw `
+
+Route5_MapScripts::
+	.byte 0
+
+Route5_EventScript_UndergroundPathSign::
+	msgbox Route5_Text_UndergroundPathSign, MSGBOX_SIGN
+	end
+
+`
+
+script Route5_EventScript_Aubrey{
+    trainerbattle_single(TRAINER_AROMA_LADY_AUBREY, Aubrey_Intro, Aubrey_Outro)
+    msgbox(Aubrey_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Aubrey_Intro{
+    format("POKéMON battles are a thing of beauty!")
+}
+
+text Aubrey_Outro{
+    format("Your POKéMON were gorgeous.")
+}
+
+text Aubrey_Postbattle{
+    format("Ahead is CLOUDED WOOD. I'd go there to train my POKéMON, but the vibe is always so gloomy.")
+}
+
+script Route5_EventScript_Weston{
+    trainerbattle_single(TRAINER_BIRD_KEEPER_WESTON, Weston_Intro, Weston_Outro)
+    msgbox(Weston_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Weston_Intro{
+    format("You're about to become another feather in my cap!")
+}
+
+text Weston_Outro{
+    format("What a downer.")
+}
+
+text Weston_Postbattle{
+    format("CLOUDED WOOD is too dreary for my taste. I prefer to battle under clear skies.")
+}
+
+script Route5_EventScript_Camper{
+    lockall
+    faceplayer
+    msgbox(format("It's much less busy here on this side of the DAYCARE."))
+    releaseall
+}
+
+script Route5_EventScript_DoorLocked{
+	lockall
+	textcolor(NPC_TEXT_COLOR_NEUTRAL)
+	applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
+	waitmovement
+	delay(10)
+	msgbox(format("The door appears to be locked."))
+	waitmessage
+	delay(8)
+	closemessage
+	applymovement(LOCALID_PLAYER, WalkDownward)
+    waitmovement
+	releaseall
+}
+
+movement WalkDownward{
+	walk_down
+	end
+}

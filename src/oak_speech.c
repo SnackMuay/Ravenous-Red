@@ -21,7 +21,7 @@
 #include "util.h"
 #include "constants/songs.h"
 
-#define INTRO_SPECIES SPECIES_DARUMAKA
+#define INTRO_SPECIES SPECIES_ELEKID
 
 enum
 {

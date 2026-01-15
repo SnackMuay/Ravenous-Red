@@ -33,3 +33,23 @@ text Xiomara_Postbattle{
     format("POKéMON love to be outdoors!")
 }
 
+script Route2_EventScript_Sonny{
+    trainerbattle_single(TRAINER_BUG_CATCHER_SONNY, Sonny_Intro, Sonny_Outro)
+    msgbox(Sonny_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Sonny_Intro{
+    format("BUG POKéMON can be powerful too! I'll prove it!")
+}
+
+text Sonny_Outro{
+    format("Even my ITEMS weren't enough.")
+}
+
+text Sonny_Postbattle{
+    format("Thank you for the thrilling battle. I need more experience so I can better equip my POKéMON for victory.")
+}
+
+

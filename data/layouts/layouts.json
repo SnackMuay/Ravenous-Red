@@ -304,8 +304,8 @@
     {
       "id": "LAYOUT_PEWTER_CITY_GYM",
       "name": "PewterCity_Gym_Layout",
-      "width": 13,
-      "height": 20,
+      "width": 27,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -869,7 +869,7 @@
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
       "width": 24,
-      "height": 80,
+      "height": 86,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -916,7 +916,7 @@
     {
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
-      "width": 42,
+      "width": 54,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
@@ -4536,6 +4536,18 @@
       "secondary_tileset": "gTileset_FuchsiaCityAutumn",
       "border_filepath": "data/layouts/CloudedWood_2/border.bin",
       "blockdata_filepath": "data/layouts/CloudedWood_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CLOUDED_WOOD_HOUSE",
+      "name": "CloudedWood_House_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/CloudedWood_House/border.bin",
+      "blockdata_filepath": "data/layouts/CloudedWood_House/map.bin"
     }
   ]
 }

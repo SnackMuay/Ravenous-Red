@@ -3,7 +3,7 @@
   "name": "CliffsideCave_2F",
   "layout": "LAYOUT_CLIFFSIDE_CAVE_2F",
   "music": "MUS_MT_MOON",
-  "region_map_section": "MAPSEC_RUSTURF_TUNNEL",
+  "region_map_section": "MAPSEC_CLIFFSIDE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_UNDERGROUND",

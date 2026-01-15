@@ -1408,3 +1408,6 @@ Text_TestMsg::
 
 	.include "data/maps/CloudedWood_2/scripts.inc"
 	.include "data/maps/CloudedWood_2/text.inc"
+
+	.include "data/maps/CloudedWood_House/scripts.inc"
+	.include "data/maps/CloudedWood_House/text.inc"
