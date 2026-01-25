@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_CERULEAN_CITY",
-      "offset": -10,
+      "offset": -11,
       "direction": "left"
     },
     {
@@ -155,7 +155,7 @@
     {
       "local_id": "LOCALID_ROUTE9_CUT_TREE",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_ROCK_SMASH_ROCK",
       "x": 2,
       "y": 8,
       "elevation": 3,
@@ -164,7 +164,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_CutTree",
+      "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_12"
     },
     {

@@ -90,8 +90,12 @@ Route25_EventScript_ItemLeafStone::
 	finditem ITEM_LEAF_STONE
 	end
 
-Route25_EventScript_ItemTM43::
-	finditem ITEM_TM43
+Route25_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
+Route5_EventScript_ItemZoomLens::
+	finditem ITEM_ZOOM_LENS
 	end
 
 CloudedWood_EventScript_ItemCharcoal::
@@ -108,6 +112,54 @@ CloudedWood_EventScript_ItemHeartScale::
 
 CloudedWood_EventScript_ItemBugGem::
 	finditem ITEM_BUG_GEM
+	end
+
+Sandswept_EventScript_ItemHeartScale_1::
+	finditem ITEM_HEART_SCALE
+	end
+
+Sandswept_EventScript_ItemRockGem::
+	finditem ITEM_ROCK_GEM
+	end
+
+Sandswept_EventScript_ItemEther::
+	finditem ITEM_ETHER
+	end
+
+Sandswept_EventScript_ItemHeartScale_2::
+	finditem ITEM_HEART_SCALE
+	end
+
+Sandswept_EventScript_ItemSmoothRock::
+	finditem ITEM_SMOOTH_ROCK
+	end
+
+Sandswept_EventScript_ItemKingsRock::
+	finditem ITEM_KINGS_ROCK
+	end
+
+Sandswept_EventScript_ItemShedShell::
+	finditem ITEM_SHED_SHELL
+	end
+
+Sandswept_EventScript_ItemSoftSand::
+	finditem ITEM_SOFT_SAND
+	end
+
+Route6_EventScript_Item001::
+	finditem ITEM_MASTER_BALL
+	end
+
+Route6_EventScript_Item002::
+	finditem ITEM_MASTER_BALL
+	end
+
+Route6_EventScript_Item003::
+	finditem ITEM_MASTER_BALL
+	end
+
+Route6_EventScript_Item004::
+	finditem ITEM_MASTER_BALL
 	end
 
 SSAnne_1F_Room2_EventScript_ItemTM31::

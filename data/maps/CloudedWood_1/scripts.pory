@@ -188,7 +188,7 @@ script CloudedWood_EventScript_Sign3{
 }
 
 script CloudedWood_EventScript_Woman1{
-    lockall
+    lock
     faceplayer
     msgbox(format("My girlfriend thinks I'm weird for this, but there's something about this place that calls to me."))
     releaseall

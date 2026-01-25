@@ -1138,7 +1138,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Quagsire (M) @ Rindo Berry
 Level: 21
@@ -1177,7 +1177,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Herdier (M) @ Silk Scarf
 Level: 21
@@ -1216,7 +1216,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Sandslash (M) @ Custap Berry
 Level: 26
@@ -1255,7 +1255,7 @@ Pic: Psychic F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Lucario (F) @ Lum Berry
 Level: 28
@@ -1294,7 +1294,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Simisear (M) @ Liechi Berry
 Level: 33
@@ -1333,7 +1333,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Dodrio (M) @ Assault Vest
 Level: 32
@@ -1382,7 +1382,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Electabuzz (M) @ Eviolite
 Level: 31
@@ -1492,7 +1492,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Surskit (M) @ Focus Sash
 Level: 15
@@ -1531,7 +1531,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Nincada (F) @ ITEM_CHERI_BERRY
 Level: 10
@@ -1558,7 +1558,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Joltik (M)
 Level: 11
@@ -1586,7 +1586,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Dustox (M)
 Level: 13
@@ -1603,7 +1603,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Vespiquen (F) @ Lum Berry
 Level: 21
@@ -1632,7 +1632,7 @@ Pic: Crush Girl
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Zangoose (F) @ Rawst Berry
 Level: 20
@@ -1671,7 +1671,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Accelgor (M) @ Choice Band
 Level: 22
@@ -1710,7 +1710,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Wormadam Sandy (F) @ Soft Sand
 Level: 26
@@ -1749,7 +1749,7 @@ Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Koffing (F) @ Starf Berry
 Level: 26
@@ -1788,7 +1788,7 @@ Pic: Pokemon Ranger M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Dugtrio (F) @ Passho Berry
 Level: 27
@@ -1920,7 +1920,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Misdreavus (F) @ Eviolite
 Level: 21
@@ -1949,7 +1949,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Sneasel (F) @ Ice Gem
 Level: 22
@@ -1988,7 +1988,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Vaporeon (F) @ Lum Berry
 Level: 23
@@ -2048,7 +2048,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Wigglytuff (M) @ Chesto Berry
 Level: 26
@@ -2087,7 +2087,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Furret (M) @ Wide Lens
 Level: 26
@@ -2126,7 +2126,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Nidoqueen (F) @ Jaboca Berry
 Level: 29
@@ -2165,7 +2165,7 @@ Pic: Pokemon Ranger F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Pelipper (M) @ Damp Rock
 Level: 27
@@ -2221,7 +2221,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Espeon (F) @ Colbur Berry
 Level: 33
@@ -2580,7 +2580,7 @@ Pic: Psychic M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Mr Mime (M) @ Light Clay
 Level: 28
@@ -2619,7 +2619,7 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Jumpluff (M) @ Big Root
 Level: 29
@@ -2651,35 +2651,103 @@ Nature: Bold
 - Heal Pulse
 - Refresh
 
-=== TRAINER_CAMPER_RICKY ===
-Name: RICKY
+=== TRAINER_CAMPER_BOB_ELLA ===
+Name: BOB & ELLA
 Class: Camper
-Pic: Camper
+Pic: Pokefan F
 Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
+Music: Cool
+Double Battle: Yes
+AI: Smart Trainer
 
-Squirtle
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pachirisu (M) @ Petaya Berry
+Level: 40
+Ability: Volt Absorb
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Relaxed
+- Super Fang
+- Discharge
+- Thunder Wave
+- Seed Bomb
 
-=== TRAINER_CAMPER_JEFF ===
-Name: JEFF
-Class: Camper
-Pic: Camper
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
+Luxray (M) @ Assault Vest
+Level: 40
+Ability: Intimidate
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Timid
+- Discharge
+- Snarl
+- Ice Fang
+- Psychic Fangs
 
-Spearow
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lilligant (F) @ Wide Lens
+Level: 40
+Ability: Own Tempo
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Gentle
+- Giga Drain
+- Draining Kiss
+- Sleep Powder
+- Flatter
 
-Raticate
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Marowak (F) @ Loaded Dice
+Level: 40
+Ability: Lightning Rod
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Quiet
+- Bonemerang
+- Shadow Ball
+- Rock Blast
+- Shadow Sneak
+
+=== TRAINER_PICNICKER_KARA_JOE ===
+Name: KARA & JOE
+Class: Picnicker
+Pic: Pokefan F
+Gender: Female
+Music: Cool
+Double Battle: Yes
+AI: Smart Trainer
+
+Quagsire (F) @ Assault Vest
+Level: 40
+Ability: Unaware
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Quiet
+- Waterfall
+- Earth Power
+- Sludge Bomb
+- Flip Turn
+
+Delibird (F) @ Poison Barb
+Level: 40
+Ability: Hospitality
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Modest
+- Ice Beam
+- Chatter
+- Light Screen
+- Fling
+
+Pinsir (M) @ Eject Pack
+Level: 40
+Ability: Mold Breaker
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Jolly
+- U-Turn
+- Close Combat
+- Facade
+- Knock Off
+
+Skuntank (M) @ Salac Berry
+Level: 40
+Ability: Aftermath
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+Nature: Timid
+- Parting Shot
+- Flamethrower
+- Dark Pulse
+- Belch
 
 === TRAINER_CAMPER_2 ===
 Name: PH
@@ -2743,7 +2811,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Alomomola (F) @ Liechi Berry
 Level: 32
@@ -2820,7 +2888,7 @@ Pic: Picnicker
 Gender: Male
 Music: Girl
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Vileplume (F) @ Persim Berry
 Level: 31
@@ -3128,7 +3196,7 @@ Pic: Super Nerd
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Solrock @ Smooth Rock
 Level: 26
@@ -3167,7 +3235,7 @@ Pic: Super Nerd
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Archen (M) @ Iapapa Berry
 Level: 27
@@ -3434,7 +3502,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Golbat (F) @ Sitrus Berry
 Level: 26
@@ -3473,7 +3541,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Excadrill (F) @ Occa Berry
 Level: 32
@@ -3522,7 +3590,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Magmar (M) @ Eviolite
 Level: 31
@@ -3551,7 +3619,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Rhyhorn (M) @ Loaded Dice
 Level: 30
@@ -4678,7 +4746,7 @@ Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Basculin Red Striped (F) @ Iapapa Berry
 Level: 32
@@ -5882,7 +5950,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Illumise (F) @ Rawst Berry
 Level: 18
@@ -6440,7 +6508,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Kricketune (F) @ Metronome
 Level: 20
@@ -6479,7 +6547,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Ninjask (M) @ Expert Belt
 Level: 20
@@ -6498,7 +6566,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Shedinja (F) @ Safety Goggles
 Level: 20
@@ -6583,7 +6651,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Munna (F)
 Level: 8
@@ -6609,7 +6677,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Munna (F)
 Level: 8
@@ -6635,7 +6703,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Munna (F)
 Level: 8
@@ -6661,7 +6729,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machoke (M) @ Coba Berry
 Level: 29
@@ -6720,7 +6788,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machoke (M) @ Coba Berry
 Level: 29
@@ -6779,7 +6847,7 @@ Pic: Rival Early
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Machoke (M) @ Coba Berry
 Level: 29
@@ -7262,7 +7330,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Musharna (F) @ Leftovers
 Level: 25
@@ -7321,7 +7389,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Musharna (F) @ Leftovers
 Level: 25
@@ -7380,7 +7448,7 @@ Pic: RS May 1
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Musharna (F) @ Leftovers
 Level: 25
@@ -7439,7 +7507,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Steelix (M) @ Iron Ball
 Level: 29
@@ -7498,7 +7566,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Nidorino (M) @ Wide Lens
 Level: 27
@@ -7527,7 +7595,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Breloom (F) @ Coba Berry
 Level: 27
@@ -7566,7 +7634,7 @@ Pic: Rocket Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Gabite (F) @ Rocky Helmet
 Level: 28
@@ -7605,7 +7673,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Yanmega (M) @ Scope Lens
 Level: 34
@@ -7644,7 +7712,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Qwilfish (M) @ Custap Berry
 Level: 30
@@ -8455,7 +8523,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Dunsparce (F) @ Rawst Berry
 Level: 10
@@ -8482,7 +8550,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Drowzee (F) @ Big Root
 Level: 12
@@ -8509,7 +8577,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Paras (M) @ Focus Sash
 Level: 12
@@ -8537,7 +8605,7 @@ Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Koffing (M) @ Cheri Berry
 Level: 10
@@ -8565,7 +8633,7 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Bagon (M) @ Oran Berry
 Level: 10
@@ -8593,7 +8661,7 @@ Pic: Picnicker
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Roselia (M) @ Rawst Berry
 Level: 12
@@ -8631,7 +8699,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Karrablast (M)
 Level: 12
@@ -8660,7 +8728,7 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Eevee (F) @ Eviolite
 Level: 14
@@ -8689,7 +8757,7 @@ Pic: Rocket Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Tentacool (F) @ Grip Claw
 Level: 14
@@ -8728,7 +8796,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Stunky (F) @ King's Rock
 Level: 14
@@ -8767,7 +8835,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Makuhita (F) @ Focus Band
 Level: 14
@@ -8795,7 +8863,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Onix (M) @ Quick Claw
 Level: 14
@@ -8824,7 +8892,7 @@ Pic: Rocket Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Murkrow (M) @ Lum Berry
 Level: 15
@@ -8883,7 +8951,7 @@ Pic: Super Nerd
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Shuckle (F) @ Leftovers
 Level: 20
@@ -8902,7 +8970,7 @@ Pic: Rocket Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Carnivine (M) @ Zoom Lens
 Level: 16
@@ -8951,7 +9019,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Absol (M) @ Scope Lens
 Level: 17
@@ -8980,7 +9048,7 @@ Pic: Rocket Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Heatmor (F) @ Wide Lens
 Level: 17
@@ -9009,7 +9077,7 @@ Pic: Interviewer
 Gender: Male
 Music: Aqua
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Wartortle (F) @ Shell Bell
 Level: 18
@@ -9418,7 +9486,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Skorupi (M) @ Scope Lens
 Level: 18
@@ -9447,7 +9515,7 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Dwebble (M) @ Lum Berry
 Level: 20
@@ -10080,7 +10148,7 @@ Pic: Wally
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Ariados (M) @ Big Root
 Level: 21
@@ -10149,7 +10217,7 @@ Pic: Leader Brock
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Geodude
 Level: 12
@@ -10171,7 +10239,7 @@ Pic: Leader Misty
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Milotic (F) @ Damp Rock
 Level: 33
@@ -10211,7 +10279,7 @@ Nature: Bold
 - Giga Drain
 - Teeter Dance
 - Hyper Voice
-- Aqua Jet
+- Jet Punch
 
 Kingdra (F) @ Shell Bell
 Level: 33
@@ -10240,7 +10308,7 @@ Pic: Leader Lt Surge
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Voltorb
 Level: 21
@@ -10273,7 +10341,7 @@ Pic: Leader Erika
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Victreebel
 Level: 29
@@ -10306,7 +10374,7 @@ Pic: Leader Koga
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Koffing
 Level: 37
@@ -10347,7 +10415,7 @@ Pic: Leader Blaine
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Growlithe
 Level: 42
@@ -10388,7 +10456,7 @@ Pic: Leader Sabrina
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Kadabra
 Level: 38
@@ -11281,7 +11349,7 @@ Pic: Channeler
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Grumpig (M) @ Blunder Policy
 Level: 35
@@ -11320,7 +11388,7 @@ Pic: Channeler
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Try to 2HKO / Ace Pokemon
+AI: Ace Trainer
 
 Chimecho (M) @ Focus Sash
 Level: 36
@@ -11359,10 +11427,10 @@ Pic: Channeler
 Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Claydol @ Light Clay
-Level: 37
+Level: 36
 Ability: Levitate
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Nature: Jolly
@@ -11372,7 +11440,7 @@ Nature: Jolly
 - Stealth Rock
 
 Banette (M) @ Zoom Lens
-Level: 37
+Level: 36
 Ability: Cursed Body
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Nature: Quirky
@@ -11382,7 +11450,7 @@ Nature: Quirky
 - Hypnosis
 
 Weezing (F) @ Black Sludge
-Level: 37
+Level: 36
 Ability: Levitate
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Nature: Sassy
@@ -11392,7 +11460,7 @@ Nature: Sassy
 - Flamethrower
 
 Darmanitan (M) @ Life Orb
-Level: 37
+Level: 36
 Ability: Sheer Force
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 Nature: Jolly
@@ -11408,10 +11476,10 @@ Pic: Elite Four Agatha
 Gender: Female
 Music: Intense
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
 Slowbro (M) @ Lum Berry
-Level: 38
+Level: 37
 Ability: Own Tempo
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 Nature: Calm
@@ -11421,7 +11489,7 @@ Nature: Calm
 - Surf
 
 Dusclops (F) @ Eviolite
-Level: 38
+Level: 37
 Ability: Pressure
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 Nature: Brave
@@ -11431,7 +11499,7 @@ Nature: Brave
 - Confuse Ray
 
 Escavalier (F) @ Occa Berry
-Level: 38
+Level: 37
 Ability: Shell Armor
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 Nature: Sassy
@@ -11441,7 +11509,7 @@ Nature: Sassy
 - Drill Run
 
 Torterra (F) @ Leftovers
-Level: 38
+Level: 37
 Ability: Overgrow
 IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 Nature: Relaxed
@@ -11451,7 +11519,7 @@ Nature: Relaxed
 - Giga Drain
 
 Gengar (M) @ Room Service
-Level: 39
+Level: 38
 Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -11720,7 +11788,7 @@ Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Bellossom (M) @ Heat Rock
 Level: 31
@@ -12113,7 +12181,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Camerupt (M) @ Passho Berry
 Level: 38
@@ -12142,7 +12210,7 @@ Pic: Crush Girl
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Infernape (F) @ Eject Pack
 Level: 38
@@ -12171,7 +12239,7 @@ Pic: Super Nerd
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Magnezone @ Iapapa Berry
 Level: 38
@@ -12200,7 +12268,7 @@ Pic: Ruin Maniac
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Magcargo (F) @ Air Balloon
 Level: 39
@@ -12239,7 +12307,7 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Fraxure (F) @ Safety Goggles
 Level: 39
@@ -12278,9 +12346,9 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Sharpedo @ Life Orb
+Sharpedo (F) @ Life Orb
 Level: 38
 Ability: Rough Skin
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
@@ -12290,7 +12358,7 @@ Nature: Lonely
 - Crunch
 - Snarl
 
-Leavanny @ Assault Vest
+Leavanny (M) @ Assault Vest
 Level: 38
 Ability: Overcoat
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
@@ -12392,10 +12460,10 @@ Pic: Pokemon Ranger M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Scolipede (M) @ Clear Amulet
-Level: 37
+Level: 36
 Ability: Speed Boost
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Nature: Sassy
@@ -12405,7 +12473,7 @@ Nature: Sassy
 - Horn Leech
 
 Ampharos (F) @ Blunder Policy
-Level: 37
+Level: 36
 Ability: Mold Breaker
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Nature: Quirky
@@ -12415,7 +12483,7 @@ Nature: Quirky
 - Ice Punch
 
 Typhlosion (M) @ Sitrus Berry
-Level: 37
+Level: 36
 Ability: Flash Fire
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Nature: Hardy
@@ -12425,7 +12493,7 @@ Nature: Hardy
 - Shadow Ball
 
 Beartic (F) @ Assault Vest
-Level: 37
+Level: 36
 Ability: Snow Cloak
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Nature: Brave
@@ -12441,7 +12509,7 @@ Pic: Pokemon Ranger M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Shelgon (M) @ Eviolite
 Level: 36
@@ -12490,7 +12558,7 @@ Pic: Bird Keeper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Swellow (M) @ Toxic Orb
 Level: 35
@@ -12506,7 +12574,7 @@ Altaria (F) @ Yache Berry
 Level: 35
 Ability: Aerilate
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-Nature: Adamant
+Nature: Modest
 - Cotton Guard
 - Draining Kiss
 - Roost
@@ -12529,7 +12597,7 @@ Pic: Aroma Lady
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Venusaur (M) @ Weakness Policy
 Level: 35
@@ -12568,7 +12636,7 @@ Pic: Picnicker
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Sunflora (M) @ Heat Rock
 Level: 15
@@ -12607,7 +12675,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Buneary (F) @ Silk Scarf
 Level: 15
@@ -13057,7 +13125,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Beautifly (F)
 Level: 13
@@ -13074,7 +13142,7 @@ Pic: Bug Catcher
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Larvesta (F)
 Level: 12
@@ -14955,7 +15023,7 @@ Pic: Hiker
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Probopass (M) @ Custap Berry
 Level: 39
@@ -14994,15 +15062,47 @@ Pic: Cooltrainer F
 Gender: Female
 Music: Cool
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Nidorino
-Level: 29
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+Pidgeot (M) @ Power Herb
+Level: 40
+Ability: Keen Eye
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Brave
+- Sky Attack
+- Heat Wave
+- Double Edge
+- Air Slash
 
-Nidorina
-Level: 29
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+Rapidash (F) @ Assault Vest
+Level: 40
+Ability: Flame Body
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Naughty
+- High Horsepower
+- Flare Blitz
+- Overheat
+- Wild Charge
+
+Nidoking (F) @ Black Sludge
+Level: 40
+Ability: Poison Point
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Hardy
+- Collision Course
+- Toxic
+- Sludge Wave
+- Drill Run
+
+Krookodile (M) @ Clear Amulet
+Level: 40
+Ability: Moxie
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Careful
+- Jaw Lock
+- Earthquake
+- Aqua Tail
+- Hone Claws
 
 === TRAINER_SUPER_NERD_BENJI ===
 Name: Benji
@@ -15013,13 +15113,25 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nidorino
-Level: 49
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+Amoonguss (M) @ Utility Umbrella
+Level: 40
+Ability: Mycelium Might
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Relaxed
+- Spore
+- Toxic
+- Giga Drain
+- Sludge Bomb
 
-Nidorina
-Level: 49
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
+Mamoswine (M) @ Loaded Dice
+Level: 40
+Ability: Thick Fat
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Hardy
+- Icicle Spear
+- Drill Run
+- Icy Wind
+- Double Edge
 
 === TRAINER_RUIN_MANIAC_CEDRIC ===
 Name: CEDRIC
@@ -15030,9 +15142,25 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Squirtle
-Level: 22
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Kabutops (F) @ Wide Lens
+Level: 40
+Ability: Swift Swim
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Jolly
+- Stone Edge
+- Aqua Cutter
+- X-Scissor
+- Swords Dance
+
+Cradily (F) @ Leftovers
+Level: 40
+Ability: Storm Drain
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Bold
+- Ancient Power
+- Brine
+- Giga Drain
+- Acid Armor
 
 === TRAINER_CRUSH_GIRL_SELENA ===
 Name: SELENA
@@ -15041,7 +15169,7 @@ Pic: Crush Girl
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Eelektross (M) @ Punching Glove
 Level: 40
@@ -15070,7 +15198,7 @@ Pic: Picnicker
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Hippowdon (F) @ Weakness Policy
 Level: 40
@@ -15099,15 +15227,47 @@ Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Spearow
-Level: 21
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Gliscor (F) @ Sitrus Berry
+Level: 40
+Ability: Sand Veil
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Careful
+- Toxic
+- Acrobatics
+- Swords Dance
+- Earthquake
 
-Raticate
-Level: 21
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Exeggutor (M) @ Safety Goggles
+Level: 40
+Ability: Chlorophyll
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Timid
+- Wood Hammer
+- Psychic
+- Giga Drain
+- Weather Ball
+
+Drapion (M) @ Assault Vest
+Level: 40
+Ability: Sniper
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Careful
+- Cross Poison
+- Night Slash
+- Lunge
+- Ice Fang
+
+Gigalith (F) @ Iron Ball
+Level: 40
+Ability: Sand Force
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Relaxed
+- Heavy Slam
+- Rock Slide
+- Curse
+- Chip Away
 
 === TRAINER_BLACK_BELT_ILIA ===
 Name: ILIA
@@ -15116,32 +15276,96 @@ Pic: Black Belt
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Fearow
-Level: 29
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+Slaking (M) @ Life Orb
+Level: 41
+Ability: Truant
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Jolly
+- Last Resort
+- Giga Impact
 
-Raticate
-Level: 29
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 
-=== TRAINER_CAMPER_JEFF_4 ===
-Name: JEFF
-Class: Camper
-Pic: Camper
+
+Scrafty (M) @ Safety Goggles
+Level: 41
+Ability: Intimidate
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Careful
+- Dragon Dance
+- Crunch
+- Power-Up Punch
+- Facade
+
+Excadrill (M) @ Muscle Band
+Level: 41
+Ability: Sand Rush
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Nature: Adamant
+- Iron Head
+- Earthquake
+- Aerial Ace
+- Swords Dance
+
+=== TRAINER_SANDSWEPT_BRENDAN ===
+Name: BRENDAN
+Class: Pkmn Trainer
+Pic: RS Brendan 2
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Fearow
-Level: 54
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Altaria (M) @ Eject Pack
+Level: 40
+Ability: Cloud Nine
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Modest
+- Draco Meteor
+- Ice Beam
+- Tailwind
+- Air Slash
 
-Raticate
-Level: 54
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Heracross (F) @ Coba Berry
+Level: 40
+Ability: Moxie
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Jolly
+- Bulk Up
+- Lunge
+- Brick Break
+- Rock Slide
+
+Wailord (M) @ Chesto Berry
+Level: 40
+Ability: Water Veil
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Sassy
+- Water Spout
+- Rest
+- Heavy Slam
+- Surf
+
+Arcanine (F) @ Assault Vest
+Level: 40
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Lax
+- Flare Blitz
+- Wild Charge
+- Flamethrower
+- Iron Tail
+
+Aggron (M) @ Weakness Policy
+Level: 42
+Ability: Filter
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Impish
+- Crush Claw
+- Rock Polish
+- Iron Head
+- Head Smash
 
 === TRAINER_PICNICKER_ISABELLE_2 ===
 Name: ISABELLE
@@ -17173,7 +17397,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Crawdaunt (M) @ Silver Powder
 Level: 32
@@ -17212,7 +17436,7 @@ Pic: Swimmer F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Slowking (M) @ Lum Berry
 Level: 32
@@ -17251,7 +17475,7 @@ Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Golduck (F) @ Twisted Spoon
 Level: 32
@@ -17290,7 +17514,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Feraligatr (M) @ Assault Vest
 Level: 32
@@ -17319,7 +17543,7 @@ Pic: Sailor
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Sealeo (F) @ Eviolite
 Level: 32

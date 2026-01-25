@@ -26,7 +26,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Cedric",
       "flag": "0"
     },
     {
@@ -40,7 +40,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Benji",
       "flag": "0"
     },
     {
@@ -54,7 +54,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Selena",
       "flag": "0"
     },
     {
@@ -68,7 +68,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Wren",
       "flag": "0"
     },
     {
@@ -82,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Melody",
       "flag": "0"
     },
     {
@@ -96,7 +96,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Zane",
       "flag": "0"
     },
     {
@@ -110,7 +110,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_OldMan",
       "flag": "0"
     },
     {
@@ -124,7 +124,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "NULL",
+      "script": "SandsweptCavern_EventScript_Ilia",
       "flag": "0"
     },
     {
@@ -138,8 +138,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Sandswept_EventScript_ItemSoftSand",
+      "flag": "FLAG_SANDSWEPT_SOFT_SAND"
     },
     {
       "type": "object",
@@ -152,8 +152,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Sandswept_EventScript_ItemSmoothRock",
+      "flag": "FLAG_SANDSWEPT_SMOOTH_ROCK"
     },
     {
       "type": "object",
@@ -166,8 +166,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Sandswept_EventScript_ItemShedShell",
+      "flag": "FLAG_SANDSWEPT_SHED_SHELL"
     },
     {
       "type": "object",
@@ -180,8 +180,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Sandswept_EventScript_ItemEther",
+      "flag": "FLAG_SANDSWEPT_ETHER"
     },
     {
       "type": "object",
@@ -242,8 +242,8 @@
       "x": 21,
       "y": 6,
       "elevation": 0,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1",
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_SANDSWEPT_STARDUST_3",
       "quantity": 1,
       "underfoot": false
     }

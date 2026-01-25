@@ -311,50 +311,22 @@ Route6_EventScript_ElijahRematch::
 	end
 
 Route6_EventScript_Ricky::
-	trainerbattle_single TRAINER_CAMPER_RICKY, Route6_Text_RickyIntro, Route6_Text_RickyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_RickyRematch
-	msgbox Route6_Text_RickyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route6_EventScript_RickyRematch::
-	trainerbattle_rematch TRAINER_CAMPER_RICKY, Route6_Text_RickyRematchIntro, Route6_Text_RickyDefeat
+	lockall
 	msgbox Route6_Text_RickyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route6_EventScript_Jeff::
-	trainerbattle_single TRAINER_CAMPER_JEFF, Route6_Text_JeffIntro, Route6_Text_JeffDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_JeffRematch
-	msgbox Route6_Text_JeffPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route6_EventScript_JeffRematch::
-	trainerbattle_rematch TRAINER_CAMPER_JEFF, Route6_Text_JeffRematchIntro, Route6_Text_JeffDefeat
+	lockall
 	msgbox Route6_Text_JeffPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route6_EventScript_Nancy::
-	trainerbattle_single TRAINER_PICNICKER_NANCY, Route6_Text_NancyIntro, Route6_Text_NancyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_NancyRematch
-	msgbox Route6_Text_NancyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route6_EventScript_NancyRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_NANCY, Route6_Text_NancyRematchIntro, Route6_Text_NancyDefeat
+	lockall
 	msgbox Route6_Text_NancyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route6_EventScript_Isabelle::
-	trainerbattle_single TRAINER_PICNICKER_ISABELLE, Route6_Text_IsabelleIntro, Route6_Text_IsabelleDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route6_EventScript_IsabelleRematch
-	msgbox Route6_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route6_EventScript_IsabelleRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_ISABELLE, Route6_Text_IsabelleRematchIntro, Route6_Text_IsabelleDefeat
+	lockall
 	msgbox Route6_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -159,6 +159,20 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route2_EventScript_Sonny",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CUBONE",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_WORLD_MAP_VERMILION_CITY"
     }
   ],
   "warp_events": [
@@ -185,7 +199,7 @@
     },
     {
       "x": 17,
-      "y": 17,
+      "y": 15,
       "elevation": 3,
       "dest_map": "MAP_DIGLETTS_CAVE_NORTH_ENTRANCE",
       "dest_warp_id": "1"
@@ -237,8 +251,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
-      "y": 18,
+      "x": 15,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route2_EventScript_DiglettsCaveSign"
@@ -250,6 +264,16 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route2_EventScript_RouteSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_TEMP_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

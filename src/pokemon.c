@@ -4722,7 +4722,7 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             if (heldItem == params[i].arg1)
             {
                 currentCondition = TRUE;
-                removeHoldItem = TRUE;
+                removeHoldItem = FALSE; // Bitch!
             }
             break;
         // Gen 3

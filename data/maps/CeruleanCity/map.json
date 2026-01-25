@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE24",
-      "offset": 12,
+      "offset": 8,
       "direction": "up"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
       "map": "MAP_ROUTE9",
-      "offset": 10,
+      "offset": 11,
       "direction": "right"
     }
   ],
@@ -169,9 +169,9 @@
     },
     {
       "type": "clone",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_ROCK_SMASH_ROCK",
       "x": 50,
-      "y": 18,
+      "y": 19,
       "target_local_id": "LOCALID_ROUTE9_CUT_TREE",
       "target_map": "MAP_ROUTE9"
     },
@@ -206,18 +206,12 @@
       "flag": "FLAG_HIDE_CERULEAN_CAVE_GUARD"
     },
     {
-      "type": "object",
+      "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 18,
       "y": 40,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "target_local_id": "2",
+      "target_map": "MAP_ROUTE5"
     }
   ],
   "warp_events": [

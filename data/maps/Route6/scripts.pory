@@ -1,0 +1,135 @@
+raw `
+
+Route6_MapScripts::
+	.byte 0
+
+Route6_EventScript_UndergroundPathSign::
+	msgbox Route6_Text_UndergroundPathSign, MSGBOX_SIGN
+	end
+
+`
+
+script Route6_EventScript_Tuber{
+    lockall
+    faceplayer
+    msgbox(format("I swam here from VERMILION CITY but now I'm too tired to get back."))
+    releaseall
+}
+
+script Route6_EventScript_AromaLady{
+    lockall
+    faceplayer
+    msgbox(format("I live in VERMILION CITY but the air there is so salty from the sea breeze. 
+        I prefer more floral scents."))
+    releaseall
+}
+
+script Route6_EventScript_OldWoman{
+    lockall
+    faceplayer
+    goto_if_unset(FLAG_ROUTE6_OLD_WOMAN_ITEM, Route6_EventScript_GiveOldWoman)
+    msgbox(format("Remember; our time is always limited, even when we don't realize it."))
+    releaseall
+}
+
+script Route6_EventScript_GiveOldWoman{
+    msgbox(format("The falling sand here in SANDSWEPT CAVERN always leaves me breathless.
+        I can't help but imagine the grains of sand in an hourglass slowly dwindling
+        as time marches forward. 
+        Sooner than you realize, you'll be my age. 
+        My favorite POKéMON MOVE perfectly encapsulates this theme as well. You ought to try it yourself."))
+    giveitem(ITEM_MASTER_BALL, amount=1)
+    setflag(FLAG_ROUTE6_OLD_WOMAN_ITEM)
+    msgbox(format("That TM contains PERISH SONG. Remember; our time is always limited, even when we don't realize it."))
+    releaseall
+}
+
+script Route6_EventScript_TriggerDouble{
+    lockall
+    getpartysize
+    compare(VAR_RESULT, 1)
+    goto_if_gt(Route6_EventScript_TriggerDoubleProceed)
+    call(Route6_EventScript_SmallParty)
+    releaseall
+}
+
+script Route6_EventScript_TriggerDoubleProceed{
+    applymovement(LOCALID_ROUTE6_RICKY, Route6_WalkRight)
+    applymovement(LOCALID_ROUTE6_NANCY, Route6_WalkLeft)
+    waitmovement(0)
+    trainerbattle_double(TRAINER_CAMPER_BOB_ELLA, BobElla_Intro, BobElla_Outro, BobElla_CantBattle, Route6_EventScript_TriggerDouble_Cont)
+    releaseall
+}
+
+script Route6_EventScript_TriggerDouble_Cont{
+    applymovement(LOCALID_ROUTE6_ISABELLE, Route6_WalkRight)
+    applymovement(LOCALID_ROUTE6_JEFF, Route6_WalkLeft)
+    waitmovement(0)
+    trainerbattle_double(TRAINER_PICNICKER_KARA_JOE, KaraJoe_Intro, KaraJoe_Outro, KaraJoe_CantBattle, Route6_EventScript_DoublesComplete)
+}
+
+script Route6_EventScript_DoublesComplete{
+    setvar(VAR_ROUTE6_DOUBLE, 1)
+    msgbox(format("Even the four of us aren't skilled enough to take you on."))
+    releaseall
+}
+
+script Route6_EventScript_SmallParty{
+    lockall
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(format("Stop right there! You need more POKéMON if you're going to challenge us!"))
+    applymovement(LOCALID_PLAYER, Route6_WalkAway)
+    releaseall
+}
+
+movement Route6_WalkRight{
+    walk_right
+}
+
+movement Route6_WalkLeft{
+    walk_left
+}
+
+movement Route6_WalkAway{
+    walk_up
+}
+
+text BobElla_Intro{
+    format("If you want to get past us, you'd better be prepared for the fight of your life!")
+}
+
+text BobElla_Outro{
+    format("You made that look easy, but we aren't done yet!")
+}
+
+text BobElla_CantBattle{
+    format("Stop right there! You need more POKéMON if you're going to challenge us!")
+}
+
+text KaraJoe_Intro{
+    format("...")
+}
+
+text KaraJoe_Outro{
+    format("...")
+}
+
+text KaraJoe_CantBattle{
+    format("...")
+}
+
+text Route6_Text_RickyPostBattle{
+    format("...")
+}
+
+text Route6_Text_JeffPostBattle{
+    format("...")
+}
+
+text Route6_Text_NancyPostBattle{
+    format("...")
+}
+
+text Route6_Text_IsabellePostBattle{
+    format("...")
+}

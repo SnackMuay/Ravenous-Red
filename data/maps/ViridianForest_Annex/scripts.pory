@@ -174,7 +174,6 @@ script Viridian_Forest_Grunts_Defeated{
 
 movement GruntMovement{
     walk_left
-    faceplayer
 }
 
 text Grunt_54_Intro{

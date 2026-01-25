@@ -22,7 +22,7 @@
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
     F(SAFEGUARD) \
-    F(FRUSTRATION) \
+    F(PERISH_SONG) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \

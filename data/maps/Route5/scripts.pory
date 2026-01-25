@@ -54,6 +54,26 @@ script Route5_EventScript_Camper{
     releaseall
 }
 
+script Route5_EventScript_Lass{
+    lockall
+    faceplayer
+    msgbox(format("I left my PONYTA at the daycare for a while and now it knows different MOVES!"))
+    releaseall
+}
+
+script Route5_EventScript_ToCloudedWood{
+    lockall
+    msgbox(format("To CLOUDED WOOD."), MSGBOX_SIGN)
+    releaseall
+}
+
+script Route5_EventScript_UndergroundDoor{
+    lockall
+    goto_if_set(FLAG_BASEMENT_KEY, Route5_EventScript_UseKey)
+    call(Route5_EventScript_DoorLocked)
+    releaseall
+}
+
 script Route5_EventScript_DoorLocked{
 	lockall
 	textcolor(NPC_TEXT_COLOR_NEUTRAL)
@@ -66,10 +86,40 @@ script Route5_EventScript_DoorLocked{
 	closemessage
 	applymovement(LOCALID_PLAYER, WalkDownward)
     waitmovement
+    setobjectmovementtype(LOCALID_PLAYER, MOVEMENT_TYPE_FACE_DOWN)
 	releaseall
 }
 
 movement WalkDownward{
+    face_down
 	walk_down
-	end
+    face_down
 }
+
+script Route5_EventScript_UseKey{
+    lockall
+    applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
+    msgbox(format("Use the UNDERGROUND KEY?"), MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, Route5_EventScript_Unlock_Underground)
+    goto_if_eq(VAR_RESULT, NO, Route5_EventScript_DoorStillLocked)
+    releaseall
+}
+
+script Route5_EventScript_Unlock_Underground{
+    lockall
+    textcolor(NPC_TEXT_COLOR_NEUTRAL)
+    msgbox(format("{PLAYER} used the UNDERGROUND KEY."))
+    waitmessage
+    setvar(VAR_UNLOCK_UNDERGROUND, 1)
+    releaseall
+}
+
+script Route5_EventScript_DoorStillLocked{
+	lockall
+	applymovement(LOCALID_PLAYER, WalkDownward)
+    waitmovement
+	releaseall
+}
+
+
+

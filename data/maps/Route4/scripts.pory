@@ -23,6 +23,30 @@ Route4_EventScript_RouteSign::
 	end
 
 `
+
+script Route4_EventScript_Psyduck{
+    lock
+	faceplayer
+	waitse
+	playmoncry(SPECIES_PSYDUCK, CRY_MODE_NORMAL)
+	msgbox(format("Psy!"))
+	waitmoncry
+	release
+	end
+}
+
+script Route4_EventScript_Cubone{
+    lock
+	faceplayer
+	waitse
+	playmoncry(SPECIES_CUBONE, CRY_MODE_NORMAL)
+	msgbox(format("Cuuu!"))
+	waitmoncry
+	release
+	end
+}
+
+
 script Route4_Trigger_May{
     lockall
     opendoor(12, 5)
@@ -61,6 +85,8 @@ script Route4_EventScript_May_Charmander{
 
 script May_2_Defeat{
     lockall
+    msgbox(format("You're the luckiest TRAINER I've encountered. What a waste of time."))
+    waitmessage
     applymovement(LOCALID_MAY_2, May_Depart)
     waitmovement(0)
     removeobject(LOCALID_MAY_2)

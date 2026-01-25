@@ -206,7 +206,7 @@ static bool32 FieldMove_IsUnlockedCut(void)
 
 static bool32 FieldMove_IsUnlockedFly(void)
 {
-    return FlagGet(FLAG_BADGE01_GET);
+    return FlagGet(FLAG_BADGE04_GET);
 }
 
 static bool32 FieldMove_IsUnlockedSurf(void)
@@ -216,17 +216,17 @@ static bool32 FieldMove_IsUnlockedSurf(void)
 
 static bool32 FieldMove_IsUnlockedStrength(void)
 {
-    return FlagGet(FLAG_BADGE04_GET);
+    return FlagGet(FLAG_BADGE06_GET);
 }
 
 static bool32 FieldMove_IsUnlockedFlash(void)
 {
-    return FlagGet(FLAG_BADGE08_GET);
+    return FlagGet(FLAG_BADGE03_GET);
 }
 
 static bool32 FieldMove_IsUnlockedRockSmash(void)
 {
-    return FlagGet(FLAG_BADGE03_GET);
+    return FlagGet(FLAG_BADGE01_GET);
 }
 
 static bool32 FieldMove_IsUnlockedWaterfall(void)

@@ -11697,14 +11697,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = NULL,
     },
 
-    [ITEM_TM_FRUSTRATION] =
+    [ITEM_TM_PERISH_SONG] =
     {
         .name = ITEM_NAME("TM21"),
         .price = 1000,
         .description = COMPOUND_STRING(
-            "The less the user "
-            "likes\nyou, the more "
-            "powerful\nthis move."),
+            "Any Pokémon that "
+            "hears\nthis song faints "
+            "in three\nturns."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13540,12 +13540,11 @@ const struct Item gItemsInfo[] =
 
     [ITEM_BASEMENT_KEY] =
     {
-        .name = ITEM_NAME("Basement Key"),
+        .name = ITEM_NAME("Underground Key"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "The key for New "
-            "Mauville beneath "
-            "\nMauville City."),
+            "The key that unlocks "
+            "Underground Path."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

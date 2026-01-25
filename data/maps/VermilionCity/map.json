@@ -21,7 +21,7 @@
     },
     {
       "map": "MAP_ROUTE11",
-      "offset": 10,
+      "offset": 6,
       "direction": "right"
     }
   ],
@@ -110,6 +110,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VermilionCity_EventScript_OaksAide",
       "flag": "FLAG_HIDE_VERMILION_CITY_OAKS_AIDE"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 43,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -268,7 +282,7 @@
       "x": 32,
       "y": 14,
       "elevation": 3,
-      "item": "ITEM_MAX_ETHER",
+      "item": "ITEM_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER",
       "quantity": 1,
       "underfoot": false

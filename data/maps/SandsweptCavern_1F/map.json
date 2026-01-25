@@ -82,8 +82,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Sandswept_EventScript_ItemHeartScale_1",
+      "flag": "FLAG_SANDSWEPT_HEART_SCALE_1"
     },
     {
       "type": "object",
@@ -165,8 +165,8 @@
       "x": 9,
       "y": 21,
       "elevation": 0,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1",
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_SANDSWEPT_STARDUST_1",
       "quantity": 1,
       "underfoot": false
     }

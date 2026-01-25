@@ -98,7 +98,7 @@
       "x": 3,
       "y": 39,
       "elevation": 3,
-      "item": "ITEM_ETHER",
+      "item": "ITEM_REPEL",
       "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ETHER",
       "quantity": 1,
       "underfoot": false

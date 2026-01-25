@@ -215,28 +215,28 @@
 #define FLAG_CLOUDED_WOOD_SITRUS                           0x0C5
 #define FLAG_CLOUDED_WOOD_BUG_GEM                          0x0C6
 #define FLAG_GO_GOGGLES                                    0x0C7
-#define FLAG_0x0C8               0x0C8
-#define FLAG_0x0C9               0x0C9
-#define FLAG_0x0CA               0x0CA
-#define FLAG_0x0CB               0x0CB
-#define FLAG_0x0CC               0x0CC
-#define FLAG_0x0CD               0x0CD
-#define FLAG_0x0CE               0x0CE
-#define FLAG_0x0CF               0x0CF
-#define FLAG_0x0D0               0x0D0
-#define FLAG_0x0D1               0x0D1
-#define FLAG_0x0D2               0x0D2
-#define FLAG_0x0D3               0x0D3
-#define FLAG_0x0D4               0x0D4
-#define FLAG_0x0D5               0x0D5
-#define FLAG_0x0D6               0x0D6
-#define FLAG_0x0D7               0x0D7
-#define FLAG_0x0D8               0x0D8
-#define FLAG_0x0D9               0x0D9
-#define FLAG_0x0DA               0x0DA
-#define FLAG_0x0DB               0x0DB
-#define FLAG_0x0DC               0x0DC
-#define FLAG_0x0DD               0x0DD
+#define FLAG_RECEIVED_TM21_SANDSWEPT                       0x0C8 // Perish Song. North
+#define FLAG_BRENDAN_1                                     0x0C9 // Defeated Brendan in Sandswept Cavern.
+#define FLAG_SANDSWEPT_STARDUST_1                          0x0CA // Hidden 1F
+#define FLAG_SANDSWEPT_HEART_SCALE_1                       0x0CB // 1F
+#define FLAG_SANDSWEPT_STARDUST_2                          0x0CC // Hidden West
+#define FLAG_SANDSWEPT_ROCK_GEM                            0x0CD // Optional West
+#define FLAG_SANDSWEPT_ETHER                               0x0CE // North
+#define FLAG_SANDSWEPT_HEART_SCALE_2                       0x0CF // East
+#define FLAG_SANDSWEPT_SMOOTH_ROCK                         0x0D0 // North (via West)
+#define FLAG_SANDSWEPT_KINGS_ROCK                          0x0D1 // East
+#define FLAG_SANDSWEPT_SHED_SHELL                          0x0D2 // North
+#define FLAG_SANDSWEPT_SOFT_SAND                           0x0D3 // North (via East. Surf Required)
+#define FLAG_SANDSWEPT_STARDUST_3                          0x0D4 // Hidden North
+#define FLAG_RECEIVED_FOCUS_BAND_SANDSWEPT                 0x0D5 // 2F (East)
+#define FLAG_BASEMENT_KEY                                  0x0D6 // Brendan
+#define FLAG_ROUTE5_ZOOM_LENS                              0x0D7
+#define FLAG_RECEIVED_WATER_STONE_VERMILION                0x0D8 // Talk to Captain
+#define FLAG_ROUTE6_ITEM001                                0x0D9
+#define FLAG_ROUTE6_ITEM002                                0x0DA
+#define FLAG_ROUTE6_ITEM003                                0x0DB
+#define FLAG_ROUTE6_ITEM004                                0x0DC
+#define FLAG_ROUTE6_OLD_WOMAN_ITEM                         0x0DD
 #define FLAG_0x0DE               0x0DE
 #define FLAG_0x0DF               0x0DF
 #define FLAG_0x0E0               0x0E0

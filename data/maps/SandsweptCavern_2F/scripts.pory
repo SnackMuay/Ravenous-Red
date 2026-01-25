@@ -1,0 +1,86 @@
+mapscripts SandsweptCavern_2F_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: SandsweptCavern_2F_OnTransition
+}
+
+script SandsweptCavern_2F_OnTransition{
+    goto_if_set(FLAG_BRENDAN_1, SandsweptCavern_RemoveBrendan)
+    releaseall
+}
+
+script SandsweptCavern_RemoveBrendan{
+    removeobject(LOCALID_BRENDAN1)
+    releaseall
+}
+
+script Sandswept_EventScript_RightBrendan{
+    lockall
+    textcolor(NPC_TEXT_COLOR_MALE)
+    applymovement(LOCALID_BRENDAN1, Common_Movement_WalkInPlaceFasterRight)
+    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_FACE_RIGHT)
+    waitmovement(0)
+    msgbox(format("It appears that this room is the center of the magnetic field here... Sorry, I forgot to introduce myself. I'm BRENDAN.
+        I could explain more about myself, but I find that there's no better way to learn about someone than a POKéMON BATTLE."))
+    goto_if_unset(FLAG_BRENDAN_1, SandSwept_EventScript_FightBrendan)
+    releaseall
+}
+
+script Sandswept_EventScript_LeftBrendan{
+    lockall
+    textcolor(NPC_TEXT_COLOR_MALE)
+    applymovement(LOCALID_BRENDAN1, Common_Movement_WalkInPlaceFasterLeft)
+    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_FACE_LEFT)
+    waitmovement(0)
+    msgbox(format("It appears that this room is the center of the magnetic field here... Sorry, I forgot to introduce myself. I'm BRENDAN.
+        I could explain more about myself, but I find that there's no better way to learn about someone than a POKéMON BATTLE."))
+    goto_if_unset(FLAG_BRENDAN_1, SandSwept_EventScript_FightBrendan)
+    releaseall
+}
+
+movement Brendan_FaceRight{
+    face_right
+    end
+}
+
+movement Brendan_FaceLeft{
+    face_left
+    end
+}
+
+script SandSwept_EventScript_FightBrendan{
+    lockall
+    trainerbattle_single(TRAINER_SANDSWEPT_BRENDAN, Brendan_1_Intro, Brendan_1_Outro, Sandswept_Brendan_Defeat)
+    releaseall
+}
+
+text Brendan_1_Intro{
+    format("Let's get to know each other, whattaya say?")
+}
+
+text Brendan_1_Outro{
+    format("I understand you now.")
+}
+
+script Sandswept_Brendan_Defeat{
+    lockall
+    msgbox(format("I can tell that you're a virtuous TRAINER. You should take this:"))
+    waitmessage
+    giveitem(ITEM_BASEMENT_KEY, amount=1)
+    setflag(FLAG_BASEMENT_KEY)
+    setvar(VAR_BRENDAN_1, 1)
+    msgbox(format("That will allow you to access the UNDERGROUND PATH. There's an entrance south of CERULEAN CITY."))
+    waitmessage
+    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_NONE)
+    applymovement(LOCALID_BRENDAN1, Sandswept_BrendanExit)
+    waitmovement
+    removeobject(LOCALID_BRENDAN1)
+    playse(SE_EXIT)
+    waitse
+    setflag(FLAG_BRENDAN_1)
+    releaseall
+}
+
+movement Sandswept_BrendanExit{
+    face_down
+    walk_down *3
+}
+

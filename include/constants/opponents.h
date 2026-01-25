@@ -150,14 +150,14 @@
 #define TRAINER_CAMPER_LIAM                      142
 #define TRAINER_PSYCHIC_SHANE                    143 // Nugget Bridge
 #define TRAINER_COOLTRAINER_ETHAN                144 // Nugget Bridge
-#define TRAINER_CAMPER_RICKY                     145
-#define TRAINER_CAMPER_JEFF                      146
+#define TRAINER_CAMPER_BOB_ELLA                  145 // Route 6. Double 1
+#define TRAINER_PICNICKER_KARA_JOE               146 // Route 6. Double 2
 #define TRAINER_CAMPER_2                         147
 #define TRAINER_CAMPER_CHRIS                     148
 #define TRAINER_CAMPER_DREW                      149
 #define TRAINER_SWIMMER_FEMALE_DIANA             150 // Cerulean Gym
-#define TRAINER_PICNICKER_NANCY                  151
-#define TRAINER_PICNICKER_ISABELLE               152
+#define TRAINER_PICNICKER_NANCY                  151 // open
+#define TRAINER_PICNICKER_ISABELLE               152 // open
 #define TRAINER_PICNICKER_KELSEY                 153
 #define TRAINER_PICNICKER_ALICIA                 154
 #define TRAINER_PICNICKER_CAITLIN                155
@@ -634,7 +634,7 @@
 #define TRAINER_PICNICKER_WREN                   626 // SandSwept Cavern 
 #define TRAINER_COOLTRAINER_ZANE                 627 // SandSwept Cavern 
 #define TRAINER_BLACK_BELT_ILIA                  628 // SandSwept Cavern 
-#define TRAINER_CAMPER_JEFF_4                    629 
+#define TRAINER_SANDSWEPT_BRENDAN                629 // End of Sandswept. Gives Key to Underground
 #define TRAINER_PICNICKER_ISABELLE_2             630
 #define TRAINER_PICNICKER_ISABELLE_3             631
 #define TRAINER_PICNICKER_ISABELLE_4             632

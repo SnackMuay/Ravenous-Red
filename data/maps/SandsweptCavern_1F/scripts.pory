@@ -156,7 +156,16 @@ script SandsweptCavern_EventScript_Camper{
 script SandsweptCavern_EventScript_Black_Belt{
     lockall
     faceplayer
-    msgbox(format("SNACK gives the player FOCUS BAND."))
+    goto_if_unset(FLAG_RECEIVED_FOCUS_BAND_SANDSWEPT, SandsweptCavern_EventScript_GetFocusBand)
+    msgbox(format("I have my POKéMON hold a FOCUS BAND to help them focus on incoming attacks."))
+    releaseall
+}
+
+script SandsweptCavern_EventScript_GetFocusBand{
+    msgbox(format("If a POKéMON is able to perfectly focus on an incoming attack, they can sometimes survive
+        a hit that would otherwise cause them to faint. I have my POKéMON hold this ITEM to help them focus."))
+    giveitem(ITEM_FOCUS_BAND, amount=1)
+    setflag(FLAG_RECEIVED_FOCUS_BAND_SANDSWEPT)
     releaseall
 }
 

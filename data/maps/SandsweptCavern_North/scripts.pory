@@ -1,0 +1,160 @@
+raw `
+
+SandsweptCavern_North_MapScripts::
+	.byte 0
+
+`
+
+script SandsweptCavern_EventScript_Melody{
+    trainerbattle_single(TRAINER_COOLTRAINER_MELODY, Melody_Intro, Melody_Outro)
+    msgbox(Melody_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Melody_Intro{
+    format("I keep getting sand in my shoes...")
+}
+
+text Melody_Outro{
+    format("I would've won if it weren't for this sand distracting me.")
+}
+
+text Melody_Postbattle{
+    format("I come here to train my POKéMON, but I have to constantly replace my wardrobe.")
+}
+
+script SandsweptCavern_EventScript_Benji{
+    trainerbattle_single(TRAINER_SUPER_NERD_BENJI, Benji_Intro, Benji_Outro)
+    msgbox(Benji_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Benji_Intro{
+    format("Guten tag.")
+}
+
+text Benji_Outro{
+    format("Auf Wiedersehen.")
+}
+
+text Benji_Postbattle{
+    format("Ich habe verloren. Wie tragisch...")
+}
+
+script SandsweptCavern_EventScript_Cedric{
+    trainerbattle_single(TRAINER_RUIN_MANIAC_CEDRIC, Cedric_Intro, Cedric_Outro)
+    msgbox(Cedric_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Cedric_Intro{
+    format("Now there's a new face!")
+}
+
+text Cedric_Outro{
+    format("How pleasant it was so meet a talented TRAINER like you!")
+}
+
+text Cedric_Postbattle{
+    format("I can't understand what the guy across from me is saying.")
+}
+
+script SandsweptCavern_EventScript_Selena{
+    trainerbattle_single(TRAINER_CRUSH_GIRL_SELENA, Selena_Intro, Selena_Outro)
+    msgbox(Selena_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Selena_Intro{
+    format("Fight me!")
+}
+
+text Selena_Outro{
+    format("Battered and bruised...")
+}
+
+text Selena_Postbattle{
+    format("You've got tremendous knockout power.")
+}
+
+script SandsweptCavern_EventScript_Wren{
+    trainerbattle_single(TRAINER_PICNICKER_WREN, Wren_Intro, Wren_Outro)
+    msgbox(Wren_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Wren_Intro{
+    format("Maybe I can focus on a BATTLE instead of this awful weather.")
+}
+
+text Wren_Outro{
+    format("I don't really like this place.")
+}
+
+text Wren_Postbattle{
+    format("I've gotta get out of here.")
+}
+
+script SandsweptCavern_EventScript_Zane{
+    trainerbattle_single(TRAINER_COOLTRAINER_ZANE, Zane_Intro, Zane_Outro)
+    msgbox(Zane_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Zane_Intro{
+    format("Let me stop you right there.")
+}
+
+text Zane_Outro{
+    format("I'm stunned.")
+}
+
+text Zane_Postbattle{
+    format("I need to study more. I can't get caught off guard like that again.")
+}
+
+script SandsweptCavern_EventScript_Ilia{
+    trainerbattle_single(TRAINER_BLACK_BELT_ILIA, Ilia_Intro, Ilia_Outro)
+    msgbox(Ilia_Postbattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+text Ilia_Intro{
+    format("Let's spar!")
+}
+
+text Ilia_Outro{
+    format("I didn't anticipate that I'd clash with such a skilled combatant.")
+}
+
+text Ilia_Postbattle{
+    format("A true martial artist uses the environment to their advantage.")
+}
+
+script SandsweptCavern_EventScript_OldMan{
+    lockall
+    faceplayer
+    goto_if_unset(FLAG_RECEIVED_TM21_SANDSWEPT, SandsweptCavern_EventScript_GivePerishSong)
+    msgbox(format("Remember; our time is always limited, even when we don't realize it."))
+    releaseall
+}
+
+script SandsweptCavern_EventScript_GivePerishSong{
+    msgbox(format("The falling sand here in SANDSWEPT CAVERN always leaves me breathless.
+        I can't help but imagine the grains of sand in an hourglass slowly dwindling
+        as time marches forward. 
+        Sooner than you realize, you'll be my age. 
+        My favorite POKéMON MOVE perfectly encapsulates this theme as well. You ought to try it yourself."))
+    giveitem(ITEM_TM21, amount=1)
+    setflag(FLAG_RECEIVED_TM21_SANDSWEPT)
+    msgbox(format("That TM contains PERISH SONG. Remember; our time is always limited, even when we don't realize it."))
+    releaseall
+}
+
