@@ -48,6 +48,9 @@
 #include "constants/maps.h"
 #include "constants/sound.h"
 
+#include "wild_encounter.h"
+#include "task.h"
+
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
 
 extern u16 (*const gSpecials[])(void);
@@ -3002,3 +3005,62 @@ bool8 ScrFunc_hidefollower(struct ScriptContext *ctx)
     // execute next script command with no delay
     return TRUE;
 }
+
+static const u8 sStatToIvMonData[] =
+{
+    MON_DATA_HP_IV,     
+    MON_DATA_ATK_IV,    
+    MON_DATA_DEF_IV,    
+    MON_DATA_SPATK_IV,  
+    MON_DATA_SPDEF_IV,  
+    MON_DATA_SPEED_IV,  
+};
+
+bool8 ScrCmd_hypotrain(struct ScriptContext *ctx)
+{
+    u16 partyIndex = VarGet(ScriptReadHalfword(ctx));
+    u16 statIndex  = VarGet(ScriptReadHalfword(ctx));
+
+    // Safety checks
+    if (partyIndex >= PARTY_SIZE){
+        gSpecialVar_Result = FALSE;
+        return FALSE;
+    }
+
+    if (statIndex >= ARRAY_COUNT(sStatToIvMonData)){
+        gSpecialVar_Result = FALSE;
+        return FALSE;
+    }
+
+    // Get current IV
+    u8 iv = GetMonData(&gPlayerParty[partyIndex],
+                       sStatToIvMonData[statIndex]);
+
+    if (iv >= 18){
+        gSpecialVar_Result = FALSE;
+        return FALSE;
+    }
+
+    // Set IV to 18
+    iv = 18;
+    SetMonData(&gPlayerParty[partyIndex],
+               sStatToIvMonData[statIndex],
+               &iv);
+
+    CalculateMonStats(&gPlayerParty[partyIndex]);
+
+    gSpecialVar_Result = TRUE;
+    return FALSE;
+}
+
+bool8 ScrCmd_headbutt(struct ScriptContext *ctx)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    HeadbuttWildEncounter();
+
+    ScriptContext_Stop();
+    return TRUE;
+}
+
+

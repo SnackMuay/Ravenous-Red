@@ -166,7 +166,9 @@
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
 
 // gTileset_SSAnne
-#define METATILE_SSAnne_Door  0x281
+#define METATILE_SSAnne_Door   0x281
+#define METATILE_SSAnne_PCOff  0x3C9
+#define METATILE_SSAnne_PCOn   0x3CB
 
 // gTileset_SaffronCity
 #define METATILE_SaffronCity_Door         0x284

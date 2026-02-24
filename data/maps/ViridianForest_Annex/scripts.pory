@@ -154,6 +154,7 @@ script ViridianForest_Annex_Eventscript_Scientist{
 
 script Viridian_Forest_Grunts_Trigger{
     lockall
+    textcolor(NPC_TEXT_COLOR_MALE)
     applymovement(LOCALID_GRUNT_54, GruntMovement)
     waitmovement(0)
     trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont)
@@ -161,6 +162,7 @@ script Viridian_Forest_Grunts_Trigger{
 }
 
 script Viridian_Forest_Grunts_Trigger_cont{
+    textcolor(NPC_TEXT_COLOR_MALE)
     applymovement(LOCALID_GRUNT_55, GruntMovement)
     waitmovement(0)
     trainerbattle_single(TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated)

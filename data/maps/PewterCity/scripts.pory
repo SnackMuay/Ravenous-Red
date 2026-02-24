@@ -1047,3 +1047,38 @@ script PewterCity_EventScript_Scientist{
 	releaseall
 }
 
+script PewterCity_EventScript_Headbutt_Man{
+	goto_if_unset(FLAG_LEARNED_TO_HEADBUTT, PewterCity_EventScript_Headbutt_ManLesson)
+	goto_if_set(FLAG_LEARNED_TO_HEADBUTT, PewterCity_EventScript_Headbutt_ManChat)
+	releaseall
+}
+
+script PewterCity_EventScript_Headbutt_ManLesson{
+	lockall
+	faceplayer
+	msgbox(format("If you see a tree like this one with exposed bark underneath, 
+		you can ram your head against it like a POKéMON using an attack! I hear 
+		that over in JOHTO, people have their POKéMON do the headbutting for them. 
+		But why let the POKéMON have all the fun, eh? Bwahahaha. Anyway, be on 
+		your guard. When you headbutt a tree hard enough, a POKéMON may descend 
+		from up in the canopy!"))
+	waitmessage
+	setflag(FLAG_LEARNED_TO_HEADBUTT)
+	textcolor(NPC_TEXT_COLOR_NEUTRAL)
+	playfanfare(MUS_OBTAIN_KEY_ITEM)
+	message("{PLAYER} learned to headbutt trees!")
+	waitmessage
+	waitfanfare
+	releaseall
+}
+
+script PewterCity_EventScript_Headbutt_ManChat{
+	lockall
+	faceplayer
+	msgbox(format("Don't tell anyone I taught you the headbutt technique. 
+		It's a forbidden move..."))
+	delay(20)
+	msgbox(format("...doctors are always coming up with new things to forbid."))
+	releaseall
+}
+

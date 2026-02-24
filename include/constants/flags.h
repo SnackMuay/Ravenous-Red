@@ -231,16 +231,16 @@
 #define FLAG_RECEIVED_FOCUS_BAND_SANDSWEPT                 0x0D5 // 2F (East)
 #define FLAG_BASEMENT_KEY                                  0x0D6 // Brendan
 #define FLAG_ROUTE5_ZOOM_LENS                              0x0D7
-#define FLAG_RECEIVED_WATER_STONE_VERMILION                0x0D8 // Talk to Captain
+#define FLAG_RECEIVED_WATER_STONE_VERMILION                0x0D8 // Talk to Captain in House3
 #define FLAG_ROUTE6_ITEM001                                0x0D9
 #define FLAG_ROUTE6_ITEM002                                0x0DA
 #define FLAG_ROUTE6_ITEM003                                0x0DB
 #define FLAG_ROUTE6_ITEM004                                0x0DC
 #define FLAG_ROUTE6_OLD_WOMAN_ITEM                         0x0DD
-#define FLAG_0x0DE               0x0DE
-#define FLAG_0x0DF               0x0DF
-#define FLAG_0x0E0               0x0E0
-#define FLAG_0x0E1               0x0E1
+#define FLAG_CLIFFSIDE_HEART_SCALE                         0x0DE
+#define FLAG_RECEIVED_WATER_GEM_SS_ANNE                    0x0DF
+#define FLAG_VERMILION_RARE_CANDY                          0x0E0
+#define FLAG_LEARNED_TO_HEADBUTT                           0x0E1 // Pewter City
 #define FLAG_0x0E2               0x0E2
 #define FLAG_0x0E3               0x0E3
 #define FLAG_0x0E4               0x0E4

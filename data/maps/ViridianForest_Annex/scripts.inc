@@ -134,39 +134,43 @@ Viridian_Forest_Grunts_Trigger::
 # 156 "data/maps/ViridianForest_Annex/scripts.pory"
 	lockall
 # 157 "data/maps/ViridianForest_Annex/scripts.pory"
-	applymovement LOCALID_GRUNT_54, GruntMovement
+	textcolor NPC_TEXT_COLOR_MALE
 # 158 "data/maps/ViridianForest_Annex/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_GRUNT_54, GruntMovement
 # 159 "data/maps/ViridianForest_Annex/scripts.pory"
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont
+	waitmovement 0
 # 160 "data/maps/ViridianForest_Annex/scripts.pory"
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_54, Grunt_54_Intro, Grunt_54_Outro, Viridian_Forest_Grunts_Trigger_cont
+# 161 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
 Viridian_Forest_Grunts_Trigger_cont::
-# 164 "data/maps/ViridianForest_Annex/scripts.pory"
-	applymovement LOCALID_GRUNT_55, GruntMovement
 # 165 "data/maps/ViridianForest_Annex/scripts.pory"
-	waitmovement 0
+	textcolor NPC_TEXT_COLOR_MALE
 # 166 "data/maps/ViridianForest_Annex/scripts.pory"
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated
+	applymovement LOCALID_GRUNT_55, GruntMovement
 # 167 "data/maps/ViridianForest_Annex/scripts.pory"
+	waitmovement 0
+# 168 "data/maps/ViridianForest_Annex/scripts.pory"
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_55, Grunt_55_Intro, Grunt_55_Outro, Viridian_Forest_Grunts_Defeated
+# 169 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
 Viridian_Forest_Grunts_Defeated::
-# 171 "data/maps/ViridianForest_Annex/scripts.pory"
+# 173 "data/maps/ViridianForest_Annex/scripts.pory"
 	setvar VAR_SIMONE_1_ANNEX, 1
-# 172 "data/maps/ViridianForest_Annex/scripts.pory"
+# 174 "data/maps/ViridianForest_Annex/scripts.pory"
 	releaseall
 	return
 
 
-# 175 "data/maps/ViridianForest_Annex/scripts.pory"
+# 177 "data/maps/ViridianForest_Annex/scripts.pory"
 GruntMovement:
-# 176 "data/maps/ViridianForest_Annex/scripts.pory"
+# 178 "data/maps/ViridianForest_Annex/scripts.pory"
 	walk_left
 	step_end
 
@@ -272,30 +276,30 @@ Simone_1_Postbattle::
 	.string "...$"
 
 Grunt_54_Intro::
-# 179 "data/maps/ViridianForest_Annex/scripts.pory"
+# 181 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "That's it. Your fun little\n"
 	.string "adventure ends here.$"
 
 Grunt_54_Outro::
-# 183 "data/maps/ViridianForest_Annex/scripts.pory"
+# 185 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Must be your lucky day.$"
 
 Grunt_54_Postbattle::
-# 187 "data/maps/ViridianForest_Annex/scripts.pory"
+# 189 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Don't be stupid. You're no match\n"
 	.string "for SIMONE.$"
 
 Grunt_55_Intro::
-# 191 "data/maps/ViridianForest_Annex/scripts.pory"
+# 193 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "I'll handle this.$"
 
 Grunt_55_Outro::
-# 195 "data/maps/ViridianForest_Annex/scripts.pory"
+# 197 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "Fine. SIMONE will straighten you\n"
 	.string "out.$"
 
 Grunt_55_Postbattle::
-# 199 "data/maps/ViridianForest_Annex/scripts.pory"
+# 201 "data/maps/ViridianForest_Annex/scripts.pory"
 	.string "I dare you to continue this\n"
 	.string "meddling. Our boss won't be so\l"
 	.string "patient with you.$"

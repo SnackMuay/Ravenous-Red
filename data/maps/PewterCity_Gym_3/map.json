@@ -1,0 +1,128 @@
+{
+  "id": "MAP_PEWTER_CITY_GYM_3",
+  "name": "PewterCity_Gym_3",
+  "layout": "LAYOUT_PEWTER_CITY_GYM_3",
+  "music": "MUS_GYM",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 12,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 8,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "x": 24,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 29,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 26,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 23,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_GYM_2",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 30,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_GYM_2",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 14,
+      "y": 64,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_GYM_2",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 38,
+      "y": 56,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_GYM_2",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 34,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_GYM_2",
+      "dest_warp_id": "6"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

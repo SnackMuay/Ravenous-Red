@@ -73,7 +73,7 @@ Route11_Text_DarianPostBattle::
     .string "I was unlucky, as always.$"
 
 Route11_Text_YasuIntro::
-    .string "I'm the best in my class.\n"
+    .string "I'm the best trainer around.\n"
     .string "I train every morning.$"
 
 Route11_Text_YasuDefeat::

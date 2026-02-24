@@ -2381,7 +2381,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -3716,14 +3716,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .accuracy = 90,
         #elif B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 80,
+            .accuracy = 90,
         #else
             .accuracy = 55,
         #endif
         .effect = EFFECT_NON_VOLATILE_STATUS,
         .power = 0,
         .type = TYPE_POISON,
-        .pp = 40,
+        .pp = 25,
         .target = B_UPDATED_MOVE_DATA >= GEN_5 ? MOVE_TARGET_BOTH : MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -4746,7 +4746,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "Spores cling to\nthe foes, "
         #else
-            "Spores cling to\nthe foe, "
+            "Spores cling to\nthe foe,\n"
         #endif
             "sharply reducing\nSpeed."),
         .effect = EFFECT_SPEED_DOWN_2,
@@ -5781,19 +5781,19 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Frustration"),
         .description = COMPOUND_STRING(
-            "An attack that is\nstronger "
-            "if the\nTrainer is\ndisliked."),
-        .effect = EFFECT_FRUSTRATION,
-        .power = 1,
+            "A powerful attack\nthat "
+            "releases pent-up\nfrustration."),
+        .effect = EFFECT_HIT,
+        .power = 100,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 15,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_STARTLE_PREV_MON : CONTEST_EFFECT_EXCITE_AUDIENCE_IN_ANY_CONTEST,
-        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_Frustration,
@@ -8861,7 +8861,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Howls to raise the\nspirit "
             "and boosts\nAttack."),
         .power = 0,
-        .effect = B_UPDATED_MOVE_DATA >= GEN_8 ? EFFECT_ATTACK_UP_USER_ALLY : EFFECT_ATTACK_UP,
+        .effect = B_UPDATED_MOVE_DATA >= GEN_5 ? EFFECT_ATTACK_UP_USER_ALLY : EFFECT_ATTACK_UP,
         .type = TYPE_NORMAL,
         .accuracy = 0,
         .pp = 40,
@@ -16857,7 +16857,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_STOMPING_TANTRUM] =
     {
-        .name = COMPOUND_STRING("Stomping Tantrum"),
+        .name = COMPOUND_STRING("Stompin Tantrum"),
         .description = COMPOUND_STRING(
             "Stomps around\nangrily. "
             "Stronger\nafter a failure."),

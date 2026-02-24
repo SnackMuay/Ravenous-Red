@@ -1411,3 +1411,15 @@ Text_TestMsg::
 
 	.include "data/maps/CloudedWood_House/scripts.inc"
 	.include "data/maps/CloudedWood_House/text.inc"
+
+	.include "data/maps/Route12_East/scripts.inc"
+	.include "data/maps/Route12_East/text.inc"
+
+	.include "data/maps/SSAnne_1F_PCRoom/scripts.inc"
+	.include "data/maps/SSAnne_1F_PCRoom/text.inc"
+
+	.include "data/maps/PewterCity_Gym_2/scripts.inc"
+	.include "data/maps/PewterCity_Gym_2/text.inc"
+
+	.include "data/maps/PewterCity_Gym_3/scripts.inc"
+	.include "data/maps/PewterCity_Gym_3/text.inc"

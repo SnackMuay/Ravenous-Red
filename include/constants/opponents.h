@@ -101,11 +101,11 @@
 #define TRAINER_YOUNGSTER_JOEY                    93
 #define TRAINER_YOUNGSTER_DAN                     94
 #define TRAINER_YOUNGSTER_CHAD                    95
-#define TRAINER_YOUNGSTER_TYLER                   96
+#define TRAINER_YOUNGSTER_TYLER                   96 // SS Anne Double
 #define TRAINER_YOUNGSTER_EDDIE                   97
 #define TRAINER_YOUNGSTER_DILLON                  98
-#define TRAINER_YOUNGSTER_YASU                    99
-#define TRAINER_YOUNGSTER_DAVE                   100
+#define TRAINER_COOLTRAINER_HOLLY                 99 // Route 11
+#define TRAINER_COOLTRAINER_DAVE                 100 // Route 11
 #define TRAINER_BUG_CATCHER_SONNY                101 // Route 2
 #define TRAINER_BUG_CATCHER_RICK                 102
 #define TRAINER_BUG_CATCHER_DOUG                 103
@@ -131,22 +131,22 @@
 #define TRAINER_PKMN_RANGER_ALI                  123 // Nugget Bridge
 #define TRAINER_LASS_2                           124
 #define TRAINER_LASS_HALEY                       125
-#define TRAINER_LASS_ANN                         126
-#define TRAINER_LASS_DAWN                        127
+#define TRAINER_LASS_ANN                         126 // SS Anne Double
+#define TRAINER_LASS_DAWN                        127 // SS Anne - Prism Scale
 #define TRAINER_LASS_PAIGE                       128
 #define TRAINER_LASS_ANDREA                      129
 #define TRAINER_LASS_MEGAN                       130
 #define TRAINER_LASS_JULIA                       131
 #define TRAINER_LASS_KAY                         132
 #define TRAINER_LASS_LISA                        133
-#define TRAINER_SAILOR_EDMOND                    134
-#define TRAINER_SAILOR_TREVOR                    135
-#define TRAINER_SAILOR_LEONARD                   136
-#define TRAINER_SAILOR_DUNCAN                    137
-#define TRAINER_SAILOR_HUEY                      138
-#define TRAINER_SAILOR_DYLAN                     139
-#define TRAINER_SAILOR_PHILLIP                   140
-#define TRAINER_SAILOR_DWAYNE                    141
+#define TRAINER_SAILOR_EDMOND                    134 // SS Anne Double - Water Gem
+#define TRAINER_SAILOR_TREVOR                    135 // SS Anne Double - Water Gem
+#define TRAINER_SAILOR_LEONARD                   136 // SS Anne Double - Dusk Stone
+#define TRAINER_SAILOR_DUNCAN                    137 // SS Anne Double - Dusk Stone
+#define TRAINER_SAILOR_HUEY                      138 // SS Anne - Dragon Scale
+#define TRAINER_SAILOR_DYLAN                     139 // Vermilion Gym - Moved from SS Anne
+#define TRAINER_SAILOR_PHILLIP                   140 // SS Anne - Dawn Stone
+#define TRAINER_SAILOR_DWAYNE                    141 // Vermilion Gym
 #define TRAINER_CAMPER_LIAM                      142
 #define TRAINER_PSYCHIC_SHANE                    143 // Nugget Bridge
 #define TRAINER_COOLTRAINER_ETHAN                144 // Nugget Bridge
@@ -174,7 +174,7 @@
 #define TRAINER_POKEMANIAC_WINSTON               166
 #define TRAINER_POKEMANIAC_DAWSON                167
 #define TRAINER_POKEMANIAC_ASHTON                168
-#define TRAINER_SUPER_NERD_JOVAN                 169 // Replace?
+#define TRAINER_SUPER_NERD_JOVAN                 169 // open
 #define TRAINER_SUPER_NERD_MIGUEL                170
 #define TRAINER_SUPER_NERD_AIDAN                 171
 #define TRAINER_SUPER_NERD_GLENN                 172
@@ -225,11 +225,11 @@
 #define TRAINER_BURGLAR_4                        217
 #define TRAINER_BURGLAR_SIMON                    218
 #define TRAINER_BURGLAR_LEWIS                    219 
-#define TRAINER_ENGINEER_BAILY                   220
-#define TRAINER_ENGINEER_BRAXTON                 221
-#define TRAINER_ENGINEER_BERNIE                  222
-#define TRAINER_FISHERMAN_DALE                   223
-#define TRAINER_FISHERMAN_BARNY                  224
+#define TRAINER_ENGINEER_BAILEY                  220 // Vermilion Gym
+#define TRAINER_BIRD_KEEPER_BRAXTON              221 // route 11 
+#define TRAINER_HIKER_BERNIE                     222 // route 11
+#define TRAINER_AROMA_LADY_HAZEL                 223 // Vermilion Gym
+#define TRAINER_FISHERMAN_BARNY                  224 // SS Anne - Dawn Stone
 #define TRAINER_FISHERMAN_NED                    225
 #define TRAINER_FISHERMAN_CHIP                   226
 #define TRAINER_FISHERMAN_HANK                   227
@@ -426,9 +426,9 @@
 #define TRAINER_LEADER_KOGA                      418
 #define TRAINER_LEADER_BLAINE                    419
 #define TRAINER_LEADER_SABRINA                   420
-#define TRAINER_GENTLEMAN_THOMAS                 421
-#define TRAINER_GENTLEMAN_ARTHUR                 422
-#define TRAINER_GENTLEMAN_TUCKER                 423
+#define TRAINER_GENTLEMAN_THOMAS                 421 // SS Anne - Heal Bed
+#define TRAINER_GENTLEMAN_ARTHUR                 422 // SS Anne - Metal Claw TM
+#define TRAINER_GUITARIST_TUCKER                 423 // Vermilion Gym
 #define TRAINER_GENTLEMAN_NORTON                 424
 #define TRAINER_GENTLEMAN_WALTER                 425
 #define TRAINER_RIVAL_SS_ANNE_SQUIRTLE           426
@@ -487,8 +487,8 @@
 #define TRAINER_PICNICKER_KINDRA                 479
 #define TRAINER_PICNICKER_BECKY                  480
 #define TRAINER_PICNICKER_CELIA                  481
-#define TRAINER_GENTLEMAN_BROOKS                 482
-#define TRAINER_GENTLEMAN_LAMAR                  483
+#define TRAINER_ROCKER_BROOKS                    482 // Vermilion Gym
+#define TRAINER_GENTLEMAN_LAMAR                  483 // SS Anne - Prism Scale
 #define TRAINER_TWINS_ELI_ANNE                   484
 #define TRAINER_COOL_COUPLE_RAY_TYRA             485
 #define TRAINER_YOUNG_COUPLE_GIA_JES             486
@@ -640,7 +640,7 @@
 #define TRAINER_PICNICKER_ISABELLE_4             632
 #define TRAINER_YOUNGSTER_YASU_2                 633
 #define TRAINER_YOUNGSTER_YASU_3                 634
-#define TRAINER_ENGINEER_BERNIE_2                635
+#define TRAINER_ENGINEER_BERNIE_2                635 // Change
 #define TRAINER_GAMER_DARIAN_2                   636
 #define TRAINER_CAMPER_CHRIS_2                   637
 #define TRAINER_CAMPER_CHRIS_3                   638

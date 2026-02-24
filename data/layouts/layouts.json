@@ -268,8 +268,8 @@
     {
       "id": "LAYOUT_VERMILION_CITY_GYM",
       "name": "VermilionCity_Gym_Layout",
-      "width": 11,
-      "height": 21,
+      "width": 33,
+      "height": 23,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -304,8 +304,8 @@
     {
       "id": "LAYOUT_PEWTER_CITY_GYM",
       "name": "PewterCity_Gym_Layout",
-      "width": 27,
-      "height": 36,
+      "width": 17,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -749,7 +749,7 @@
       "id": "LAYOUT_PEWTER_CITY",
       "name": "PewterCity_Layout",
       "width": 48,
-      "height": 40,
+      "height": 48,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -772,7 +772,7 @@
     {
       "id": "LAYOUT_LAVENDER_TOWN",
       "name": "LavenderTown_Layout",
-      "width": 24,
+      "width": 35,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -953,7 +953,7 @@
       "id": "LAYOUT_ROUTE9",
       "name": "Route9_Layout",
       "width": 72,
-      "height": 20,
+      "height": 50,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -1144,7 +1144,7 @@
     {
       "id": "LAYOUT_ROUTE25",
       "name": "Route25_Layout",
-      "width": 72,
+      "width": 76,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -4408,7 +4408,7 @@
     {
       "id": "LAYOUT_CLIFFSIDE_CAVE_2F",
       "name": "CliffsideCave_2F_Layout",
-      "width": 20,
+      "width": 30,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -4548,6 +4548,54 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/CloudedWood_House/border.bin",
       "blockdata_filepath": "data/layouts/CloudedWood_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12_EAST",
+      "name": "Route12_East_Layout",
+      "width": 50,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LavenderTown",
+      "border_filepath": "data/layouts/Route12_East/border.bin",
+      "blockdata_filepath": "data/layouts/Route12_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_SSANNE_1F_PCROOM",
+      "name": "SSAnne_1F_PCRoom_Layout",
+      "width": 7,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SSAnne",
+      "border_filepath": "data/layouts/SSAnne_1F_PCRoom/border.bin",
+      "blockdata_filepath": "data/layouts/SSAnne_1F_PCRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_GYM_2",
+      "name": "PewterCity_Gym_2_Layout",
+      "width": 35,
+      "height": 45,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/PewterCity_Gym_2/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Gym_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_GYM_3",
+      "name": "PewterCity_Gym_3_Layout",
+      "width": 45,
+      "height": 70,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/PewterCity_Gym_3/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Gym_3/map.bin"
     }
   ]
 }

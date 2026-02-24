@@ -1535,6 +1535,7 @@ extern const u8 gText_PokeSum_EggOrigin_NicePlace[];
 extern const u8 gText_PokeSum_EggOrigin_Spa[];
 extern const u8 gText_PokeSum_EggOrigin_Trade[];
 
+extern const u8 gText_BaseDash[];
 
 extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_PkmnFriendlyBaseVar2Fell[];
@@ -1563,6 +1564,7 @@ extern const u8 gText_ExpShareOn[];
 extern const u8 gText_ExpShareOff[];
 
 // stats
+extern const u8 gText_HP[];
 extern const u8 gText_Attack[];
 extern const u8 gText_Defense[];
 extern const u8 gText_SpAtk[];

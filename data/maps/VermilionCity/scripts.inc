@@ -536,3 +536,26 @@ VermilionCity_EventScript_Sailor::
 	releaseall
 	return
 
+
+VermilionCity_EventScript_Fisherman::
+# 275 "data/maps/VermilionCity/scripts.pory"
+	lockall
+# 276 "data/maps/VermilionCity/scripts.pory"
+	faceplayer
+# 277 "data/maps/VermilionCity/scripts.pory"
+	msgbox VermilionCity_EventScript_Fisherman_Text_0
+# 278 "data/maps/VermilionCity/scripts.pory"
+	closemessage
+# 279 "data/maps/VermilionCity/scripts.pory"
+	delay 10
+# 280 "data/maps/VermilionCity/scripts.pory"
+	face_right
+# 281 "data/maps/VermilionCity/scripts.pory"
+	releaseall
+	return
+
+
+VermilionCity_EventScript_Fisherman_Text_0:
+# 277 "data/maps/VermilionCity/scripts.pory"
+	.string "Shhh! you'll scare away the\n"
+	.string "POKéMON.$"

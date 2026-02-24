@@ -16,7 +16,6 @@ script Sandswept_EventScript_RightBrendan{
     lockall
     textcolor(NPC_TEXT_COLOR_MALE)
     applymovement(LOCALID_BRENDAN1, Common_Movement_WalkInPlaceFasterRight)
-    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_FACE_RIGHT)
     waitmovement(0)
     msgbox(format("It appears that this room is the center of the magnetic field here... Sorry, I forgot to introduce myself. I'm BRENDAN.
         I could explain more about myself, but I find that there's no better way to learn about someone than a POKéMON BATTLE."))
@@ -28,7 +27,6 @@ script Sandswept_EventScript_LeftBrendan{
     lockall
     textcolor(NPC_TEXT_COLOR_MALE)
     applymovement(LOCALID_BRENDAN1, Common_Movement_WalkInPlaceFasterLeft)
-    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_FACE_LEFT)
     waitmovement(0)
     msgbox(format("It appears that this room is the center of the magnetic field here... Sorry, I forgot to introduce myself. I'm BRENDAN.
         I could explain more about myself, but I find that there's no better way to learn about someone than a POKéMON BATTLE."))
@@ -69,7 +67,6 @@ script Sandswept_Brendan_Defeat{
     setvar(VAR_BRENDAN_1, 1)
     msgbox(format("That will allow you to access the UNDERGROUND PATH. There's an entrance south of CERULEAN CITY."))
     waitmessage
-    setobjectmovementtype(LOCALID_BRENDAN1, MOVEMENT_TYPE_NONE)
     applymovement(LOCALID_BRENDAN1, Sandswept_BrendanExit)
     waitmovement
     removeobject(LOCALID_BRENDAN1)

@@ -1,13 +1,17 @@
-Route2_EventScript_ItemEther::
-	finditem ITEM_ETHER
+Route2_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
-Route2_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+Route2_EventScript_ItemThunderStone::
+	finditem ITEM_THUNDER_STONE
 	end
 
 CliifsideCave_2F_EventScript_ItemHardStone::
 	finditem ITEM_HARD_STONE
+	end
+
+CliifsideCave_2F_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 ViridianForest_EventScript_ItemPokeBall::
@@ -167,27 +171,31 @@ SSAnne_1F_Room2_EventScript_ItemTM31::
 	end
 
 SSAnne_2F_Room2_EventScript_ItemStardust::
-	finditem ITEM_STARDUST
+	finditem ITEM_DAWN_STONE
 	end
 
 SSAnne_2F_Room4_EventScript_ItemXAttack::
-	finditem ITEM_X_ATTACK
+	finditem ITEM_PRISM_SCALE
 	end
 
 SSAnne_B1F_Room2_EventScript_ItemTM44::
-	finditem ITEM_TM44
+	finditem ITEM_DRAGON_SCALE
 	end
 
 SSAnne_B1F_Room3_EventScript_ItemEther::
-	finditem ITEM_ETHER
+	finditem ITEM_DUSK_STONE
 	end
 
 SSAnne_B1F_Room5_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+	finditem ITEM_HEART_SCALE
 	end
 
 SSAnne_Kitchen_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
+	finditem ITEM_NEVER_MELT_ICE
+	end
+
+VermilionCity_Gym_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
 	end
 
 Route9_EventScript_ItemTM40::
@@ -522,8 +530,8 @@ MtMoon_B2F_EventScript_ItemAntidote::
 	finditem ITEM_DUSK_BALL
 	end
 
-Route11_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFEND
+Route11_EventScript_ItemSilverPowder::
+	finditem ITEM_SILVER_POWDER
 	end
 
 Route9_EventScript_ItemBurnHeal::
@@ -578,12 +586,12 @@ ViridianCity_EventScript_ItemPotion::
 	finditem ITEM_FULL_HEAL
 	end
 
-Route11_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
+Route11_EventScript_ItemShinyStone::
+	finditem ITEM_SHINY_STONE
 	end
 
-Route11_EventScript_ItemAwakening::
-	finditem ITEM_AWAKENING
+Route11_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
 	end
 
 PokemonTower_5F_EventScript_ItemCleanseTag::

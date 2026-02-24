@@ -43,6 +43,9 @@
 #include "constants/songs.h"
 #include "constants/field_weather.h"
 
+// NEW HEADER REQUIRED FOR CANDY BAR
+#include "caps.h"          // GetCurrentLevelCap()
+
 EWRAM_DATA void (*sItemUseOnFieldCB)(u8 taskId) = NULL;
 
 static void Task_WaitFadeIn_CallItemUseOnFieldCB(u8 taskId);
@@ -77,6 +80,8 @@ static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static bool8 TryToWaterSudowoodo(void);
 
+// --- Candy Bar forward declarations ---
+void ItemUseOutOfBattle_CandyBar(u8 taskId);    // 
 
 // Below is set TRUE by UseRegisteredKeyItemOnField
 #define tUsingRegisteredKeyItem  data[3]
@@ -638,6 +643,21 @@ void ItemUseOutOfBattle_PPUp(u8 taskId)
 
 void ItemUseOutOfBattle_RareCandy(u8 taskId)
 {
+    gItemUseCB = ItemUseCB_RareCandy;
+    DoSetUpItemUseCallback(taskId);
+}
+
+// Candy Bar (non-consumable Rare Candy that respects level cap)
+void ItemUseOutOfBattle_CandyBar(u8 taskId)
+{
+    // If used via REGISTERED key item, Fails
+    if (gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        PrintNotTheTimeToUseThat(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+        return;
+    }
+
+    // Normal bag-menu behavior
     gItemUseCB = ItemUseCB_RareCandy;
     DoSetUpItemUseCallback(taskId);
 }

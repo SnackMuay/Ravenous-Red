@@ -124,6 +124,7 @@ struct MoveTutorMoveInfoHeaders
 
 struct LearnMoveGfxResources
 {
+    u8 bg1TilemapBuffer[BG_SCREEN_SIZE]; // 264
     u8 state;
     u8 unk_01;
     u8 unk_02;
@@ -144,7 +145,6 @@ struct LearnMoveGfxResources
     u8 selectedMoveSlot;
     u8 unk_262;
     u8 listMenuTaskId;
-    u8 bg1TilemapBuffer[BG_SCREEN_SIZE]; // 264
     u8 textColor[3]; // A64
     u8 selectedIndex;
     u16 listMenuScrollPos;

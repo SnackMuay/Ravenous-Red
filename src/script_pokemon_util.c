@@ -597,6 +597,7 @@ void Script_GetChosenMonDefensiveIVs(void)
     ConvertIntToDecimalStringN(gStringVar3, GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_IV), STR_CONV_MODE_LEFT_ALIGN, 3);
 }
 
+
 void Script_SetStatus1(struct ScriptContext *ctx)
 {
     u32 status1 = VarGet(ScriptReadHalfword(ctx));

@@ -240,6 +240,9 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_DYNMULTICHOICE                 ScrCmd_dynmultichoice,                 requests_effects=1  @ 0xd7
 	script_cmd_table_entry SCR_OP_DYNMULTIPUSH                   ScrCmd_dynmultipush,                   requests_effects=1  @ 0xd8
 
+	script_cmd_table_entry SCR_OP_HYPOTRAIN						 ScrCmd_hypotrain,                      requests_effects=1  @ 0xd9
+    script_cmd_table_entry SCR_OP_HEADBUTT                		 ScrCmd_headbutt,    	                requests_effects=1  @ 0xda
+
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

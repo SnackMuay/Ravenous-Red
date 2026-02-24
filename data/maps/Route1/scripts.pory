@@ -1,0 +1,126 @@
+raw `
+
+Route1_MapScripts::
+	.byte 0
+
+Route1_EventScript_MartClerk::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_POTION_ON_ROUTE_1, Route1_EventScript_AlreadyGotPotion
+	msgbox Route1_Text_WorkAtPokeMartTakeSample
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	checkitemspace ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+	bufferitemname STR_VAR_2, ITEM_POTION
+	playfanfare MUS_LEVEL_UP
+	message Text_ObtainedTheX
+	waitmessage
+	waitfanfare
+	additem ITEM_POTION
+	msgbox Route1_Text_PutPotionAway
+	call EventScript_RestorePrevTextColor
+	setflag FLAG_GOT_POTION_ON_ROUTE_1
+	release
+	end
+
+Route1_EventScript_AlreadyGotPotion::
+	msgbox Route1_Text_ComeSeeUsIfYouNeedPokeBalls
+	release
+	end
+
+Route1_EventScript_Boy::
+	msgbox Route1_Text_CanJumpFromLedges, MSGBOX_NPC
+	end
+
+Route1_EventScript_RouteSign::
+	msgbox Route1_Text_RouteSign, MSGBOX_SIGN
+	end
+
+`
+
+script Universal_Eventscript_HeadbuttTree{
+    lockall
+    goto_if_set(FLAG_LEARNED_TO_HEADBUTT, Universal_EventScript_HeadbuttEncounter)
+    goto_if_unset(FLAG_LEARNED_TO_HEADBUTT, Universal_EventScript_CantHeadbutt)
+    releaseall
+}
+
+script Universal_EventScript_CantHeadbutt{
+    lockall
+    msgbox(format("The bark on this tree looks scuffed."))
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttEncounter{
+    lockall
+    msgbox(format("Headbutt the tree?"), MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Universal_EventScript_HeadbuttEncounterProceed)
+	goto_if_eq(VAR_RESULT, NO, Universal_EventScript_HeadbuttEncounterAbort)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttEncounterAbort{
+    lockall
+    msgbox("The tree looks almost... relieved?")
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttEncounterProceed{
+    lockall
+    msgbox(format("{PLAYER} headbutted the tree."))
+    waitmessage
+    call_if_eq(VAR_FACING, DIR_NORTH, Universal_EventScript_HeadbuttNorthward)
+    call_if_eq(VAR_FACING, DIR_SOUTH, Universal_EventScript_HeadbuttSouthward)
+    call_if_eq(VAR_FACING, DIR_EAST,  Universal_EventScript_HeadbuttEastward)
+    call_if_eq(VAR_FACING, DIR_WEST,  Universal_EventScript_HeadbuttWestward)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttNorthward{
+    applymovement(LOCALID_PLAYER, HeadbuttNorth)
+    goto(Universal_EventScript_HeadbuttEncounterFinish)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttSouthward{
+    applymovement(LOCALID_PLAYER, HeadbuttSouth)
+    goto(Universal_EventScript_HeadbuttEncounterFinish)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttEastward{
+    applymovement(LOCALID_PLAYER, HeadbuttEast)
+    goto(Universal_EventScript_HeadbuttEncounterFinish)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttWestward{
+    applymovement(LOCALID_PLAYER, HeadbuttWest)
+    goto(Universal_EventScript_HeadbuttEncounterFinish)
+    releaseall
+}
+
+script Universal_EventScript_HeadbuttEncounterFinish{
+    lockall
+    applymovement(LOCALID_PLAYER, Common_Movement_ExclamationMark)
+    msgbox(format("A POKéMON sprang down from the tree!"))
+    headbutt
+    release
+    end
+}
+
+movement HeadbuttNorth{
+    jump_in_place_up
+}
+
+movement HeadbuttSouth{
+    jump_in_place_down
+}
+
+movement HeadbuttEast{
+    jump_in_place_right
+}
+
+movement HeadbuttWest{
+    jump_in_place_left
+}

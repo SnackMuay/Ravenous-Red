@@ -477,6 +477,7 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	fadedefaultbgm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4
 	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
+	setflag FLAG_SYS_B_DASH
 	releaseall
 	end
 
@@ -654,7 +655,6 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_SYS_B_DASH
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 2
@@ -1122,7 +1122,7 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
-	givemon PLAYER_STARTER_SPECIES, 5
+	givemon PLAYER_STARTER_SPECIES, 5, , , , 2
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak

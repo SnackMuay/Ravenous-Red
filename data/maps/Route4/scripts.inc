@@ -101,11 +101,11 @@ Route4_Trigger_May::
 # 61 "data/maps/Route4/scripts.pory"
 	waitmovement 0
 # 62 "data/maps/Route4/scripts.pory"
-	call_if_eq VAR_STARTER_MON, 2, Route4_EventScript_May_Charmander
+	goto_if_eq VAR_STARTER_MON, 2, Route4_EventScript_May_Charmander
 # 63 "data/maps/Route4/scripts.pory"
-	call_if_eq VAR_STARTER_MON, 1, Route4_EventScript_May_Piplup
+	goto_if_eq VAR_STARTER_MON, 1, Route4_EventScript_May_Piplup
 # 64 "data/maps/Route4/scripts.pory"
-	call_if_eq VAR_STARTER_MON, 0, Route4_EventScript_May_Chikorita
+	goto_if_eq VAR_STARTER_MON, 0, Route4_EventScript_May_Chikorita
 # 65 "data/maps/Route4/scripts.pory"
 	releaseall
 	return

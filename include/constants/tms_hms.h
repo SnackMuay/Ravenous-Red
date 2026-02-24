@@ -32,7 +32,7 @@
     F(DIG) \
     F(PSYCHIC) \
     F(SHADOW_BALL) \
-    F(BRICK_BREAK) \
+    F(METAL_CLAW) \
     F(DOUBLE_TEAM) \
     F(REFLECT) \
     F(SHOCK_WAVE) \

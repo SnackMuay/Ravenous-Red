@@ -421,6 +421,12 @@ static void TryUseItemOnMove(u8 taskId);
 static u16 ItemEffectToMonEv(struct Pokemon *mon, u8 effectType);
 static void ItemEffectToStatString(u8 effectType, u8 *dest);
 
+static bool8 ItemIsReusable(u16 itemId)
+{
+    return itemId == ITEM_CANDY_BAR;
+}
+
+
 static EWRAM_DATA struct PartyMenuInternal *sPartyMenuInternal = NULL;
 EWRAM_DATA struct PartyMenu gPartyMenu = {0};
 static EWRAM_DATA struct PartyMenuBox *sPartyMenuBoxes = NULL;
@@ -5686,16 +5692,25 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
     u8 holdEffectParam = GetItemHoldEffectParam(*itemPtr);
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
-    if (!(B_RARE_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
-    {
-        GetMonLevelUpWindowStats(mon, sLevelUpStatsBefore);
-        cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
-        GetMonLevelUpWindowStats(mon, sLevelUpStatsAfter);
-    }
-    else
+
+    // Enforce level cap ONLY for Candy Bar
+    if (gSpecialVar_ItemId == ITEM_CANDY_BAR
+        && sInitialLevel >= GetCurrentLevelCap())
     {
         cannotUseEffect = TRUE;
     }
+    else
+    {
+        GetMonLevelUpWindowStats(mon, sLevelUpStatsBefore);
+        cannotUseEffect = ExecuteTableBasedItemEffect(
+            mon,
+            *itemPtr,
+            gPartyMenu.slotId,
+            0
+        );
+        GetMonLevelUpWindowStats(mon, sLevelUpStatsAfter);
+    }
+
     PlaySE(SE_SELECT);
     if (cannotUseEffect)
     {
@@ -5714,7 +5729,13 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
         if (targetSpecies != SPECIES_NONE)
         {
             GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, DO_EVO);
+            
+        if (!ItemIsReusable(gSpecialVar_ItemId)
+            && gSpecialVar_ItemId != ITEM_CANDY_BAR)
+        {
             RemoveBagItem(gSpecialVar_ItemId, 1);
+        }
+
             FreePartyPointers();
             gCB2_AfterEvolution = gPartyMenu.exitCallback;
             BeginEvolutionScene(mon, targetSpecies, canStopEvo, gPartyMenu.slotId);
@@ -5753,7 +5774,13 @@ static void ItemUseCB_RareCandyStep(u8 taskId, TaskFunc func)
     gPartyMenuUseExitCallback = TRUE;
     ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, 0xFFFF);
     UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-    RemoveBagItem(gSpecialVar_ItemId, 1);
+    
+    if (!ItemIsReusable(gSpecialVar_ItemId)
+        && gSpecialVar_ItemId != ITEM_CANDY_BAR)
+    {
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+    }
+
     GetMonNickname(mon, gStringVar1);
     if (sFinalLevel > sInitialLevel)
     {

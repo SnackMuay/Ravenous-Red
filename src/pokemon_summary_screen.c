@@ -146,6 +146,9 @@ static void PokeSum_UpdateMonMarkingsAnim(void);
 static s8 SeekToNextMonInSingleParty(s8 direction);
 static s8 SeekToNextMonInMultiParty(s8 direction);
 
+static u16 GetBaseStatBySummaryStat(u16 species, u8 stat);
+
+
 struct PokemonSummaryScreenData
 {
     u16 bg1TilemapBuffer[0x800];
@@ -2524,28 +2527,96 @@ static void BufferStatString(u8 stat)
         ApplyNatureColor(dst, stat);
 }
 
+//    static void BufferEVString(u8 stat)
+//    {
+//        u16 statValue = GetMonData(&sMonSummaryScreen->currentMon, sStatData[stat].monDataEv);
+//        u8 *dst = sMonSummaryScreen->summary.statValueStrBufs[sStatData[stat].pssStat];
+//        u8 tmp[20];
+//        
+//        ConvertIntToDecimalStringN(dst, statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
+//        StringAppend(dst, gText_Slash);
+//        ConvertIntToDecimalStringN(tmp, MAX_PER_STAT_EVS, STR_CONV_MODE_LEFT_ALIGN, 3);
+//        StringAppend(dst, tmp);
+//        SetStatXPos(stat, GetNumberRightAlign63(dst));
+//        if (stat != STAT_HP)
+//            ApplyNatureColor(dst, stat);
+//    }
+
+static u16 GetBaseStatBySummaryStat(u16 species, u8 stat)
+{
+    switch (stat)
+    {
+    case STAT_HP:
+        return gSpeciesInfo[species].baseHP;
+    case STAT_ATK:
+        return gSpeciesInfo[species].baseAttack;
+    case STAT_DEF:
+        return gSpeciesInfo[species].baseDefense;
+    case STAT_SPEED:
+        return gSpeciesInfo[species].baseSpeed;
+    case STAT_SPATK:
+        return gSpeciesInfo[species].baseSpAttack;
+    case STAT_SPDEF:
+        return gSpeciesInfo[species].baseSpDefense;
+    default:
+        return 0;
+    }
+}
+
 static void BufferEVString(u8 stat)
 {
-    u16 statValue = GetMonData(&sMonSummaryScreen->currentMon, sStatData[stat].monDataEv);
-    u8 *dst = sMonSummaryScreen->summary.statValueStrBufs[sStatData[stat].pssStat];
-    u8 tmp[20];
+    u16 species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES);
+    u16 baseStat = GetBaseStatBySummaryStat(species, stat);
+
+    u8 *dst = sMonSummaryScreen->summary.statValueStrBufs
+              [sStatData[stat].pssStat];
     
-    ConvertIntToDecimalStringN(dst, statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
-    StringAppend(dst, gText_Slash);
-    ConvertIntToDecimalStringN(tmp, MAX_PER_STAT_EVS, STR_CONV_MODE_LEFT_ALIGN, 3);
-    StringAppend(dst, tmp);
+    StringCopy(dst, gText_BaseDash);
+    ConvertIntToDecimalStringN(dst + StringLength(dst),
+                               baseStat,
+                               STR_CONV_MODE_LEFT_ALIGN, 3);
+    
     SetStatXPos(stat, GetNumberRightAlign63(dst));
+
     if (stat != STAT_HP)
         ApplyNatureColor(dst, stat);
 }
 
-static const u8 sText_JudgeNoGood[] = _(" F - - - - -");
-static const u8 sText_JudgeDecent[] = _(" - D - - - -");
-static const u8 sText_JudgePrettyGood[] = _(" - - C - - -");
-static const u8 sText_JudgeVeryGood[] = _(" - - - B - -");
-static const u8 sText_JudgeFantastic[] = _(" - - - - A -");
-static const u8 sText_JudgeBest[] = _(" - - - - - S");
 static const u8 sText_JudgeHyperTrained[] = _("Hyper trained!");
+
+static const u8 sText_IV_0[]  = _("00 ---------");
+static const u8 sText_IV_1[]  = _("01 ---------");
+static const u8 sText_IV_2[]  = _("02 ---------");
+static const u8 sText_IV_3[]  = _("03 ---------");
+static const u8 sText_IV_4[]  = _("04 ---------");
+static const u8 sText_IV_5[]  = _("- 05 -------");
+static const u8 sText_IV_6[]  = _("- 06 -------");
+static const u8 sText_IV_7[]  = _("- 07 -------");
+static const u8 sText_IV_8[]  = _("- 08 -------");
+static const u8 sText_IV_9[]  = _("- 09 -------");
+static const u8 sText_IV_10[] = _("--- 10 -----");
+static const u8 sText_IV_11[] = _("--- 11 -----");
+static const u8 sText_IV_12[] = _("--- 12 -----");
+static const u8 sText_IV_13[] = _("--- 13 -----");
+static const u8 sText_IV_14[] = _("--- 14 -----");
+static const u8 sText_IV_15[] = _("--- 15 -----");
+static const u8 sText_IV_16[] = _("----- 16 ---");
+static const u8 sText_IV_17[] = _("----- 17 ---");
+static const u8 sText_IV_18[] = _("----- 18 ---");
+static const u8 sText_IV_19[] = _("----- 19 ---");
+static const u8 sText_IV_20[] = _("----- 20 ---");
+static const u8 sText_IV_21[] = _("----- 21 ---");
+static const u8 sText_IV_22[] = _("------- 22 -");
+static const u8 sText_IV_23[] = _("------- 23 -");
+static const u8 sText_IV_24[] = _("------- 24 -");
+static const u8 sText_IV_25[] = _("------- 25 -");
+static const u8 sText_IV_26[] = _("------- 26 -");
+static const u8 sText_IV_27[] = _("--------- 27");
+static const u8 sText_IV_28[] = _("--------- 28");
+static const u8 sText_IV_29[] = _("--------- 29");
+static const u8 sText_IV_30[] = _("--------- 30");
+static const u8 sText_IV_31[] = _("--------- 31");
+
 
 static void BufferIVString(u8 stat)
 {
@@ -2556,17 +2627,69 @@ static void BufferIVString(u8 stat)
     if (isHyperTrained)
         StringCopy(dst, sText_JudgeHyperTrained);
     else if (statValue == 31)
-        StringCopy(dst, sText_JudgeBest);
-    else if (statValue > 24)
-        StringCopy(dst, sText_JudgeFantastic);
-    else if (statValue > 18)
-        StringCopy(dst, sText_JudgeVeryGood);
-    else if (statValue > 12)
-        StringCopy(dst, sText_JudgePrettyGood);
-    else if (statValue > 6)
-        StringCopy(dst, sText_JudgeDecent);
+        StringCopy(dst, sText_IV_31);
+    else if (statValue == 30)
+        StringCopy(dst, sText_IV_30);
+    else if (statValue == 29)
+        StringCopy(dst, sText_IV_29);
+    else if (statValue == 28)
+        StringCopy(dst, sText_IV_28);
+    else if (statValue == 27)
+        StringCopy(dst, sText_IV_27);
+    else if (statValue == 26)
+        StringCopy(dst, sText_IV_26);
+    else if (statValue == 25)
+        StringCopy(dst, sText_IV_25);
+    else if (statValue == 24)
+        StringCopy(dst, sText_IV_24);
+    else if (statValue == 23)
+        StringCopy(dst, sText_IV_23);
+    else if (statValue == 22)
+        StringCopy(dst, sText_IV_22);
+    else if (statValue == 21)
+        StringCopy(dst, sText_IV_21);
+    else if (statValue == 20)
+        StringCopy(dst, sText_IV_20);
+    else if (statValue == 19)
+        StringCopy(dst, sText_IV_19);
+    else if (statValue == 18)
+        StringCopy(dst, sText_IV_18);
+    else if (statValue == 17)
+        StringCopy(dst, sText_IV_17);
+    else if (statValue == 16)
+        StringCopy(dst, sText_IV_16);
+    else if (statValue == 15)
+        StringCopy(dst, sText_IV_15);
+    else if (statValue == 14)
+        StringCopy(dst, sText_IV_14);
+    else if (statValue == 13)
+        StringCopy(dst, sText_IV_13);
+    else if (statValue == 12)
+        StringCopy(dst, sText_IV_12);
+    else if (statValue == 11)
+        StringCopy(dst, sText_IV_11);
+    else if (statValue == 10)
+        StringCopy(dst, sText_IV_10);
+    else if (statValue == 9)
+        StringCopy(dst, sText_IV_9);
+    else if (statValue == 8)
+        StringCopy(dst, sText_IV_8);
+    else if (statValue == 7)
+        StringCopy(dst, sText_IV_7);
+    else if (statValue == 6)
+        StringCopy(dst, sText_IV_6);
+    else if (statValue == 5)
+        StringCopy(dst, sText_IV_5);
+    else if (statValue == 4)
+        StringCopy(dst, sText_IV_4);
+    else if (statValue == 3)
+        StringCopy(dst, sText_IV_3);
+    else if (statValue == 2)
+        StringCopy(dst, sText_IV_2);
+    else if (statValue == 1)
+        StringCopy(dst, sText_IV_1);
     else
-        StringCopy(dst, sText_JudgeNoGood);
+        StringCopy(dst, sText_IV_0);
 
     SetStatXPos(stat, 0);
     if (stat != STAT_HP)

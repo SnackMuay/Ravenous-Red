@@ -599,7 +599,7 @@ void DoPicboxCancel(void)
 
 void SetVermilionTrashCans(void)
 {
-    u16 idx = (Random() % 15) + 1;
+    u16 idx = (Random() % 9) + 1;
     gSpecialVar_0x8004 = idx;
     gSpecialVar_0x8005 = idx;
     switch (gSpecialVar_0x8004)
@@ -609,93 +609,88 @@ void SetVermilionTrashCans(void)
         if (idx == 0)
             gSpecialVar_0x8005 += 1;
         else
-            gSpecialVar_0x8005 += 5;
+            gSpecialVar_0x8005 += 3;
         break;
     case 2:
+        idx = Random() % 3;
+        if (idx == 0)
+            gSpecialVar_0x8005 -= 1;
+        else if (idx == 1)
+            gSpecialVar_0x8005 += 1;
+        else
+            gSpecialVar_0x8005 += 3;
+        break;
     case 3:
+        idx = Random() % 2;
+        if (idx == 0)
+            gSpecialVar_0x8005 -= 1;
+        else
+            gSpecialVar_0x8005 += 3;
+        break;
     case 4:
         idx = Random() % 3;
         if (idx == 0)
-            gSpecialVar_0x8005 += 1;
+            gSpecialVar_0x8005 -= 3;
         else if (idx == 1)
-            gSpecialVar_0x8005 += 5;
+            gSpecialVar_0x8005 += 1;
         else
-            gSpecialVar_0x8005 -= 1;
+            gSpecialVar_0x8005 += 3;
         break;
     case 5:
-        idx = Random() % 2;
+        idx = Random() % 4;
         if (idx == 0)
-            gSpecialVar_0x8005 += 5;
-        else
+            gSpecialVar_0x8005 -= 3;
+        else if (idx == 1)
             gSpecialVar_0x8005 -= 1;
+        else if (idx == 2)
+            gSpecialVar_0x8005 += 1;
+        else
+            gSpecialVar_0x8005 += 3;
         break;
     case 6:
         idx = Random() % 3;
         if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
+            gSpecialVar_0x8005 -= 3;
         else if (idx == 1)
-            gSpecialVar_0x8005 += 1;
+            gSpecialVar_0x8005 -= 1;
         else
-            gSpecialVar_0x8005 += 5;
+            gSpecialVar_0x8005 += 3;
         break;
     case 7:
+        idx = Random() % 2;
+        if (idx == 0)
+            gSpecialVar_0x8005 -= 3;
+        else
+            gSpecialVar_0x8005 += 1;
+        break;
     case 8:
+        idx = Random() % 3;
+        if (idx == 0)
+            gSpecialVar_0x8005 -= 3;
+        else if (idx == 1)
+            gSpecialVar_0x8005 -= 1;
+        else
+            gSpecialVar_0x8005 += 1;
+        break;
     case 9:
-        idx = Random() % 4;
-        if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
-        else if (idx == 1)
-            gSpecialVar_0x8005 += 1;
-        else if (idx == 2)
-            gSpecialVar_0x8005 += 5;
-        else
-            gSpecialVar_0x8005 -= 1;
-        break;
-    case 10:
-        idx = Random() % 3;
-        if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
-        else if (idx == 1)
-            gSpecialVar_0x8005 += 5;
-        else
-            gSpecialVar_0x8005 -= 1;
-        break;
-    case 11:
         idx = Random() % 2;
         if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
+            gSpecialVar_0x8005 -= 3; // up
         else
-            gSpecialVar_0x8005 += 1;
-        break;
-    case 12:
-    case 13:
-    case 14:
-        idx = Random() % 3;
-        if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
-        else if (idx == 1)
-            gSpecialVar_0x8005 += 1;
-        else
-            gSpecialVar_0x8005 -= 1;
-        break;
-    case 15:
-        idx = Random() % 2;
-        if (idx == 0)
-            gSpecialVar_0x8005 -= 5;
-        else
-            gSpecialVar_0x8005 -= 1;
+            gSpecialVar_0x8005 -= 1; // left
         break;
     }
-    if (gSpecialVar_0x8005 > 15)
+    if (gSpecialVar_0x8005 > 9)
     {
-        if (gSpecialVar_0x8004 % 5 == 1)
+        if (gSpecialVar_0x8004 % 3 == 1)
             gSpecialVar_0x8005 = gSpecialVar_0x8004 + 1;
-        else if (gSpecialVar_0x8004 % 5 == 0)
+        else if (gSpecialVar_0x8004 % 3 == 0)
             gSpecialVar_0x8005 = gSpecialVar_0x8004 - 1;
         else
             gSpecialVar_0x8005 = gSpecialVar_0x8004 + 1;
     }
 }
+
 
 static const u16 sResortGorgeousDeluxeRewards[] = {
     ITEM_BIG_PEARL,

@@ -10,14 +10,16 @@ enum WildPokemonArea
     WILD_AREA_WATER,
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
-    WILD_AREA_HIDDEN
+    WILD_AREA_HIDDEN,
+    WILD_AREA_HEADBUTT
 };
 
-#define LAND_WILD_COUNT     12
-#define WATER_WILD_COUNT    5
-#define ROCK_WILD_COUNT     5
-#define FISH_WILD_COUNT     10
-#define HIDDEN_WILD_COUNT   3
+#define LAND_WILD_COUNT       12
+#define WATER_WILD_COUNT      5
+#define ROCK_WILD_COUNT       5
+#define FISH_WILD_COUNT       10
+#define HIDDEN_WILD_COUNT     3
+#define HEADBUTT_WILD_COUNT   12
 
 #define NUM_ALTERING_CAVE_TABLES 9
 
@@ -44,6 +46,7 @@ struct WildEncounterTypes
     const struct WildPokemonInfo *rockSmashMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
     const struct WildPokemonInfo *hiddenMonsInfo;
+    const struct WildPokemonInfo *headbuttMonsInfo;
 };
 
 struct WildPokemonHeader
@@ -69,7 +72,8 @@ u16 GetLocalWaterMon(void);
 bool8 UpdateRepelCounter(void);
 void DisableWildEncounters(bool8 state);
 u8 GetUnownLetterByPersonalityLoByte(u32 personality);
-bool8 SweetScentWildEncounter(void);
+bool8 DoesCurrentMapHaveHeadbuttMons(void);
+bool8 HeadbuttWildEncounter(void);
 void SeedWildEncounterRng(u16 randVal);
 void ResetEncounterRateModifiers(void);
 bool8 TryStandardWildEncounter(u32 currMetatileAttrs);
@@ -79,6 +83,7 @@ u16 GetCurrentMapWildMonHeaderId(void);
 u8 ChooseWildMonIndex_Land(void);
 u8 ChooseWildMonIndex_WaterRock(void);
 u8 ChooseHiddenMonIndex(void);
+u8 ChooseWildMonIndex_Headbutt(void);
 bool32 MapHasNoEncounterData(void);
 void GetSeasonAndTimeOfDayForEncounters(u32 headerId, enum WildPokemonArea area, enum Season *season, enum TimeOfDay *timeOfDay);
 

@@ -1,0 +1,227 @@
+raw `
+
+.equ CHECKED_CURRENCY,  FLAG_TEMP_1
+.equ HAS_HEART_SCALE,   FLAG_TEMP_2
+.equ HAS_STARDUST,      FLAG_TEMP_3
+.equ HAS_BOTH_ITEMS,    FLAG_TEMP_4
+
+TwoIsland_House_MapScripts::
+	.byte 0
+
+TwoIsland_House_EventScript_MoveManiac::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	clearflag HAS_HEART_SCALE
+	clearflag HAS_STARDUST
+	clearflag HAS_BOTH_ITEMS
+	goto_if_set CHECKED_CURRENCY, TwoIsland_House_EventScript_CheckPlayerHasMushrooms
+	msgbox TwoIsland_House_Text_TeachMonMoveForMushroom
+	setflag CHECKED_CURRENCY
+	goto TwoIsland_House_EventScript_CheckPlayerHasMushrooms
+	end
+
+TwoIsland_House_EventScript_CheckPlayerHasMushrooms::
+	checkitem ITEM_HEART_SCALE, 3
+	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasBigMushroom
+	checkitem ITEM_STARDUST, 15
+	call_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_SetHasTinyMushrooms
+	goto_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms
+	goto_if_set HAS_STARDUST, TwoIsland_House_EventScript_CheckAlsoHasBigMushroom
+	goto TwoIsland_House_EventScript_EndTutorMove
+	end
+
+TwoIsland_House_EventScript_CheckAlsoHasTinyMushrooms::
+	call_if_set HAS_STARDUST, TwoIsland_House_EventScript_SetHasBothMushrooms
+	goto TwoIsland_House_EventScript_AskTutorMon
+	end
+
+TwoIsland_House_EventScript_CheckAlsoHasBigMushroom::
+	call_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_SetHasBothMushrooms
+	goto TwoIsland_House_EventScript_AskTutorMon
+	end
+
+TwoIsland_House_EventScript_AskTutorMon::
+	msgbox TwoIsland_House_Text_WantMeToTeachMove, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, TwoIsland_House_EventScript_EndTutorMove
+	goto TwoIsland_House_EventScript_ChooseMonToTutor
+	end
+
+TwoIsland_House_EventScript_ChooseMonToTutor::
+	msgbox TwoIsland_House_Text_TutorWhichMon
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, TwoIsland_House_EventScript_EndTutorMove
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, TwoIsland_House_EventScript_CantTutorEgg
+	goto_if_eq VAR_0x8005, 0, TwoIsland_House_EventScript_NoMoveToTutorMon
+	goto TwoIsland_House_EventScript_ChooseMoveToTeach
+	end
+
+TwoIsland_House_EventScript_ChooseMoveToTeach::
+	msgbox TwoIsland_House_Text_TeachWhichMove
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, 0, TwoIsland_House_EventScript_ChooseMonToTutor
+	goto_if_set HAS_BOTH_ITEMS, TwoIsland_House_EventScript_ChooseMushroom
+	goto_if_set HAS_HEART_SCALE, TwoIsland_House_EventScript_GiveBigMushroom
+	goto_if_set HAS_STARDUST, TwoIsland_House_EventScript_GiveTinyMushrooms
+	end
+
+TwoIsland_House_EventScript_GiveBigMushroom::
+	removeitem ITEM_HEART_SCALE, 3
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox TwoIsland_House_Text_HandedOverOneBigMushroom
+	call EventScript_RestorePrevTextColor
+	goto TwoIsland_House_EventScript_EndTutorMove
+	end
+
+TwoIsland_House_EventScript_GiveTinyMushrooms::
+	removeitem ITEM_STARDUST, 15
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox TwoIsland_House_Text_HandedOverTwoTinyMushrooms
+	call EventScript_RestorePrevTextColor
+	goto TwoIsland_House_EventScript_EndTutorMove
+	end
+
+TwoIsland_House_EventScript_ChooseMushroom::
+	message TwoIsland_House_Text_IllNeedMushroomOrTwo
+	waitmessage
+	multichoice 0, 0, MULTICHOICE_MUSHROOMS, TRUE
+	switch VAR_RESULT
+	case 0, TwoIsland_House_EventScript_GiveTinyMushrooms
+	case 1, TwoIsland_House_EventScript_GiveBigMushroom
+	end
+
+TwoIsland_House_EventScript_NoMoveToTutorMon::
+	msgbox TwoIsland_House_Text_NoMoveICanTeachThatMon
+	goto TwoIsland_House_EventScript_ChooseMonToTutor
+	end
+
+TwoIsland_House_EventScript_CantTutorEgg::
+	msgbox TwoIsland_House_Text_CantTeachAnEgg
+	goto TwoIsland_House_EventScript_ChooseMonToTutor
+	end
+
+TwoIsland_House_EventScript_EndTutorMove::
+	msgbox TwoIsland_House_Text_NeedMushroomOrTwoToLearnMove
+	release
+	end
+
+TwoIsland_House_EventScript_SetHasBigMushroom::
+	setflag HAS_HEART_SCALE
+	return
+
+TwoIsland_House_EventScript_SetHasTinyMushrooms::
+	setflag HAS_STARDUST
+	return
+
+TwoIsland_House_EventScript_SetHasBothMushrooms::
+	setflag HAS_BOTH_ITEMS
+	return
+
+`
+
+script Universal_EventScript_HypoTrainer{
+    lockall
+    faceplayer
+    msgbox(format("I can boost a POKéMON's potential in a given stat, provided they are struggling to reach it. 
+        my effort will only cost you 2 HEART SCALES. Would you like to boost an IV on one of your POKéMON?"), MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, NO, Universal_EventScript_HypoTraining_Decline)
+    goto_if_eq(VAR_RESULT, YES, Universal_EventScript_HypoTraining_Check_Scales)
+}
+
+script Universal_EventScript_HypoTraining_Decline{
+    msgbox(format("Come back any time!"))
+    releaseall
+}
+
+script Universal_EventScript_HypoTraining_Check_Scales{
+    checkitem(ITEM_HEART_SCALE, 2)
+    goto_if_eq(VAR_RESULT, FALSE, Universal_EventScript_HypoTraining_NoScales)
+    goto_if_eq(VAR_RESULT, TRUE, Universal_EventScript_HypoTraining_Check)
+}
+
+script Universal_EventScript_HypoTraining_NoScales{
+    msgbox("You don't have enough HEART SCALES.")
+    releaseall
+}
+
+script Universal_EventScript_HypoTraining_Check{
+    special(ChoosePartyMon)
+    waitstate
+    goto_if_eq(VAR_0x8004, 0xFF, Universal_EventScript_HypoTraining_Decline)
+    special(IsSelectedMonEgg)
+    goto_if_eq(VAR_RESULT, TRUE, Universal_EventScript_CantTrainEgg)
+    goto_if_eq(VAR_RESULT, FALSE, Universal_EventScript_HypoTraining_Proceed)
+    releaseall
+}
+
+script Universal_EventScript_HypoTraining_Proceed {
+    msgbox("Which stat should be boosted?")
+    waitmessage
+    multichoice(19, 0, MULTICHOICE_HYPOTRAIN_STATS, FALSE)
+    copyvar(VAR_0x8005, VAR_RESULT)
+    goto_if_eq(VAR_0x8005, 0, Universal_EventScript_HypoTraining_DoHP)
+    goto_if_eq(VAR_0x8005, 1, Universal_EventScript_HypoTraining_DoAttack)
+    goto_if_eq(VAR_0x8005, 2, Universal_EventScript_HypoTraining_DoDefense)
+    goto_if_eq(VAR_0x8005, 3, Universal_EventScript_HypoTraining_DoSpAtk)
+    goto_if_eq(VAR_0x8005, 4, Universal_EventScript_HypoTraining_DoSpDef)
+    goto_if_eq(VAR_0x8005, 5, Universal_EventScript_HypoTraining_DoSpeed)
+    goto_if_eq(VAR_0x8005, 6, Universal_EventScript_HypoTraining_Decline)
+    goto_if_eq(VAR_0x8005, 127, Universal_EventScript_HypoTraining_Decline)
+}
+
+script Universal_EventScript_HypoTraining_DoHP{
+    setvar(VAR_0x8005, 0)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_DoAttack{
+    setvar(VAR_0x8005, 1)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_DoDefense{
+    setvar(VAR_0x8005, 2)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_DoSpAtk{
+    setvar(VAR_0x8005, 3)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_DoSpDef{
+    setvar(VAR_0x8005, 4)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_DoSpeed{
+    setvar(VAR_0x8005, 5)
+    goto(Universal_EventScript_HypoTraining_Apply)
+}
+
+script Universal_EventScript_HypoTraining_Apply{
+    hypotrain(VAR_0x8004, VAR_0x8005)
+    copyvar(VAR_0x8006, VAR_RESULT)
+    goto_if_eq(VAR_0x8006, FALSE, Universal_EventScript_IV_TooHigh)
+    removeitem (ITEM_HEART_SCALE, 2)
+    msgbox("Your POKéMON's stat was boosted!")
+    releaseall
+}
+
+script Universal_EventScript_IV_TooHigh{
+    msgbox(format("I'm unable to boost this stat. 
+        Your POKéMON has already reached its potential in this regard. 
+        Would you like to boost a different stat?"), MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Universal_EventScript_HypoTraining_Proceed)
+    goto_if_eq(VAR_RESULT, NO, Universal_EventScript_HypoTraining_Decline)
+}
+
+script Universal_EventScript_CantTrainEgg{
+    msgbox("I'm unable to boost the IVs of an EGG.")
+    releaseall
+}
+

@@ -10140,7 +10140,7 @@ static void TryPlayStatChangeAnimation(u32 battler, enum Ability ability, u32 st
                 else if (!((ability == ABILITY_KEEN_EYE || ability == ABILITY_MINDS_EYE) && currStat == STAT_ACC)
                         && !(GetGenConfig(GEN_ILLUMINATE_EFFECT) >= GEN_9 && ability == ABILITY_ILLUMINATE && currStat == STAT_ACC)
                         && !(ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK)
-                        && !(ability == ABILITY_BIG_PECKS && currStat == STAT_DEF))
+                        && !(ability == ABILITY_BIG_PECKS && (currStat == STAT_DEF || currStat == STAT_SPDEF)))
                 {
                     if (gBattleMons[battler].statStages[currStat] > MIN_STAT_STAGE)
                     {
@@ -10309,7 +10309,7 @@ static u32 ChangeStatBuffs(u32 battler, s8 statValue, enum Stat statId, union St
                 && (((battlerAbility == ABILITY_KEEN_EYE || battlerAbility == ABILITY_MINDS_EYE) && statId == STAT_ACC)
                 || (GetGenConfig(GEN_ILLUMINATE_EFFECT) >= GEN_9 && battlerAbility == ABILITY_ILLUMINATE && statId == STAT_ACC)
                 || (battlerAbility == ABILITY_HYPER_CUTTER && statId == STAT_ATK)
-                || (battlerAbility == ABILITY_BIG_PECKS && statId == STAT_DEF)))
+                || (battlerAbility == ABILITY_BIG_PECKS && (statId == STAT_DEF || statId == STAT_SPDEF))))
         {
             if (flags.allowPtr)
             {

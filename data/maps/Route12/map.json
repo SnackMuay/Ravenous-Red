@@ -28,6 +28,11 @@
       "map": "MAP_ROUTE11",
       "offset": 55,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE12_EAST",
+      "offset": 79,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -160,7 +165,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
+      "x": 18,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -230,13 +235,6 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 15,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE12_NORTH_ENTRANCE_1F",
-      "dest_warp_id": "1"
-    },
-    {
       "x": 14,
       "y": 21,
       "elevation": 3,
@@ -277,7 +275,7 @@
       "x": 14,
       "y": 70,
       "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_LAVA_COOKIE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE12_LEFTOVERS",
       "quantity": 1,
       "underfoot": true

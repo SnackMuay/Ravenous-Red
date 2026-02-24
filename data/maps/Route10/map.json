@@ -21,7 +21,7 @@
     },
     {
       "map": "MAP_ROUTE9",
-      "offset": 0,
+      "offset": -20,
       "direction": "left"
     }
   ],
@@ -71,14 +71,14 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 33,
-      "y": 46,
+      "x": 30,
+      "y": 42,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route10_EventScript_Trent",
       "flag": "0"
     },
@@ -221,7 +221,7 @@
       "x": 4,
       "y": 24,
       "elevation": 0,
-      "item": "ITEM_SUPER_POTION",
+      "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION",
       "quantity": 1,
       "underfoot": false
@@ -238,10 +238,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 25,
+      "x": 17,
+      "y": 29,
       "elevation": 3,
-      "item": "ITEM_CHERI_BERRY",
+      "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE10_CHERI_BERRY",
       "quantity": 1,
       "underfoot": false
@@ -249,9 +249,9 @@
     {
       "type": "hidden_item",
       "x": 17,
-      "y": 29,
+      "y": 11,
       "elevation": 3,
-      "item": "ITEM_PERSIM_BERRY",
+      "item": "ITEM_IAPAPA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE10_PERSIM_BERRY",
       "quantity": 1,
       "underfoot": false

@@ -144,7 +144,7 @@
       "x": 14,
       "y": 8,
       "elevation": 0,
-      "item": "ITEM_CHESTO_BERRY",
+      "item": "ITEM_ENIGMA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHESTO_BERRY",
       "quantity": 1,
       "underfoot": false
@@ -154,7 +154,7 @@
       "x": 14,
       "y": 4,
       "elevation": 0,
-      "item": "ITEM_PECHA_BERRY",
+      "item": "ITEM_LUM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_PECHA_BERRY",
       "quantity": 1,
       "underfoot": false
@@ -164,7 +164,7 @@
       "x": 14,
       "y": 6,
       "elevation": 0,
-      "item": "ITEM_CHERI_BERRY",
+      "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHERI_BERRY",
       "quantity": 1,
       "underfoot": false

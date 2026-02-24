@@ -2249,6 +2249,18 @@
 	callnative Script_ToggleFakeRtc
 	.endm
 
+	@ Boosts a selected Pokemon's IV for a given stat
+	.macro hypotrain partyVar:req, statVar:req
+	.byte SCR_OP_HYPOTRAIN
+	.hword \partyVar
+	.hword \statVar
+	.endm
+
+	@ Triggers the Headbutt wild encounter system.
+	.macro headbutt
+    .byte SCR_OP_HEADBUTT
+    .endm
+
 	@ ============================ @
 	@ ITEM DESCRIPTION HEADER MACROS
 	@ Used with OW_SHOW_ITEM_DESCRIPTIONS config

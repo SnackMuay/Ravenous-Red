@@ -1903,6 +1903,58 @@ PewterCity_EventScript_Scientist::
 	return
 
 
+PewterCity_EventScript_Headbutt_Man::
+# 1051 "data/maps/PewterCity/scripts.pory"
+	goto_if_unset FLAG_LEARNED_TO_HEADBUTT, PewterCity_EventScript_Headbutt_ManLesson
+# 1052 "data/maps/PewterCity/scripts.pory"
+	goto_if_set FLAG_LEARNED_TO_HEADBUTT, PewterCity_EventScript_Headbutt_ManChat
+# 1053 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+PewterCity_EventScript_Headbutt_ManLesson::
+# 1057 "data/maps/PewterCity/scripts.pory"
+	lockall
+# 1058 "data/maps/PewterCity/scripts.pory"
+	faceplayer
+# 1059 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Headbutt_ManLesson_Text_0
+# 1065 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 1066 "data/maps/PewterCity/scripts.pory"
+	setflag FLAG_LEARNED_TO_HEADBUTT
+# 1067 "data/maps/PewterCity/scripts.pory"
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+# 1068 "data/maps/PewterCity/scripts.pory"
+	playfanfare MUS_OBTAIN_KEY_ITEM
+# 1069 "data/maps/PewterCity/scripts.pory"
+	message PewterCity_EventScript_Headbutt_ManLesson_Text_1
+# 1070 "data/maps/PewterCity/scripts.pory"
+	waitmessage
+# 1071 "data/maps/PewterCity/scripts.pory"
+	waitfanfare
+# 1072 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
+PewterCity_EventScript_Headbutt_ManChat::
+# 1076 "data/maps/PewterCity/scripts.pory"
+	lockall
+# 1077 "data/maps/PewterCity/scripts.pory"
+	faceplayer
+# 1078 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Headbutt_ManChat_Text_0
+# 1080 "data/maps/PewterCity/scripts.pory"
+	delay 20
+# 1081 "data/maps/PewterCity/scripts.pory"
+	msgbox PewterCity_EventScript_Headbutt_ManChat_Text_1
+# 1082 "data/maps/PewterCity/scripts.pory"
+	releaseall
+	return
+
+
 PewterCity_EventScript_Youngster_Text_0:
 # 824 "data/maps/PewterCity/scripts.pory"
 	.string "I'm waiting for BROCK to return so\n"
@@ -1943,6 +1995,36 @@ PewterCity_EventScript_Scientist_Text_0:
 	.string "me on the second floor of PEWTER\l"
 	.string "MUSEUM. I'd like to give you a\l"
 	.string "token of my gratitude.$"
+
+PewterCity_EventScript_Headbutt_ManLesson_Text_0:
+# 1059 "data/maps/PewterCity/scripts.pory"
+	.string "If you see a tree like this one\n"
+	.string "with exposed bark underneath, you\l"
+	.string "can ram your head against it like a\l"
+	.string "POKéMON using an attack! I hear\l"
+	.string "that over in JOHTO, people have\l"
+	.string "their POKéMON do the headbutting\l"
+	.string "for them. But why let the POKéMON\l"
+	.string "have all the fun, eh? Bwahahaha.\l"
+	.string "Anyway, be on your guard. When you\l"
+	.string "headbutt a tree hard enough, a\l"
+	.string "POKéMON may descend from up in\l"
+	.string "the canopy!$"
+
+PewterCity_EventScript_Headbutt_ManLesson_Text_1:
+# 1069 "data/maps/PewterCity/scripts.pory"
+	.string "{PLAYER} learned to headbutt trees!$"
+
+PewterCity_EventScript_Headbutt_ManChat_Text_0:
+# 1078 "data/maps/PewterCity/scripts.pory"
+	.string "Don't tell anyone I taught you the\n"
+	.string "headbutt technique. It's a\l"
+	.string "forbidden move...$"
+
+PewterCity_EventScript_Headbutt_ManChat_Text_1:
+# 1081 "data/maps/PewterCity/scripts.pory"
+	.string "...doctors are always coming up\n"
+	.string "with new things to forbid.$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
 # 812 "data/maps/PewterCity/scripts.pory"

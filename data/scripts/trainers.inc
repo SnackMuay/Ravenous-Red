@@ -355,50 +355,50 @@ Route11_EventScript_DillonRematch::
 	end
 
 Route11_EventScript_Yasu::
-	trainerbattle_single TRAINER_YOUNGSTER_YASU, Route11_Text_YasuIntro, Route11_Text_YasuDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_HOLLY, Route11_Text_YasuIntro, Route11_Text_YasuDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_YasuRematch
 	msgbox Route11_Text_YasuPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_YasuRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_YASU, Route11_Text_YasuRematchIntro, Route11_Text_YasuDefeat
+	trainerbattle_rematch TRAINER_COOLTRAINER_HOLLY, Route11_Text_YasuRematchIntro, Route11_Text_YasuDefeat
 	msgbox Route11_Text_YasuPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Dave::
-	trainerbattle_single TRAINER_YOUNGSTER_DAVE, Route11_Text_DaveIntro, Route11_Text_DaveDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_DAVE, Route11_Text_DaveIntro, Route11_Text_DaveDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_DaveRematch
 	msgbox Route11_Text_DavePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_DaveRematch::
-	trainerbattle_rematch TRAINER_YOUNGSTER_DAVE, Route11_Text_DaveRematchIntro, Route11_Text_DaveDefeat
+	trainerbattle_rematch TRAINER_COOLTRAINER_DAVE, Route11_Text_DaveRematchIntro, Route11_Text_DaveDefeat
 	msgbox Route11_Text_DavePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Braxton::
-	trainerbattle_single TRAINER_ENGINEER_BRAXTON, Route11_Text_BraxtonIntro, Route11_Text_BraxtonDefeat
+	trainerbattle_single TRAINER_BIRD_KEEPER_BRAXTON, Route11_Text_BraxtonIntro, Route11_Text_BraxtonDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_BraxtonRematch
 	msgbox Route11_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_BraxtonRematch::
-	trainerbattle_rematch TRAINER_ENGINEER_BRAXTON, Route11_Text_BraxtonRematchIntro, Route11_Text_BraxtonDefeat
+	trainerbattle_rematch TRAINER_BIRD_KEEPER_BRAXTON, Route11_Text_BraxtonRematchIntro, Route11_Text_BraxtonDefeat
 	msgbox Route11_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Bernie::
-	trainerbattle_single TRAINER_ENGINEER_BERNIE, Route11_Text_BernieIntro, Route11_Text_BernieDefeat
+	trainerbattle_single TRAINER_HIKER_BERNIE, Route11_Text_BernieIntro, Route11_Text_BernieDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_BernieRematch
 	msgbox Route11_Text_BerniePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_BernieRematch::
-	trainerbattle_rematch TRAINER_ENGINEER_BERNIE, Route11_Text_BernieRematchIntro, Route11_Text_BernieDefeat
+	trainerbattle_rematch TRAINER_HIKER_BERNIE, Route11_Text_BernieRematchIntro, Route11_Text_BernieDefeat
 	msgbox Route11_Text_BerniePostBattle, MSGBOX_AUTOCLOSE
 	end
 

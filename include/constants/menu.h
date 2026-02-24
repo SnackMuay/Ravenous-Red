@@ -74,6 +74,8 @@
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_TRAINER_TOWER_MODE                         64
 
+#define MULTICHOICE_HYPOTRAIN_STATS                            65
+
 #define MULTICHOICE_NONE                                      255
 
 #define LISTMENU_BADGES                    0

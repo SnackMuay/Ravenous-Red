@@ -2021,8 +2021,7 @@ const struct Item gItemsInfo[] =
             "Gives a very small "
             "amount of Exp.\nto "
             "a single Pokémon."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
@@ -10065,7 +10064,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_HEAVY_DUTY_BOOTS] =
     {
-        .name = ITEM_NAME("Heavy-Duty Boots"),
+        .name = ITEM_NAME("Heavy Boots"),
         .pluralName = ITEM_PLURAL_NAME("Heavy-Duty Boots"),
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_HEAVY_DUTY_BOOTS,
@@ -11837,14 +11836,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = NULL,
     },
 
-    [ITEM_TM_BRICK_BREAK] =
+    [ITEM_TM_METAL_CLAW] =
     {
         .name = ITEM_NAME("TM31"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Destroys barriers "
-            "like\nLight Screen "
-            "and causes\ndamage."),
+            "Attacks with steel "
+            "claws\nIt may also "
+            "raise Attack."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13387,6 +13386,22 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TeachyTv,
         .iconPic = gItemIcon_TeachyTV,
         .iconPalette = gItemIconPalette_TeachyTV,
+    },
+
+    [ITEM_CANDY_BAR] =
+    {
+        .name = ITEM_NAME("Candy Bar"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Raises a Pokémon's\n"
+            "level."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CandyBar,
+        .effect = gItemEffect_RareCandy,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
     },
 
 // Story Key Items

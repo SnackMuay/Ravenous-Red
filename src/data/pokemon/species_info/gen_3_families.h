@@ -1174,9 +1174,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_LIMBER, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
     #else
-        .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_LIMBER, ABILITY_NONE, ABILITY_QUICK_FEET },
     #endif
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Linoone"),
@@ -2518,7 +2518,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #if P_UPDATED_ABILITIES >= GEN_7
         .abilities = { ABILITY_KEEN_EYE, ABILITY_HYDRATION, ABILITY_RAIN_DISH },
     #else
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .abilities = { ABILITY_HYDRATION, ABILITY_NONE, ABILITY_GLUTTONY },
     #endif
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Wingull"),
@@ -2599,7 +2599,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #if P_UPDATED_ABILITIES >= GEN_7
         .abilities = { ABILITY_KEEN_EYE, ABILITY_DRIZZLE, ABILITY_RAIN_DISH },
     #else
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .abilities = { ABILITY_RAIN_DISH, ABILITY_NONE, ABILITY_UNBURDEN },
     #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Pelipper"),
@@ -2803,7 +2803,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .teachableLearnset = sKirliaTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GARDEVOIR}
                             #if P_GEN_4_CROSS_EVOS
-                                ,{EVO_ITEM, ITEM_DAWN_STONE, SPECIES_GALLADE, CONDITIONS({IF_GENDER, MON_MALE})}
+                                ,{EVO_ITEM, ITEM_DAWN_STONE, SPECIES_GALLADE}
                             #endif
                             ),
     },
@@ -4117,7 +4117,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FLUCTUATING,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_THICK_FAT, ABILITY_GUTS, ABILITY_SHEER_FORCE },
+        .abilities = { ABILITY_THICK_FAT, ABILITY_NONE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Makuhita"),
         .cryId = CRY_MAKUHITA,
@@ -4193,7 +4193,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FLUCTUATING,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_THICK_FAT, ABILITY_GUTS, ABILITY_SHEER_FORCE },
+        .abilities = { ABILITY_THICK_FAT, ABILITY_NONE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Hariyama"),
         .cryId = CRY_HARIYAMA,
@@ -7755,7 +7755,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_NATURAL_CURE, ABILITY_CLOUD_NINE, ABILITY_NORMALIZE },
+        .abilities = { ABILITY_NATURAL_CURE, ABILITY_CLOUD_NINE, ABILITY_AERILATE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Altaria"),
         .cryId = CRY_ALTARIA,
@@ -9464,7 +9464,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #if P_UPDATED_ABILITIES >= GEN_6
         .abilities = { ABILITY_COLOR_CHANGE, ABILITY_NONE, ABILITY_PROTEAN },
     #else
-        .abilities = { ABILITY_COLOR_CHANGE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_COLOR_CHANGE, ABILITY_NONE, ABILITY_PROTEAN },
     #endif
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Kecleon"),
@@ -10464,7 +10464,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggMoveLearnset = sSnoruntEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_GLALIE}
                             #if P_GEN_4_CROSS_EVOS
-                                ,{EVO_ITEM, ITEM_DAWN_STONE, SPECIES_FROSLASS, CONDITIONS({IF_GENDER, MON_FEMALE})}
+                                ,{EVO_ITEM, ITEM_DAWN_STONE, SPECIES_FROSLASS}
                             #endif
                             ),
     },
@@ -10487,7 +10487,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_MINERAL),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_INNER_FOCUS, ABILITY_ICE_BODY, ABILITY_MOODY },
+        .abilities = { ABILITY_REFRIGERATE, ABILITY_NONE, ABILITY_MOODY },
     #else
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_NONE, ABILITY_MOODY },
     #endif

@@ -854,7 +854,7 @@ const u8 gText_PokeSum_ExpPoints[] = _("EXP. POINTS");
 const u8 gText_PokeSum_NextLv[] = _("NEXT LV.");
 const u8 gText_PokeSum_Controls_PageCancel[] = _("{DPAD_RIGHT}PAGE {A_BUTTON}CANCEL");
 const u8 gText_PokeSum_Controls_Cancel[] = _("{A_BUTTON}CANCEL");
-const u8 gText_PokeSum_Controls_PageJudge[] = _("{DPAD_LEFTRIGHT}PAGE {A_BUTTON}JUDGE");
+const u8 gText_PokeSum_Controls_PageJudge[] = _("{DPAD_LEFTRIGHT}PAGE {A_BUTTON}CYCLE");
 const u8 gText_PokeSum_Controls_PageDetail[] = _("{DPAD_LEFT}PAGE {A_BUTTON}DETAIL");
 const u8 gText_PokeSum_Controls_PickSwitch[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}SWITCH");
 const u8 gText_PokeSum_Controls_Pick[] = _("{DPAD_UPDOWN}PICK");
@@ -1254,7 +1254,7 @@ const u8 gText_Empty7[] = _("");
 const u8 gText_Empty8[] = _("");
 const u8 gText_Empty9[] = _("");
 const u8 gText_Empty10[] = _("");
-const u8 gText_Empty11[] = _("");
+const u8 gText_BaseDash[] = _("Base - ");
 const u8 gText_WirelessCommunicationStatus[] = _("Wireless Communication Status");
 const u8 gText_PeopleTrading[] = _("People trading:");
 const u8 gText_PeopleBattling[] = _("People battling:");
@@ -1390,6 +1390,7 @@ const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_
 const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
 
 // stats
+const u8 gText_HP[] = _("HP");
 const u8 gText_Attack[] = _("ATTACK");
 const u8 gText_Defense[] = _("DEFENSE");
 const u8 gText_Speed[] = _("SPEED");

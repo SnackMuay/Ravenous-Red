@@ -26,8 +26,11 @@ EventScript_SetCeruleanGymTrainers::
 
 EventScript_SetVermilionGymTrainers::
 	settrainerflag TRAINER_SAILOR_DWAYNE
-	settrainerflag TRAINER_ENGINEER_BAILY
-	settrainerflag TRAINER_GENTLEMAN_TUCKER
+	settrainerflag TRAINER_SAILOR_DYLAN
+	settrainerflag TRAINER_ENGINEER_BAILEY
+	settrainerflag TRAINER_GUITARIST_TUCKER
+	settrainerflag TRAINER_ROCKER_BROOKS
+	settrainerflag TRAINER_AROMA_LADY_HAZEL
 	return
 
 EventScript_SetCeladonGymTrainers::

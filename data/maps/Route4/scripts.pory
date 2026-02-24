@@ -59,9 +59,9 @@ script Route4_Trigger_May{
 	waitdooranim
     applymovement(LOCALID_MAY_2, May_Approach)
     waitmovement(0)
-    call_if_eq(VAR_STARTER_MON, 2, Route4_EventScript_May_Charmander)
-    call_if_eq(VAR_STARTER_MON, 1, Route4_EventScript_May_Piplup)
-    call_if_eq(VAR_STARTER_MON, 0, Route4_EventScript_May_Chikorita)
+    goto_if_eq(VAR_STARTER_MON, 2, Route4_EventScript_May_Charmander)
+    goto_if_eq(VAR_STARTER_MON, 1, Route4_EventScript_May_Piplup)
+    goto_if_eq(VAR_STARTER_MON, 0, Route4_EventScript_May_Chikorita)
     releaseall    
 }
 

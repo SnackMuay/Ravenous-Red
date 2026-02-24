@@ -2183,7 +2183,7 @@ bool32 CanLowerStat(u32 battlerAtk, u32 battlerDef, struct AiLogicData *aiData, 
             if (stat == STAT_ATK)
                 return FALSE;
         case ABILITY_BIG_PECKS:
-            if (stat == STAT_DEF)
+            if (stat == STAT_DEF || stat == STAT_SPDEF)
                 return FALSE;
         case ABILITY_ILLUMINATE:
             if (GetGenConfig(GEN_ILLUMINATE_EFFECT) < GEN_9)

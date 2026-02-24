@@ -1,0 +1,45 @@
+raw `
+
+SSAnne_Deck_MapScripts::
+	.byte 0
+
+SSAnne_Deck_EventScript_Youngster::
+	msgbox SSAnne_Deck_Text_ShipDepartingSoon, MSGBOX_NPC
+	end
+
+SSAnne_Deck_EventScript_BaldingMan::
+	msgbox SSAnne_Deck_Text_FeelSeasick, MSGBOX_NPC
+	end
+
+SSAnne_Deck_EventScript_Sailor::
+	msgbox SSAnne_Deck_Text_ScrubbingDecksHardWork, MSGBOX_NPC
+	end
+
+SSAnne_Deck_EventScript_Edmond::
+	trainerbattle_single TRAINER_SAILOR_EDMOND, SSAnne_Deck_Text_EdmondIntro, SSAnne_Deck_Text_EdmondDefeat
+	msgbox SSAnne_Deck_Text_EdmondPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SSAnne_Deck_EventScript_Trevor::
+	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_Deck_Text_TrevorIntro, SSAnne_Deck_Text_TrevorDefeat
+	msgbox SSAnne_Deck_Text_TrevorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+`
+
+script SSAnne_Deck_EventScript_Tuber{
+    lockall
+    faceplayer
+    goto_if_unset(FLAG_RECEIVED_WATER_GEM_SS_ANNE, SSAnne_Deck_EventScript_GetWaterGem)
+    msgbox(format("That gem can power up a WATER-type attack, but you can only use it once."))
+    releaseall
+}
+
+script SSAnne_Deck_EventScript_GetWaterGem{
+    msgbox(format("I don't know what I'm supposed to do with this crystal. You look like you'd
+        know what to do with it."))
+    giveitem(ITEM_WATER_GEM, amount=1)
+    setflag(FLAG_RECEIVED_WATER_GEM_SS_ANNE)
+    releaseall
+}
+

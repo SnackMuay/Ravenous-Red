@@ -92,6 +92,11 @@
     },
     "msgbox": {
       "var_name": "VAR_RESULT"
+    },
+
+    "hypotrain": {
+
     }
+
   }
 }

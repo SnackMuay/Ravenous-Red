@@ -53,18 +53,13 @@ VermilionCity_Gym_Text_TuckerPostBattle::
     .string "LT. SURGE was always famous for\n"
     .string "his cautious nature in the Army.$"
 
-VermilionCity_Gym_Text_BailyIntro::
+VermilionCity_Gym_Text_BaileyIntro::
     .string "I'm a lightweight, but I'm good\n"
     .string "with electricity!\p"
     .string "That's why I joined this GYM.$"
 
-VermilionCity_Gym_Text_BailyDefeat::
+VermilionCity_Gym_Text_BaileyDefeat::
     .string "Fried!$"
-
-VermilionCity_Gym_Text_BailyPostBattle::
-    .string "Okay, I'll talk!\p"
-    .string "LT. SURGE said he hid door\n"
-    .string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
     .string "This is no place for kids!\n"

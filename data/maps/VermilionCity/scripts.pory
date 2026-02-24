@@ -271,5 +271,13 @@ script VermilionCity_EventScript_Sailor{
     releaseall
 }
 
-
+script VermilionCity_EventScript_Fisherman{
+    lockall
+    faceplayer
+    msgbox(format("Shhh! you'll scare away the POKéMON."))
+    closemessage
+    delay(10)
+    face_right
+    releaseall
+}
 	

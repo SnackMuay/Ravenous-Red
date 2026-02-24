@@ -67,13 +67,6 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 20,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_SSANNE_EXTERIOR",
-      "dest_warp_id": "3"
-    },
-    {
       "x": 3,
       "y": 20,
       "elevation": 0,
@@ -126,7 +119,7 @@
       "x": 23,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_SSANNE_1F_ROOM7",
+      "dest_map": "MAP_SSANNE_1F_PCROOM",
       "dest_warp_id": "0"
     },
     {
