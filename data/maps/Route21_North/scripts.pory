@@ -9,7 +9,6 @@ script Route21_EventScript_Fisherman{
     faceplayer
     msgbox(format("Shhh! you'll scare away the POKéMON."))
     closemessage
-    delay(10)
     face_left
     releaseall
 }

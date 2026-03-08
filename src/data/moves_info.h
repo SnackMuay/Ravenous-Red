@@ -12404,7 +12404,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Storm Throw"),
         .description = sStormThrowDescription,
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 40,
+        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 60,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 10,

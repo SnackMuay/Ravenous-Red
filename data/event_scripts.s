@@ -1423,3 +1423,6 @@ Text_TestMsg::
 
 	.include "data/maps/PewterCity_Gym_3/scripts.inc"
 	.include "data/maps/PewterCity_Gym_3/text.inc"
+
+	.include "data/maps/RockTunnel_2F/scripts.inc"
+	.include "data/maps/RockTunnel_2F/text.inc"

@@ -152,7 +152,8 @@
     "SixIsland_PatternBush",
     "SixIsland_AlteringCave",
     "CliffsideCave_1F",
-    "CliffsideCave_2F"
+    "CliffsideCave_2F",
+    "RockTunnel_2F"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",

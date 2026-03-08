@@ -1637,7 +1637,7 @@
       "id": "LAYOUT_ROCK_TUNNEL_1F",
       "name": "RockTunnel_1F_Layout",
       "width": 48,
-      "height": 40,
+      "height": 43,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -1648,8 +1648,8 @@
     {
       "id": "LAYOUT_ROCK_TUNNEL_B1F",
       "name": "RockTunnel_B1F_Layout",
-      "width": 48,
-      "height": 40,
+      "width": 65,
+      "height": 60,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -2264,7 +2264,7 @@
       "height": 55,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSummer",
       "secondary_tileset": "gTileset_SaffronCity",
       "border_filepath": "data/layouts/SaffronCity/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity/map.bin"
@@ -4504,8 +4504,8 @@
     {
       "id": "LAYOUT_SAND_SWEPT_CAVE_2F",
       "name": "SandSweptCave_2F_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 47,
+      "height": 86,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GeneralAutumn",
@@ -4596,6 +4596,18 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/PewterCity_Gym_3/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Gym_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCK_TUNNEL_2F",
+      "name": "RockTunnel_2F_Layout",
+      "width": 60,
+      "height": 50,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/RockTunnel_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RockTunnel_2F/map.bin"
     }
   ]
 }

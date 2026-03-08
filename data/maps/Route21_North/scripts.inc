@@ -15,10 +15,8 @@ Route21_EventScript_Fisherman::
 # 11 "data/maps/Route21_North/scripts.pory"
 	closemessage
 # 12 "data/maps/Route21_North/scripts.pory"
-	delay 10
-# 13 "data/maps/Route21_North/scripts.pory"
 	face_left
-# 14 "data/maps/Route21_North/scripts.pory"
+# 13 "data/maps/Route21_North/scripts.pory"
 	releaseall
 	return
 

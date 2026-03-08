@@ -1,0 +1,57 @@
+{
+  "id": "MAP_ROCK_TUNNEL_2F",
+  "name": "RockTunnel_2F",
+  "layout": "LAYOUT_ROCK_TUNNEL_2F",
+  "music": "MUS_MT_MOON",
+  "region_map_section": "MAPSEC_ROCK_TUNNEL",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 30,
+      "y": 44,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 11,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_1F",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 4,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_1F",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

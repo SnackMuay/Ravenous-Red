@@ -850,7 +850,7 @@ bool8 DoesCurrentMapHaveHeadbuttMons(void)
     return TRUE;
 }
 
-bool8 HeadbuttWildEncounter(void)
+bool8 HeadbuttWildEncounterBUGGED(void)
 {
     u16 headerId;
     enum Season season;
@@ -860,11 +860,6 @@ bool8 HeadbuttWildEncounter(void)
     if (headerId == HEADER_NONE)
         return FALSE;
 
-    if (TryStartRoamerEncounter())
-    {
-        BattleSetup_StartRoamerBattle();
-        return TRUE;
-    }
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_HEADBUTT, &season, &timeOfDay);
 
     if (gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].headbuttMonsInfo == NULL)
@@ -874,6 +869,46 @@ bool8 HeadbuttWildEncounter(void)
         return FALSE;
 
     BattleSetup_StartWildBattle();
+    return TRUE;
+}
+
+bool8 HeadbuttWildEncounter(void)
+{
+    u16 headerId;
+    enum Season season;
+    enum TimeOfDay timeOfDay;
+
+    headerId = GetCurrentMapWildMonHeaderId();
+    if (headerId == HEADER_NONE)
+    {
+        gSpecialVar_Result = FALSE;
+        return TRUE;
+    }
+
+    GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_HEADBUTT, &season, &timeOfDay);
+
+    if (gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].headbuttMonsInfo == NULL)
+    {
+        gSpecialVar_Result = FALSE;
+        return TRUE;
+    }
+
+    if (DoWildEncounterRateTest(gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].headbuttMonsInfo->encounterRate, TRUE) != TRUE)
+    {
+        gSpecialVar_Result = FALSE;
+        return TRUE;
+    }
+
+    if (TryGenerateWildMon(gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].headbuttMonsInfo, WILD_AREA_HEADBUTT, WILD_CHECK_REPEL) == TRUE)
+    {
+        BattleSetup_StartWildBattle();
+        gSpecialVar_Result = TRUE;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+
     return TRUE;
 }
 
